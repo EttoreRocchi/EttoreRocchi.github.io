@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications - Ettore Rocchi</title>
+  <meta name="description" content="Publication record of Ettore Rocchi - antimicrobial resistance, clinical AI, mass spectrometry, mathematical epidemiology, and computational biology.">
+  <meta name="author" content="Ettore Rocchi">
+
+  <meta property="og:title" content="Publications - Ettore Rocchi">
+  <meta property="og:description" content="Peer-reviewed publications on AMR, clinical AI, MALDI-TOF, and computational biology.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ettorerocchi.github.io/publications.html">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body data-page="publications">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">ER</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#about" data-nav="about">About</a></li>
+          <li><a href="research.html" data-nav="research">Research</a></li>
+          <li><a href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="publications.html" data-nav="publications">Publications</a></li>
+          <li><a href="index.html#contact" data-nav="contact">Contact</a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-sun">&#9788;</span>
+        <span class="icon-moon">&#9790;</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <header class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">Publications</p>
+      <h1>Peer-reviewed work.</h1>
+      <p class="page-lede">
+        A selection of peer-reviewed work, listed most recent first. Each entry links to the
+        DOI and provides a copyable BibTeX citation.
+      </p>
+      <p class="page-lede-meta">
+        For the complete and up-to-date list, see my
+        <a href="https://scholar.google.com/citations?user=MKHoGnQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        or
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57220152522" target="_blank" rel="noopener">Scopus</a>
+        profile.
+      </p>
+
+      <!-- Filters -->
+      <div class="pub-filters" role="toolbar" aria-label="Filter publications by year">
+        <button class="pub-filter active" data-filter="all">All</button>
+        <button class="pub-filter" data-filter="2026">2026</button>
+        <button class="pub-filter" data-filter="2025">2025</button>
+        <button class="pub-filter" data-filter="2023">2023</button>
+        <button class="pub-filter" data-filter="2022">2022</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PUBLICATIONS LIST ========== -->
+  <section id="publications-list">
+    <div class="container">
+      <ol class="pub-list fade-in">
+
+        <!-- Pub 1 -->
+        <li class="pub-item" data-year="2026">
+          <div class="pub-meta">
+            <span class="pub-year">2026</span>
+            <span class="pub-journal">BMC Microbiology</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">Combining mass spectrometry and machine learning models for predicting <em>Klebsiella pneumoniae</em> antimicrobial resistance: a multicenter experience from clinical isolates in Italy</p>
+          <p class="pub-authors"><strong>Rocchi E</strong>, Nicitra E, Calvo M, Cento V, Peiretti L, Asif Z, Menchinelli G, Posteraro B, Sala C, Colosimo C, Cricca M, Sambri V, Sanguinetti M, Castellani G, Stefani S</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1186/s12866-025-04657-2" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{rocchi2026combining,
+  title={Combining mass spectrometry and machine learning models for predicting {Klebsiella pneumoniae} antimicrobial resistance: a multicenter experience from clinical isolates in Italy},
+  author={Rocchi, Ettore and Nicitra, Emanuele and Calvo, Maddalena and Cento, Valeria and Peiretti, Laura and Asif, Zian and Menchinelli, Giulia and Posteraro, Brunella and Sala, Claudia and Colosimo, Claudia and Cricca, Monica and Sambri, Vittorio and Sanguinetti, Maurizio and Castellani, Gastone and Stefani, Stefania},
+  journal={BMC Microbiology},
+  year={2026},
+  publisher={Springer},
+  doi={10.1186/s12866-025-04657-2}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+        <!-- Pub 2 -->
+        <li class="pub-item" data-year="2025">
+          <div class="pub-meta">
+            <span class="pub-year">2025</span>
+            <span class="pub-journal">npj Digital Medicine</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections</p>
+          <p class="pub-authors">Bonazzetti C, <strong>Rocchi E</strong>, Toschi A, Derus NR, Sala C, Pascale R, Rinaldi M, Campoli C, Pasquini ZAI, Tazza B, Amicucci A, Gatti M, Ambretti S, Viale P, Castellani G, Giannella M</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1038/s41746-025-01696-x" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{bonazzetti2025artificial,
+  title={Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections},
+  author={Bonazzetti, Cecilia and Rocchi, Ettore and Toschi, Alice and Derus, Nicolas Riccardo and Sala, Claudia and Pascale, Renato and Rinaldi, Matteo and Campoli, Caterina and Pasquini, Zeno Adrien Igor and Tazza, Beatrice and Amicucci, Armando and Gatti, Milo and Ambretti, Simone and Viale, Pierluigi and Castellani, Gastone and Giannella, Maddalena},
+  journal={npj Digital Medicine},
+  volume={8},
+  number={1},
+  pages={319},
+  year={2025},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s41746-025-01696-x}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+        <!-- Pub 3 -->
+        <li class="pub-item" data-year="2025">
+          <div class="pub-meta">
+            <span class="pub-year">2025</span>
+            <span class="pub-journal">Frontiers in Genome Editing</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">CATS: a bioinformatic tool for automated Cas9 nucleases activity comparison in clinically relevant contexts</p>
+          <p class="pub-authors"><strong>Rocchi E</strong>, Magnani F, Castellani G, Carusillo A, Tarozzi M</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3389/fgeed.2025.1571023" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{rocchi2025cats,
+  title={CATS: a bioinformatic tool for automated Cas9 nucleases activity comparison in clinically relevant contexts},
+  author={Rocchi, Ettore and Magnani, Federico and Castellani, Gastone and Carusillo, Antonio and Tarozzi, Martina},
+  journal={Frontiers in Genome Editing},
+  volume={7},
+  pages={1571023},
+  year={2025},
+  publisher={Frontiers},
+  doi={10.3389/fgeed.2025.1571023}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+        <!-- Pub 4 -->
+        <li class="pub-item" data-year="2025">
+          <div class="pub-meta">
+            <span class="pub-year">2025</span>
+            <span class="pub-journal">Entropy</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data</p>
+          <p class="pub-authors">Giacometti T, <strong>Rocchi E</strong>, Cojutti PG, Magnani F, Remondini D, Pea F, Castellani G</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3390/e27060602" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{giacometti2025leveraging,
+  title={Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data},
+  author={Giacometti, Tommaso and Rocchi, Ettore and Cojutti, Pier Giorgio and Magnani, Federico and Remondini, Daniel and Pea, Federico and Castellani, Gastone},
+  journal={Entropy},
+  volume={27},
+  number={6},
+  pages={602},
+  year={2025},
+  publisher={MDPI},
+  doi={10.3390/e27060602}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+        <!-- Pub 5 -->
+        <li class="pub-item" data-year="2025">
+          <div class="pub-meta">
+            <span class="pub-year">2025</span>
+            <span class="pub-journal">Frontiers in Radiology</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">Radiomic signatures from postprocedural MRI thalamotomy lesion can predict long-term clinical outcome in patients with tremor after MRgFUS: a pilot study</p>
+          <p class="pub-authors">Innocenzi A, Peluso S, Bruno F, Balducci L, <strong>Rocchi E</strong>, Bellini M, Catalucci A, Sucapane P, Saporito G, Russo T, Castellani G, Pistoia F, Splendiani A</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3389/fradi.2025.1683274" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{innocenzi2025radiomic,
+  title={Radiomic signatures from postprocedural MRI thalamotomy lesion can predict long-term clinical outcome in patients with tremor after MRgFUS: a pilot study},
+  author={Innocenzi, Antonio and Peluso, Sara and Bruno, Federico and Balducci, Laura and Rocchi, Ettore and Bellini, Michela and Catalucci, Alessia and Sucapane, Patrizia and Saporito, Gennaro and Russo, Tommasina and Castellani, Gastone and Pistoia, Francesca and Splendiani, Alessandra},
+  journal={Frontiers in Radiology},
+  volume={5},
+  pages={1683274},
+  year={2025},
+  publisher={Frontiers},
+  doi={10.3389/fradi.2025.1683274}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+        <!-- Pub 6 -->
+        <li class="pub-item" data-year="2025">
+          <div class="pub-meta">
+            <span class="pub-year">2025</span>
+            <span class="pub-journal">Scientific Reports</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">Understanding the evolutionary dynamics of Monkeypox virus through less explored pathways</p>
+          <p class="pub-authors">De Pascali AM, Ingletto L, Brandolini M, <strong>Rocchi E</strong>, Tarozzi M, Turba ME, Casadio R, Gentilini F, Gatti G, Dionisi L, Colosimo C, Guerra M, Zannoli S, Dirani G, Montanari MS, Marzucco A, Grumiro L, Rossini G, Lazzarotto T, Cricca M, Castellani G, Sambri V, Scagliarini A</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1038/s41598-025-11855-5" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{depascali2025understanding,
+  title={Understanding the evolutionary dynamics of Monkeypox virus through less explored pathways},
+  author={De Pascali, A. M. and Ingletto, L. and Brandolini, M. and Rocchi, E. and Tarozzi, M. and Turba, M. E. and Casadio, R. and Gentilini, F. and Gatti, G. and Dionisi, L. and Colosimo, C. and Guerra, M. and Zannoli, S. and Dirani, G. and Montanari, M. S. and Marzucco, A. and Grumiro, L. and Rossini, G. and Lazzarotto, T. and Cricca, M. and Castellani, G. and Sambri, V. and Scagliarini, A.},
+  journal={Scientific Reports},
+  volume={15},
+  number={1},
+  pages={25849},
+  year={2025},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s41598-025-11855-5}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+        <!-- Pub 7 -->
+        <li class="pub-item" data-year="2023">
+          <div class="pub-meta">
+            <span class="pub-year">2023</span>
+            <span class="pub-journal">Viruses</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">Comparing Heterologous and Homologous COVID-19 Vaccination: A Longitudinal Study of Antibody Decay</p>
+          <p class="pub-authors">Orlandi C, Stefanetti G, Barocci S, Buffi G, Diotallevi A, <strong>Rocchi E</strong>, Ceccarelli M, Peluso S, Vandini D, Carlotti E, Magnani M, Galluzzi L, Casabianca A</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3390/v15051162" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{orlandi2023comparing,
+  title={Comparing Heterologous and Homologous COVID-19 Vaccination: A Longitudinal Study of Antibody Decay},
+  author={Orlandi, Chiara and Stefanetti, Giuseppe and Barocci, Sara and Buffi, Giorgia and Diotallevi, Aurora and Rocchi, Ettore and Ceccarelli, Mauro and Peluso, Sara and Vandini, Davide and Carlotti, Elisa and Magnani, Mauro and Galluzzi, Luca and Casabianca, Anna},
+  journal={Viruses},
+  volume={15},
+  number={5},
+  pages={1162},
+  year={2023},
+  publisher={MDPI},
+  doi={10.3390/v15051162}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+        <!-- Pub 7 -->
+        <li class="pub-item" data-year="2022">
+          <div class="pub-meta">
+            <span class="pub-year">2022</span>
+            <span class="pub-journal">BioMedInformatics</span>
+            <span class="pub-oa">Open Access</span>
+          </div>
+          <p class="pub-title">A New Epidemic Model for the COVID-19 Pandemic: The &theta;-SI(R)D Model</p>
+          <p class="pub-authors"><strong>Rocchi E</strong>, Peluso S, Sisti D, Carletti M</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3390/biomedinformatics2030025" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+          <details class="bibtex-toggle">
+            <summary>BibTeX</summary>
+            <div class="bibtex-code">@article{rocchi2022new,
+  title={A New Epidemic Model for the COVID-19 Pandemic: The $\theta$-SI(R)D Model},
+  author={Rocchi, Ettore and Peluso, Sara and Sisti, Davide and Carletti, Margherita},
+  journal={BioMedInformatics},
+  volume={2},
+  number={3},
+  pages={398--404},
+  year={2022},
+  publisher={MDPI},
+  doi={10.3390/biomedinformatics2030025}
+}<button class="bibtex-copy" onclick="copyBibtex(this)" aria-label="Copy BibTeX">copy</button></div>
+          </details>
+        </li>
+
+      </ol>
+
+      <p class="pub-empty" hidden>No publications match this filter.</p>
+    </div>
+  </section>
+
+  <!-- ========== CTA BACK ========== -->
+  <section class="back-cta">
+    <div class="container">
+      <a href="research.html" class="btn btn-outline">Read about the research &#8594;</a>
+      <a href="projects.html" class="btn btn-outline">Browse the projects &#8594;</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Ettore Rocchi. Built with care, no frameworks were harmed.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

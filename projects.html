@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Ettore Rocchi</title>
+  <meta name="description" content="Open-source projects by Ettore Rocchi: MaldiSuite, ResPredAI, combatlearn, phenocluster, nestkit, CATS, APOBECSeeker, CAMISIM-BrokenStick.">
+  <meta name="author" content="Ettore Rocchi">
+
+  <meta property="og:title" content="Projects - Ettore Rocchi">
+  <meta property="og:description" content="Open-source tools for clinical AMR prediction, multi-omics integration, and computational biology.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ettorerocchi.github.io/projects.html">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body data-page="projects">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">ER</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#about" data-nav="about">About</a></li>
+          <li><a href="research.html" data-nav="research">Research</a></li>
+          <li><a href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="publications.html" data-nav="publications">Publications</a></li>
+          <li><a href="index.html#contact" data-nav="contact">Contact</a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-sun">&#9788;</span>
+        <span class="icon-moon">&#9790;</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <header class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">Projects</p>
+      <h1>Open-source tools for biomedical data science.</h1>
+      <p class="page-lede">
+        A curated catalog of the software I build and maintain. Most are Python packages,
+        all are open-source, and each was written to solve a problem I actually ran into.
+        Pull requests, issues, and feedback are welcome.
+      </p>
+    </div>
+  </header>
+
+  <!-- ========== FLAGSHIP - MaldiSuite ========== -->
+  <section id="maldisuite" class="project-section">
+    <div class="container">
+      <p class="project-section-label">Flagship ecosystem</p>
+      <div class="project-feature">
+        <div class="project-feature-head">
+          <h2>MaldiSuite</h2>
+          <a href="https://github.com/EttoreRocchi/MaldiSuite" class="btn btn-outline btn-small" target="_blank" rel="noopener">GitHub &#8599;</a>
+          <a href="https://ettorerocchi.github.io/MaldiSuite/" class="btn btn-outline btn-small" target="_blank" rel="noopener">Docs &#8599;</a>
+        </div>
+        <p class="project-feature-lede">
+          A Python ecosystem for MALDI-TOF spectral processing and analysis in antimicrobial
+          resistance research. Three sklearn-compatible packages that chain into an end-to-end
+          clinical AMR pipeline.
+        </p>
+        <div class="ecosystem-grid">
+          <div class="ecosystem-card">
+            <h3>MaldiAMRKit</h3>
+            <p class="eco-role">Preprocess</p>
+            <p>
+              Smoothing, baseline correction, peak detection (including persistent homology),
+              alignment strategies, and flexible binning. Parallelised, sklearn-integrated,
+              opinion-free about which method you should use.
+            </p>
+            <a href="https://github.com/EttoreRocchi/MaldiAMRKit" target="_blank" rel="noopener">github.com/EttoreRocchi/MaldiAMRKit &#8599;</a>
+          </div>
+          <div class="ecosystem-card">
+            <h3>MaldiBatchKit</h3>
+            <p class="eco-role">Harmonise</p>
+            <p>
+              Batch-effect correction tailored to MALDI-TOF data, with leakage-safe
+              cross-validation handling and diagnostics that quantify residual structure
+              after correction. Multi-site by design.
+            </p>
+            <a href="https://github.com/EttoreRocchi/MaldiBatchKit" target="_blank" rel="noopener">github.com/EttoreRocchi/MaldiBatchKit &#8599;</a>
+          </div>
+          <div class="ecosystem-card">
+            <h3>MaldiDeepKit</h3>
+            <p class="eco-role">Classify</p>
+            <p>
+              Deep learning models for MALDI-TOF spectra, with calibrated outputs and
+              clinically oriented evaluation (decision thresholds, cost-sensitive metrics,
+              cross-site validation).
+            </p>
+            <a href="https://github.com/EttoreRocchi/MaldiDeepKit" target="_blank" rel="noopener">github.com/EttoreRocchi/MaldiDeepKit &#8599;</a>
+          </div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">PyPI</span>
+          <span class="tag">MALDI-TOF</span>
+          <span class="tag">AMR</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLINICAL ML FRAMEWORKS ========== -->
+  <section id="frameworks" class="project-section project-section-alt">
+    <div class="container">
+      <p class="project-section-label">Clinical ML frameworks</p>
+      <h2>End-to-end frameworks for clinical questions</h2>
+      <p class="project-section-lede">
+        Self-contained ML frameworks built around a specific clinical question. Each one
+        ships as an installable package with a single configuration file, runs end-to-end
+        from raw inputs to reproducible results and figures, and has been used in peer-reviewed
+        work.
+      </p>
+
+      <div class="frameworks-grid fade-in-stagger">
+
+        <article class="framework-card" id="respredai">
+          <div class="framework-card-head">
+            <span class="framework-badge">Framework</span>
+            <h3>ResPredAI</h3>
+            <a href="https://github.com/EttoreRocchi/ResPredAI" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="framework-oneliner">A reproducible ML framework for predicting antimicrobial resistance from clinical and microbiology data.</p>
+          <p class="framework-description">
+            Built around nested cross-validation with proper hyperparameter selection, nine model
+            architectures (linear, tree-based, kernel methods, neural networks), probability
+            calibration, and decision-threshold optimization. The whole pipeline is configured
+            via a single <code>.ini</code> file and produces reproducible results, including
+            calibration plots, performance tables, and SHAP-based interpretability reports.
+          </p>
+          <p class="framework-meta">
+            <strong>Used in:</strong> Bonazzetti C, <strong>Rocchi E</strong>, <em>et al.</em>
+            <em>npj Digital Medicine</em>, 2025
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">CLI</span>
+            <span class="tag">PyPI</span>
+            <span class="tag">AMR</span>
+          </div>
+        </article>
+
+        <article class="framework-card" id="phenocluster">
+          <div class="framework-card-head">
+            <span class="framework-badge">Framework</span>
+            <h3>phenocluster</h3>
+            <a href="https://github.com/EttoreRocchi/phenocluster" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="framework-oneliner">An unsupervised framework for clinical phenotype discovery with survival and multi-state outcomes.</p>
+          <p class="framework-description">
+            Combines unsupervised clustering with survival analysis and multi-state trajectory
+            modelling to surface clinically meaningful patient subgroups from heterogeneous
+            cohorts. Designed for prognostic interpretation: every cluster comes with hazard
+            ratios, transition probabilities, statistical reports, and graphical summaries.
+          </p>
+          <p class="framework-meta">
+            <strong>Built for:</strong> heterogeneous patient cohorts where outcomes are
+            time-to-event or multi-state
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">clustering</span>
+            <span class="tag">survival</span>
+            <span class="tag">multi-state</span>
+            <span class="tag">phenotyping</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STANDALONE TOOLS ========== -->
+  <section id="catalog" class="project-section">
+    <div class="container">
+      <p class="project-section-label">Standalone tools</p>
+      <h2>Single-purpose libraries &amp; bioinformatic tools</h2>
+      <p class="project-section-lede">
+        Focused tools that solve one problem well. Some plug into the frameworks above,
+        others stand on their own and are used by collaborators across labs.
+      </p>
+
+      <div class="projects-grid fade-in-stagger">
+
+        <div class="project-card" id="combatlearn">
+          <div class="project-header">
+            <span class="project-name">combatlearn</span>
+            <a href="https://github.com/EttoreRocchi/combatlearn" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="project-oneliner">Scikit-learn compatible ComBat batch-effect correction.</p>
+          <p class="project-description">
+            Integrates Johnson, Fortin (neuroComBat), and Chen (CovBat) harmonization methods
+            into scikit-learn pipelines, with leakage-safe cross-validation handling.
+            Plugs into existing workflows without breaking the <code>scikit-learn</code> API contract.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">PyPI</span>
+            <span class="tag">ComBat</span>
+          </div>
+        </div>
+
+        <div class="project-card" id="nestkit">
+          <div class="project-header">
+            <span class="project-name">nestkit</span>
+            <a href="https://github.com/EttoreRocchi/nestkit" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="project-oneliner">Nested cross-validation with calibration, threshold optimization, and statistical tests.</p>
+          <p class="project-description">
+            A toolkit for the kind of model evaluation that survives peer review: nested CV
+            with proper hyperparameter selection, probability calibration, decision-threshold
+            tuning, and built-in statistical comparisons between models.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">nested CV</span>
+            <span class="tag">calibration</span>
+          </div>
+        </div>
+
+        <div class="project-card" id="cats">
+          <div class="project-header">
+            <span class="project-name">CATS</span>
+            <a href="https://github.com/Physics4MedicineLab/CATS" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="project-oneliner">Automated Cas9 PAM-compatibility comparison with ClinVar integration.</p>
+          <p class="project-description">
+            A bioinformatic tool for comparing Cas9 nucleases across clinically relevant genomic
+            contexts. Detects overlapping PAM sites between variants and identifies allele-specific
+            targets arising from pathogenic mutations. Published in Frontiers in Genome Editing (2025).
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">CRISPR</span>
+            <span class="tag">genomics</span>
+            <span class="tag">bioinformatics</span>
+          </div>
+        </div>
+
+        <div class="project-card" id="apobecseeker">
+          <div class="project-header">
+            <span class="project-name">APOBECSeeker</span>
+            <a href="https://github.com/Physics4MedicineLab/APOBECSeeker" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="project-oneliner">APOBEC-style mutation identification from multiple sequence alignment.</p>
+          <p class="project-description">
+            Detects mutational patterns consistent with APOBEC enzyme activity from multiple
+            sequence alignments, supporting downstream statistical description of mutational signatures.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">mutational signatures</span>
+            <span class="tag">APOBEC</span>
+            <span class="tag">MSA</span>
+          </div>
+        </div>
+
+        <div class="project-card" id="camisim">
+          <div class="project-header">
+            <span class="project-name">CAMISIM-BrokenStick</span>
+            <a href="https://github.com/Physics4MedicineLab/CAMISIM-BrokenStick" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="project-oneliner">Broken-stick model extension for metagenomic simulation.</p>
+          <p class="project-description">
+            Extends the CAMISIM metagenomic simulator with a broken-stick abundance model and
+            a configurable number of strains, producing synthetic communities with controlled
+            relative-abundance distributions for benchmarking metagenomic pipelines.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">metagenomics</span>
+            <span class="tag">simulation</span>
+            <span class="tag">benchmarking</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BACK ========== -->
+  <section class="back-cta">
+    <div class="container">
+      <a href="research.html" class="btn btn-outline">Read about the research &#8594;</a>
+      <a href="publications.html" class="btn btn-outline">See the publications &#8594;</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Ettore Rocchi. Built with care, no frameworks were harmed.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
