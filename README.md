@@ -1,3 +1,4 @@
-# ettorerocchi.github.io
+# [Ettore Rocchi](https://ettorerocchi.github.io)
+## Personal academic website
 
-Personal academic website for Ettore Rocchi - PhD researcher in Biomedical Data Science at the University of Bologna.
+PhD researcher in Biomedical Data Science at the University of Bologna.
