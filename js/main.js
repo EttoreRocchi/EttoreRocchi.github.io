@@ -76,7 +76,7 @@
   var page = document.body.getAttribute('data-page');
   if (page === 'home') {
     var sections = document.querySelectorAll('section[id]');
-    var sectionIds = ['about', 'research', 'projects', 'publications', 'contact'];
+    var sectionIds = ['about', 'education', 'research', 'projects', 'publications', 'contact'];
 
     if ('IntersectionObserver' in window && sections.length) {
       var navObserver = new IntersectionObserver(function (entries) {

@@ -487,6 +487,121 @@ section:nth-child(even) {
   margin-bottom: 1.2rem;
 }
 
+/* --- Education / Timeline --- */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  left: 11px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 4px;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-bg);
+  transition: background-color var(--transition-medium), border-color var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.timeline-item:first-child .timeline-marker {
+  background: var(--color-accent);
+}
+
+.timeline-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin: 0 0 0.25rem 0;
+  color: var(--color-text);
+}
+
+.timeline-institution {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-detail {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.timeline-sub {
+  margin-top: 1rem;
+  padding: 1rem 1.2rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 6px;
+  box-shadow: 0 2px 12px var(--color-card-shadow);
+  transition: background-color var(--transition-medium), border-color var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.timeline-sub-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-tag-text);
+  background: var(--color-tag-bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-sub-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: var(--color-text);
+}
+
+.timeline-sub-detail {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+  .timeline-sub {
+    padding: 0.85rem 1rem;
+  }
+}
+
 /* --- Research Section --- */
 .research-grid {
   display: grid;
