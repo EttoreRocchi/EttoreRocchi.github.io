@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research - Ettore Rocchi</title>
-  <meta name="description" content="Research areas of Ettore Rocchi: antimicrobial resistance prediction, multi-centre data harmonisation, computational patient phenotyping, and genomics/metagenomics analyses.">
+  <meta name="description" content="Research areas of Ettore Rocchi: AMR and clinical machine learning, infectious risk and pathogen surveillance, computational genomics, and computational methodologies.">
   <meta name="author" content="Ettore Rocchi">
 
   <meta property="og:title" content="Research - Ettore Rocchi">
@@ -69,22 +69,22 @@
         that quantitative methods, properly applied, can move the needle on real biomedical problems.
       </p>
       <nav class="page-toc" aria-label="Page sections">
-        <a href="#amr">Antimicrobial resistance</a>
-        <a href="#harmonisation">Multi-centre harmonisation</a>
-        <a href="#phenotyping">Patient phenotyping</a>
-        <a href="#genomics">Genomics &amp; metagenomics</a>
+        <a href="#amr">AMR &amp; clinical ML</a>
+        <a href="#infectious-risk">Infectious risk &amp; surveillance</a>
+        <a href="#genomics">Computational genomics</a>
+        <a href="#methodologies">Computational methodologies</a>
       </nav>
     </div>
   </header>
 
-  <!-- ========== AREA 1 - AMR ========== -->
+  <!-- ========== AREA 1 - AMR & clinical ML ========== -->
   <section id="amr" class="research-area">
     <div class="container">
       <div class="area-grid">
         <div class="area-text fade-in">
           <p class="area-number">01</p>
-          <h2>Antimicrobial resistance prediction</h2>
-          <p class="area-tags"><span>MALDI-TOF mass spectrometry</span><span>supervised learning</span><span>deep neural networks</span></p>
+          <h2>AMR &amp; clinical machine learning</h2>
+          <p class="area-tags"><span>MALDI-TOF mass spectrometry</span><span>supervised &amp; generative learning</span><span>cross-site harmonisation</span></p>
           <p>
             Antimicrobial resistance is one of the defining clinical challenges of our generation.
             By the time culture-based diagnostics return a phenotype, the patient has often already
@@ -94,10 +94,19 @@
           </p>
           <p>
             My focus is on MALDI-TOF mass spectrometry as a low-cost, high-throughput substrate
-            for resistance prediction. The signal is rich but noisy, the labels are imbalanced,
-            and the data spans heterogeneous clinical sites. The work involves clinical and demographic 
-            features integration, calibrated probability outputs, threshold optimization for clinical
-            decision-making, and evaluation grounded in clinical utility rather than benchmark performance.
+            for resistance prediction. The signal is rich but noisy, labels are imbalanced, and the
+            data spans heterogeneous clinical sites and patient populations. The work involves clinical and demographic feature
+            integration, calibrated probability outputs, threshold optimisation for clinical decision-making,
+            and evaluation grounded in clinical utility rather than benchmark performance.
+          </p>
+          <p>
+            Two methodological threads run through this work. The first is cross-site harmonisation:
+            different instruments, calibration schedules, and operating procedures
+            introduce systematic variation that ML models will happily memorise instead of the biology,
+            so I work on ComBat-style corrections, batch-mixing diagnostics, and validation strategies
+            that improve models' generalizability. The second is generative modelling of
+            mass spectra to address labelled-data scarcity and broaden the regime in which deep models
+            become viable on clinical MALDI-TOF data.
           </p>
         </div>
         <aside class="area-side fade-in">
@@ -105,47 +114,14 @@
           <ul class="area-projects">
             <li><a href="projects.html#maldisuite">MaldiSuite</a><span>spectra preprocessing &middot; harmonisation &middot; deep models</span></li>
             <li><a href="projects.html#respredai">ResPredAI</a><span>nested CV ML framework for AMR prediction</span></li>
+            <li><a href="projects.html#combatlearn">combatlearn</a><span>scikit-learn-compatible ComBat with leakage-safe CV</span></li>
           </ul>
-          <h3>Selected paper</h3>
+          <h3>Selected papers</h3>
           <p class="area-paper">
             Bonazzetti C, <strong>Rocchi E</strong>, <em>et al.</em> Artificial Intelligence model to
             predict resistances in Gram-negative bloodstream infections. <em>npj Digital Medicine</em>,
             2025.
-            <a href="publications.html">See publications &#8594;</a>
           </p>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== AREA 2 - Harmonisation ========== -->
-  <section id="harmonisation" class="research-area">
-    <div class="container">
-      <div class="area-grid">
-        <div class="area-text fade-in">
-          <p class="area-number">02</p>
-          <h2>Multi-centre data harmonisation</h2>
-          <p class="area-tags"><span>batch-effect correction</span><span>ComBat</span><span>batch-mixing diagnostics</span></p>
-          <p>
-            High-throughput biomedical data does not arrive clean. Different instruments, calibration
-            schedules, reagent lots, and operating procedures introduce systematic variation that
-            machine learning models will happily memorise instead of the biology. Cross-site
-            generalisation lives or dies on how seriously we treat batch effects.
-          </p>
-          <p>
-            I work on harmonisation methods that integrate cleanly into ML pipelines: ComBat-style
-            corrections (and their cross-validation pitfalls), batch-mixing diagnostics that quantify
-            residual structure after correction, and validation strategies that preserve the
-            independence of held-out sites.
-          </p>
-        </div>
-        <aside class="area-side fade-in">
-          <h3>Related projects</h3>
-          <ul class="area-projects">
-            <li><a href="projects.html#combatlearn">combatlearn</a><span>scikit-learn-compatible ComBat with leakage-safe CV</span></li>
-            <li><a href="projects.html#maldisuite">MaldiBatchKit</a><span>batch correction tailored to MALDI-TOF spectra</span></li>
-          </ul>
-          <h3>Selected paper</h3>
           <p class="area-paper">
             <strong>Rocchi E</strong>, <em>et al.</em> Combining mass spectrometry and machine learning
             models for predicting <em>Klebsiella pneumoniae</em> antimicrobial resistance: a multicenter
@@ -157,74 +133,111 @@
     </div>
   </section>
 
-  <!-- ========== AREA 3 - Phenotyping ========== -->
-  <section id="phenotyping" class="research-area">
+  <!-- ========== AREA 2 - Infectious risk & pathogen surveillance ========== -->
+  <section id="infectious-risk" class="research-area">
     <div class="container">
       <div class="area-grid">
         <div class="area-text fade-in">
-          <p class="area-number">03</p>
-          <h2>Computational patient phenotyping</h2>
-          <p class="area-tags"><span>unsupervised clustering</span><span>survival analysis</span><span>multi-state modelling</span></p>
+          <p class="area-number">02</p>
+          <h2>Infectious risk &amp; pathogen surveillance</h2>
+          <p class="area-tags"><span>clinical phenotyping</span><span>risk stratification</span><span>metagenomic surveillance</span></p>
           <p>
-            A diagnostic label rarely captures the full picture of a patient. Within any clinical
-            cohort there are subgroups whose trajectories, treatment responses, and outcomes
-            diverge in ways that simple stratification misses. Unsupervised methods can help
-            surface those subgroups, but only if the resulting clusters are clinically meaningful
-            and statistically reproducible.
+            Infectious disease is more than the resistance phenotype of a single isolate. Individual
+            patients carry risk that depends on phenotype, immune status, and clinical trajectory; at
+            the population scale, pathogens evolve, spread, and circulate through environments and
+            communities. The two views share the same quantitative vocabulary: high-dimensional
+            structured data, time-to-event outcomes, and dynamics that resist simple summaries.
           </p>
           <p>
-            My work in this area combines unsupervised learning on heterogeneous patient data
-            with survival analysis and multi-state models, so that discovered phenotypes are
-            anchored to outcomes that matter (event-free survival, transitions between disease
-            states, treatment success). The aim is interpretable subgroups that clinicians can
-            recognise and act on.
+            At the patient scale, I work on computational phenotyping: unsupervised learning on
+            heterogeneous clinical data combined with survival analysis and multi-state models, so
+            that fragile populations (transplant recipients, critically ill patients) are stratified
+            by outcomes that matter (event-free survival, transitions between disease states, treatment
+            success). At the population scale, the work spans pathogen surveillance through metagenomic
+            monitoring of circulating strains, and epidemic modelling for outbreak dynamics.
           </p>
         </div>
         <aside class="area-side fade-in">
           <h3>Related projects</h3>
           <ul class="area-projects">
             <li><a href="projects.html#phenocluster">phenocluster</a><span>phenotype discovery with survival &amp; multi-state modelling</span></li>
-            <li><a href="projects.html#nestkit">nestkit</a><span>nested CV with calibration &amp; statistical testing</span></li>
+            <li><a href="projects.html#camisim">CAMISIM-BrokenStick</a><span>broken-stick extension for metagenomic simulation</span></li>
           </ul>
+          <h3>Selected paper</h3>
+          <p class="area-paper">
+            <strong>Rocchi E</strong>, Peluso S, Sisti D, Carletti M. A New Epidemic Model for the
+            COVID-19 Pandemic: The &theta;-SI(R)D Model. <em>BioMedInformatics</em>, 2022.
+            <a href="publications.html">See publications &#8594;</a>
+          </p>
         </aside>
       </div>
     </div>
   </section>
 
-  <!-- ========== AREA 4 - Genomics ========== -->
+  <!-- ========== AREA 3 - Computational genomics ========== -->
   <section id="genomics" class="research-area">
     <div class="container">
       <div class="area-grid">
         <div class="area-text fade-in">
-          <p class="area-number">04</p>
-          <h2>Genomics &amp; metagenomics analyses</h2>
-          <p class="area-tags"><span>microbial community networks</span><span>structural &amp; somatic variants</span><span>mutational signatures</span><span>CRISPR-Cas9</span></p>
+          <p class="area-number">03</p>
+          <h2>Computational genomics</h2>
+          <p class="area-tags"><span>structural variants</span><span>somatic calling</span><span>long-read sequencing</span></p>
           <p>
-            Microbial communities, somatic variants, and mutational signatures all share a common
-            statistical property: high-dimensional, sparse, and structured. Network-based modelling
-            of microbial communities offers a route to pathogen detection that respects ecological
-            context, while mutational signature analysis turns variant catalogues into hypotheses
-            about underlying biological processes.
+            Genomic data carries signal that is easily lost in noise: structural variants spanning
+            complex regions, somatic mutations diluted by tumour heterogeneity, mutational signatures
+            that need careful deconvolution to be interpretable. Each step from raw reads to clinically
+            usable variant is a small statistical decision that compounds with the next.
           </p>
           <p>
-            I also maintain an interest in computational tools for CRISPR-Cas9 genome editing,
-            particularly methods to compare nuclease activity across clinically relevant contexts.
-            The thread linking these projects is the same: applying careful quantitative methods 
-            to genomic data where signal is easily lost in noise.
+            My work in this area builds methods and tooling to support structural and somatic
+            variant discovery from short- and long-read sequencing, and to make mutational
+            signature analysis tractable in clinically relevant genomic contexts.
           </p>
         </div>
         <aside class="area-side fade-in">
           <h3>Related projects</h3>
           <ul class="area-projects">
-            <li><a href="projects.html#cats">CATS</a><span>automated Cas9 nuclease comparison</span></li>
             <li><a href="projects.html#apobecseeker">APOBECSeeker</a><span>APOBEC-style mutation identification</span></li>
-            <li><a href="projects.html#camisim">CAMISIM-BrokenStick</a><span>broken-stick extension for metagenomic simulation</span></li>
           </ul>
           <h3>Selected paper</h3>
           <p class="area-paper">
             De Pascali AM, Ingletto L, Brandolini M, <strong>Rocchi E</strong>, <em>et al.</em>
             Understanding the evolutionary dynamics of Monkeypox virus through less explored pathways.
             <em>Scientific Reports</em>, 2025.
+            <a href="publications.html">See publications &#8594;</a>
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AREA 4 - Computational methodologies ========== -->
+  <section id="methodologies" class="research-area">
+    <div class="container">
+      <div class="area-grid">
+        <div class="area-text fade-in">
+          <p class="area-number">04</p>
+          <h2>Computational methodologies</h2>
+          <p class="area-tags"><span>bioinformatic tools</span><span>open-source software</span><span>reproducible pipelines</span></p>
+          <p>
+            A recurring part of my work is building tools: small, focused, open-source libraries
+            that solve a biomedical question and can be reused by others. Some are
+            born inside a specific project and grow into standalone packages; others start
+            as standalone tools designed to plug into pipelines.
+          </p>
+        </div>
+        <aside class="area-side fade-in">
+          <h3>Related projects</h3>
+          <ul class="area-projects">
+            <li><a href="projects.html#cats">CATS</a><span>automated Cas9 nuclease comparison</span></li>
+            <li><a href="projects.html#sarcostat">SarcoStat</a><span>sarcomere morphometry &amp; myofibril linearity</span></li>
+            <li><a href="projects.html#nestkit">nestkit</a><span>nested CV with calibration &amp; statistical testing</span></li>
+          </ul>
+          <h3>Selected paper</h3>
+          <p class="area-paper">
+            <strong>Rocchi E</strong>, <em>et al.</em> CATS: a bioinformatic tool for automated Cas9
+            nucleases activity comparison in clinically relevant contexts.
+            <em>Frontiers in Genome Editing</em>, 2025.
             <a href="publications.html">See publications &#8594;</a>
           </p>
         </aside>
