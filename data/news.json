@@ -1,0 +1,43 @@
+[
+  {
+    "date": "2026-04-28",
+    "type": "software",
+    "text": "MaldiSuite ecosystem published on PyPI - MaldiAMRKit, MaldiBatchKit, and MaldiDeepKit for end-to-end clinical AMR pipelines.",
+    "link": "https://github.com/EttoreRocchi/MaldiSuite"
+  },
+  {
+    "date": "2026-04-17",
+    "type": "conference",
+    "text": "Poster at ESCMID Global 2026, Munich (17-21 April): 'AMRchitecture - a standardised benchmark framework for MALDI-TOF-based antimicrobial resistance detection'."
+  },
+  {
+    "date": "2026-01-19",
+    "type": "paper",
+    "text": "Paper published in BMC Microbiology - multicentre AMR prediction in Klebsiella pneumoniae from MALDI-TOF spectra.",
+    "link": "https://doi.org/10.1186/s12866-025-04657-2"
+  },
+  {
+    "date": "2026-01-08",
+    "type": "software",
+    "text": "ResPredAI released on PyPI - CLI-based ML framework for predicting resistances in Gram-negative bloodstream infections.",
+    "link": "https://github.com/EttoreRocchi/ResPredAI"
+  },
+  {
+    "date": "2025-09-24",
+    "type": "visit",
+    "text": "Completed 6-month research visit at the Max Planck Institute of Biochemistry, Munich (March-September 2025) - Machine Learning & Systems Biology group (Prof. Karsten Borgwardt).",
+    "link": "https://www.biochem.mpg.de/borgwardt"
+  },
+  {
+    "date": "2025-07-16",
+    "type": "paper",
+    "text": "Paper published in Scientific Reports - evolutionary dynamics of Monkeypox virus through less explored pathways.",
+    "link": "https://doi.org/10.1038/s41598-025-11855-5"
+  },
+  {
+    "date": "2025-05-29",
+    "type": "paper",
+    "text": "Paper published in npj Digital Medicine - AI model to predict resistances in Gram-negative bloodstream infections.",
+    "link": "https://doi.org/10.1038/s41746-025-01696-x"
+  }
+]

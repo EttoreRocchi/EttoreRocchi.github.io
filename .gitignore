@@ -1,0 +1,23 @@
+# Local-only scratchpad - not part of the published site
+TODO.md
+
+# CV PDFs live here locally; not committed by default.
+# If you want the CV publicly downloadable from the site,
+# remove this entry or un-ignore specific files (e.g. !cv/ettore-rocchi-cv.pdf).
+cv/
+
+# Build tooling. Not part of the published site. The OUTPUT of these scripts
+# (e.g. data/publications.json) IS committed; only the scripts themselves
+# AND their .env / .env.example files are local-only.
+scripts/
+
+# Local server housekeeping
+.serve.pid
+.serve.log
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

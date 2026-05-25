@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications - Ettore Rocchi</title>
-  <meta name="description" content="Publication record of Ettore Rocchi - antimicrobial resistance, clinical AI, mass spectrometry, mathematical epidemiology, and computational biology.">
+  <title>Education - Ettore Rocchi</title>
+  <meta name="description" content="Academic training of Ettore Rocchi - PhD in Health and Technologies, MSc and BSc in Physics at the University of Bologna.">
   <meta name="author" content="Ettore Rocchi">
 
-  <meta property="og:title" content="Publications - Ettore Rocchi">
-  <meta property="og:description" content="Peer-reviewed publications on AMR, clinical AI, MALDI-TOF, and computational biology.">
+  <meta property="og:title" content="Education - Ettore Rocchi">
+  <meta property="og:description" content="Academic training: physics undergraduate, applied physics MSc, PhD in biomedical data science.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ettorerocchi.github.io/publications.html">
+  <meta property="og:url" content="https://ettorerocchi.github.io/education.html">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -31,7 +31,7 @@
     })();
   </script>
 </head>
-<body data-page="publications">
+<body data-page="education">
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -61,83 +61,74 @@
   <!-- ========== PAGE HEADER ========== -->
   <header class="page-header">
     <div class="container">
-      <p class="page-eyebrow">Publications</p>
-      <h1>Peer-reviewed work.</h1>
+      <p class="page-eyebrow">Education</p>
+      <h1>Where I trained.</h1>
       <p class="page-lede">
-        My full publication record. Most recent first. Each entry links to the DOI and provides
-        a copyable BibTeX citation. Filter by document type or year, or use the search box.
+        A physics training that gradually re-oriented itself toward biomedical questions.
+        The full timeline below, with thesis topics, supervisors, and the visiting period
+        at Max Planck Institute of Biochemistry.
       </p>
-
-      <!-- Search + bulk bib export -->
-      <div class="pub-toolbar">
-        <div class="pub-search-wrapper" role="search">
-          <svg class="pub-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="7"/>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-          <input
-            type="search"
-            id="pubSearch"
-            class="pub-search-input"
-            placeholder="Filter by title, author, journal, or year..."
-            aria-label="Filter publications"
-            autocomplete="off"
-          >
-          <button class="pub-search-clear" id="pubSearchClear" aria-label="Clear search" hidden>&times;</button>
-        </div>
-        <button type="button" id="pubBibDownload" class="pub-bib-download" title="Download currently visible publications as a .bib file">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-          <span class="pub-bib-label">Download <span class="pub-bib-mode">all</span> .bib</span>
-          <span class="pub-bib-count" id="pubBibCount" aria-hidden="true">&mdash;</span>
-        </button>
-      </div>
-      <div class="pub-facet" id="pubTypeFacet" hidden>
-        <span class="pub-facet-label">Type</span>
-        <div class="pub-type-filter" id="pubTypeFilter" role="toolbar" aria-label="Filter by document type"></div>
-      </div>
-      <div class="pub-facet" id="pubYearFacet" hidden>
-        <span class="pub-facet-label">Year</span>
-        <div class="pub-type-filter" id="pubYearFilter" role="toolbar" aria-label="Filter by year"></div>
-      </div>
-      <p class="pub-search-meta" id="pubSearchMeta" aria-live="polite"></p>
     </div>
   </header>
 
-  <!-- ========== PUBLICATIONS LIST ========== -->
-  <section id="publications-list">
+  <!-- ========== TIMELINE ========== -->
+  <section id="education-timeline">
     <div class="container">
-      <ol class="pub-list fade-in" id="pub-list" aria-live="polite">
-        <li class="pub-item-skeleton" aria-hidden="true">
-          <div class="pub-meta-skel"></div>
-          <div class="pub-title-skel"></div>
-          <div class="pub-authors-skel"></div>
+      <ol class="timeline fade-in-stagger">
+
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">PhD in Health and Technologies</h3>
+            <p class="timeline-institution">University of Bologna</p>
+            <p class="timeline-detail"><strong>Supervisor:</strong> Prof. Gastone Castellani &middot; <strong>Co-supervisor:</strong> Prof. Simone Ambretti</p>
+            <p class="timeline-detail">
+              <strong>Cohort:</strong> XXXVIII &middot; <strong>Research focus:</strong> machine learning on omics data
+            </p>
+            <p class="timeline-detail">
+              <strong>Thesis:</strong> <em>Computational algorithms and machine learning frameworks for omics data with focus on antimicrobial resistance</em>
+            </p>
+
+            <div class="timeline-sub">
+              <p class="timeline-sub-badge">Visiting researcher &middot; 6 months</p>
+              <p class="timeline-sub-title">Max Planck Institute of Biochemistry, Munich, Germany</p>
+              <p class="timeline-sub-detail">
+                Machine Learning &amp; Systems Biology group - Prof. Karsten Borgwardt.
+                March - September 2025.
+              </p>
+            </div>
+          </div>
         </li>
-        <li class="pub-item-skeleton" aria-hidden="true">
-          <div class="pub-meta-skel"></div>
-          <div class="pub-title-skel"></div>
-          <div class="pub-authors-skel"></div>
+
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">MSc in Applied Physics</h3>
+            <p class="timeline-institution">University of Bologna</p>
+            <p class="timeline-detail">
+              <strong>Supervisor:</strong> Prof. Claudia Sala &middot; <strong>Co-supervisor:</strong> Prof. Daniel Remondini
+            </p>
+            <p class="timeline-detail">
+              <strong>Thesis:</strong> <em>Characterisation of the sewage microbiome in four European cities throughout the COVID-19 pandemic by means of ecological and network modelling</em>
+            </p>
+          </div>
         </li>
-        <li class="pub-item-skeleton" aria-hidden="true">
-          <div class="pub-meta-skel"></div>
-          <div class="pub-title-skel"></div>
-          <div class="pub-authors-skel"></div>
+
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">BSc in Physics</h3>
+            <p class="timeline-institution">University of Bologna</p>
+            <p class="timeline-detail">
+              <strong>Supervisor:</strong> Prof. Alexandr Kamenchtchik
+            </p>
+            <p class="timeline-detail">
+              <strong>Topic:</strong> <em>Physical applications of differential geometry</em>
+            </p>
+          </div>
         </li>
+
       </ol>
-
-      <p class="pub-error" id="pubError" hidden>Couldn&rsquo;t load publications. <button class="pub-error-retry" id="pubErrorRetry">Try again</button></p>
-
-      <div class="pub-empty" id="pubEmpty" hidden>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="7"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <p>No publications match &ldquo;<span id="pubEmptyQuery"></span>&rdquo;.</p>
-        <button class="btn btn-outline" id="pubEmptyClear">Clear filter</button>
-      </div>
     </div>
   </section>
 
@@ -145,7 +136,7 @@
   <section class="back-cta">
     <div class="container">
       <a href="research.html" class="btn btn-outline">Read about the research &#8594;</a>
-      <a href="projects.html" class="btn btn-outline">Browse the projects &#8594;</a>
+      <a href="publications.html" class="btn btn-outline">Browse publications &#8594;</a>
     </div>
   </section>
 
