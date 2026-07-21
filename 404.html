@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found - Ettore Rocchi</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="The page you were looking for does not exist on Ettore Rocchi's website.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <style>
+    .notfound {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .notfound-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(4rem, 18vw, 9rem);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin: 0;
+      color: var(--color-accent, #2c3e6b);
+    }
+    .notfound h1 {
+      margin: 1rem 0 0.75rem;
+    }
+    .notfound p {
+      max-width: 32rem;
+      margin: 0 auto 2rem;
+    }
+    .notfound .hero-buttons {
+      justify-content: center;
+    }
+  </style>
+</head>
+<body data-page="404">
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/index.html" class="nav-logo">ER</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="/index.html" data-nav="about">About</a></li>
+          <li><a href="/research.html" data-nav="research">Research</a></li>
+          <li><a href="/projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="/publications.html" data-nav="publications">Publications</a></li>
+          <li><a href="/news.html" data-nav="news">News</a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-sun">&#9788;</span>
+        <span class="icon-moon">&#9790;</span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="notfound">
+    <div class="container">
+      <p class="notfound-code">404</p>
+      <h1>This page could not be found</h1>
+      <p>
+        The link may be broken, or the page may have moved - a bit like a result
+        that didn't survive multiple-testing correction. Let's get you back to
+        somewhere that exists.
+      </p>
+      <div class="hero-buttons">
+        <a href="/index.html" class="btn btn-primary">Back home</a>
+        <a href="/publications.html" class="btn btn-outline">Publications</a>
+        <a href="/projects.html" class="btn btn-outline">Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copyright">&copy; 2026 Ettore Rocchi. Built with care, no frameworks were harmed.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

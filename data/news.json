@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-07-15",
+    "type": "award",
+    "text": "PhD defended at the University of Bologna (Health and Technologies), awarded the highest evaluation - Excellent cum laude. Supervisor: Prof. Gastone Castellani.",
+    "link": null
+  },
+  {
+    "date": "2026-07",
+    "type": "default",
+    "text": "Started as a Postdoctoral Researcher at the University of Bologna, continuing work on machine learning for clinical microbiology and omics data within the Physics4MedicineLab with Prof. Gastone Castellani.",
+    "link": null
+  },
+  {
     "date": "2026-04-28",
     "type": "software",
     "text": "MaldiSuite ecosystem published on PyPI - MaldiAMRKit, MaldiBatchKit, and MaldiDeepKit for end-to-end clinical AMR pipelines.",
@@ -9,6 +21,12 @@
     "date": "2026-04-17",
     "type": "conference",
     "text": "Poster at ESCMID Global 2026, Munich (17-21 April): 'AMRchitecture - a standardised benchmark framework for MALDI-TOF-based antimicrobial resistance detection'."
+  },
+  {
+    "date": "2026-03",
+    "type": "default",
+    "text": "Started as an Associate Researcher at IRCCS Policlinico di Sant'Orsola (Azienda Ospedaliero-Universitaria di Bologna) with Dr. Magda Ialonardi.",
+    "link": null
   },
   {
     "date": "2026-01-19",
