@@ -1,0 +1,135 @@
+{
+  "ecosystem": {
+    "id": "maldisuite",
+    "name": "MaldiSuite",
+    "github": "https://github.com/EttoreRocchi/MaldiSuite",
+    "docs": "https://ettorerocchi.github.io/MaldiSuite/",
+    "pypi": "MaldiSuite",
+    "home": {
+      "oneliner": "A Python ecosystem for end-to-end clinical AMR pipelines on MALDI-TOF spectra.",
+      "description": "Three sklearn-compatible packages that chain into a single workflow: preprocess with MaldiAMRKit, harmonise across batches and sites with MaldiBatchKit, classify with MaldiDeepKit. Designed to be modular and reproducible.",
+      "tags": ["Python", "scikit-learn", "PyTorch", "PyPI", "MALDI-TOF"]
+    },
+    "page": {
+      "lede": "A Python ecosystem for MALDI-TOF spectral processing and analysis in antimicrobial resistance research. Three sklearn-compatible packages that chain into an end-to-end clinical AMR pipeline.",
+      "tags": ["Python", "scikit-learn", "PyTorch", "PyPI", "MALDI-TOF", "AMR"]
+    },
+    "packages": [
+      {
+        "name": "MaldiAMRKit",
+        "role": "Preprocess",
+        "github": "https://github.com/EttoreRocchi/MaldiAMRKit",
+        "pypi": "MaldiAMRKit",
+        "description": "Smoothing, baseline correction, peak detection (including persistent homology), alignment strategies, and flexible binning. Parallelised, sklearn-integrated, opinion-free about which method you should use."
+      },
+      {
+        "name": "MaldiBatchKit",
+        "role": "Harmonise",
+        "github": "https://github.com/EttoreRocchi/MaldiBatchKit",
+        "pypi": "MaldiBatchKit",
+        "description": "Batch-effect correction tailored to MALDI-TOF data, with leakage-safe cross-validation handling and diagnostics that quantify residual structure after correction. Multi-site by design."
+      },
+      {
+        "name": "MaldiDeepKit",
+        "role": "Classify",
+        "github": "https://github.com/EttoreRocchi/MaldiDeepKit",
+        "pypi": "MaldiDeepKit",
+        "description": "Deep learning models for MALDI-TOF spectra, with calibrated outputs and clinically oriented evaluation (decision thresholds, cost-sensitive metrics, cross-site validation)."
+      }
+    ]
+  },
+  "frameworks": [
+    {
+      "id": "respredai",
+      "name": "ResPredAI",
+      "github": "https://github.com/EttoreRocchi/ResPredAI",
+      "pypi": "ResPredAI",
+      "featured_home": true,
+      "home": {
+        "oneliner": "AI model to predict resistances in Gram-negative bloodstream infections.",
+        "description": "CLI-based ML framework with nested cross-validation, nine model architectures, probability calibration, and threshold optimization for clinical decision-making. Configured via a single .ini file. Published in npj Digital Medicine.",
+        "tags": ["Python", "XGBoost", "PyTorch", "CLI", "PyPI"]
+      },
+      "page": {
+        "oneliner": "A reproducible ML framework for predicting antimicrobial resistance from clinical and microbiology data.",
+        "description": "Built around nested cross-validation with proper hyperparameter selection, nine model architectures (linear, tree-based, kernel methods, neural networks), probability calibration, and decision-threshold optimization. The whole pipeline is configured via a single <code>.ini</code> file and produces reproducible results, including calibration plots, performance tables, and SHAP-based interpretability reports.",
+        "meta": "<strong>Used in:</strong> Bonazzetti C, <strong>Rocchi E</strong>, <em>et al.</em> <em>npj Digital Medicine</em>, 2025",
+        "tags": ["Python", "XGBoost", "PyTorch", "CLI", "PyPI", "AMR"]
+      }
+    },
+    {
+      "id": "phenocluster",
+      "name": "phenocluster",
+      "github": "https://github.com/EttoreRocchi/phenocluster",
+      "pypi": "phenocluster",
+      "featured_home": true,
+      "home": {
+        "oneliner": "Unsupervised clinical phenotype discovery with survival and multi-state modeling.",
+        "description": "Tools for identifying clinically meaningful patient subgroups from heterogeneous cohorts, combining unsupervised clustering with survival analysis and multi-state trajectory modelling for prognostic interpretation.",
+        "tags": ["Python", "clustering", "survival", "phenotyping"]
+      },
+      "page": {
+        "oneliner": "An unsupervised framework for clinical phenotype discovery with survival and multi-state outcomes.",
+        "description": "Combines unsupervised clustering with survival analysis and multi-state trajectory modelling to surface clinically meaningful patient subgroups from heterogeneous cohorts. Designed for prognostic interpretation: every cluster comes with hazard ratios, transition probabilities, statistical reports, and graphical summaries.",
+        "meta": "<strong>Built for:</strong> heterogeneous patient cohorts where outcomes are time-to-event or multi-state",
+        "tags": ["Python", "clustering", "survival", "multi-state", "phenotyping"]
+      }
+    }
+  ],
+  "tools": [
+    {
+      "id": "combatlearn",
+      "name": "combatlearn",
+      "github": "https://github.com/EttoreRocchi/combatlearn",
+      "pypi": "combatlearn",
+      "oneliner": "Scikit-learn compatible ComBat batch-effect correction.",
+      "description": "Integrates Johnson, Fortin (neuroComBat), and Chen (CovBat) harmonization methods into scikit-learn pipelines, with leakage-safe cross-validation handling. Plugs into existing workflows without breaking the <code>scikit-learn</code> API contract.",
+      "tags": ["Python", "scikit-learn", "PyPI", "ComBat"]
+    },
+    {
+      "id": "nestkit",
+      "name": "nestkit",
+      "github": "https://github.com/EttoreRocchi/nestkit",
+      "pypi": "nestkit",
+      "oneliner": "Nested cross-validation with calibration, threshold optimization, and statistical tests.",
+      "description": "A toolkit for the kind of model evaluation that survives peer review: nested CV with proper hyperparameter selection, probability calibration, decision-threshold tuning, and built-in statistical comparisons between models.",
+      "tags": ["Python", "scikit-learn", "nested CV", "calibration"]
+    },
+    {
+      "id": "cats",
+      "name": "CATS",
+      "github": "https://github.com/Physics4MedicineLab/CATS",
+      "pypi": null,
+      "oneliner": "Automated Cas9 PAM-compatibility comparison with ClinVar integration.",
+      "description": "A bioinformatic tool for comparing Cas9 nucleases across clinically relevant genomic contexts. Detects overlapping PAM sites between variants and identifies allele-specific targets arising from pathogenic mutations. Published in Frontiers in Genome Editing (2025).",
+      "tags": ["Python", "CRISPR", "genomics", "bioinformatics"]
+    },
+    {
+      "id": "apobecseeker",
+      "name": "APOBECSeeker",
+      "github": "https://github.com/Physics4MedicineLab/APOBECSeeker",
+      "pypi": null,
+      "oneliner": "APOBEC-style mutation identification from multiple sequence alignment.",
+      "description": "Detects mutational patterns consistent with APOBEC enzyme activity from multiple sequence alignments, supporting downstream statistical description of mutational signatures.",
+      "tags": ["Python", "mutational signatures", "APOBEC", "MSA"]
+    },
+    {
+      "id": "camisim",
+      "name": "CAMISIM-BrokenStick",
+      "github": "https://github.com/Physics4MedicineLab/CAMISIM-BrokenStick",
+      "pypi": null,
+      "oneliner": "Broken-stick model extension for metagenomic simulation.",
+      "description": "Extends the CAMISIM metagenomic simulator with a broken-stick abundance model and a configurable number of strains, producing synthetic communities with controlled relative-abundance distributions for benchmarking metagenomic pipelines.",
+      "tags": ["Python", "metagenomics", "simulation", "benchmarking"]
+    },
+    {
+      "id": "sarcostat",
+      "name": "SarcoStat",
+      "github": "https://github.com/EttoreRocchi/SarcoStat",
+      "pypi": "sarcostat",
+      "oneliner": "Interactive toolkit for sarcomeric morphometry and myofibril linearity analysis.",
+      "description": "Combines image analysis with circular statistics and Monte Carlo simulations to quantify sarcomere geometry (aspect ratio, curviness, shape index) and myofibril alignment in skeletal-muscle micrographs.",
+      "tags": ["Python", "morphometry", "image analysis", "circular statistics"]
+    }
+  ]
+}

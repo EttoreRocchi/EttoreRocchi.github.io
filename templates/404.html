@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Page not found - Ettore Rocchi{% endblock %}
+{% block description %}The page you were looking for does not exist on Ettore Rocchi's website.{% endblock %}
+{% block robots %}<meta name="robots" content="noindex">{% endblock %}
+
+{% block head_extra %}
+  <style>
+    .notfound {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .notfound-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(4rem, 18vw, 9rem);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin: 0;
+      color: var(--color-accent, #2c3e6b);
+    }
+    .notfound h1 {
+      margin: 1rem 0 0.75rem;
+    }
+    .notfound p {
+      max-width: 32rem;
+      margin: 0 auto 2rem;
+    }
+    .notfound .hero-buttons {
+      justify-content: center;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <section class="notfound">
+    <div class="container">
+      <p class="notfound-code">404</p>
+      <h1>This page could not be found</h1>
+      <p>
+        The link may be broken, or the page may have moved - a bit like a result
+        that didn't survive multiple-testing correction. Let's get you back to
+        somewhere that exists.
+      </p>
+      <div class="hero-buttons">
+        <a href="/" class="btn btn-primary">Back home</a>
+        <a href="/publications.html" class="btn btn-outline">Publications</a>
+        <a href="/projects.html" class="btn btn-outline">Projects</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}News - Ettore Rocchi{% endblock %}
+{% block description %}Recent news from Ettore Rocchi - papers, software releases, conferences, and research visits in biomedical data science and applied physics.{% endblock %}
+{% block og_description %}Recent updates from Ettore Rocchi: papers, software, conferences, visits.{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">News</p>
+      <h1>What's happening.</h1>
+      <p class="page-lede">
+        A chronological record of papers, software releases, conferences, and research visits.
+        The home page shows the three most recent - the full archive lives here.
+      </p>
+    </div>
+  </header>
+
+  <section id="news-archive">
+    <div class="container">
+      <div id="news-feed" class="news-feed fade-in">
+        <ol class="news-list">
+          {% for item in news %}
+          {{ m.news_item(item, loop.index0) }}
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="back-cta">
+    <div class="container">
+      <a href="/publications.html" class="btn btn-outline">Browse publications &#8594;</a>
+      <a href="/projects.html" class="btn btn-outline">Browse projects &#8594;</a>
+    </div>
+  </section>
+{% endblock %}

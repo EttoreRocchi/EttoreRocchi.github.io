@@ -1,7 +1,7 @@
 # EttoreRocchi.github.io - local development
-# The site is plain HTML/CSS/JS. No build step.
-# A local HTTP server is required so that fetch('data/news.json') works
-# (browsers block fetch over file://).
+# The published site is plain HTML/CSS/JS. Pages are rendered from
+# templates/ + data/ by `make build` (Python + jinja2), then committed.
+# A local HTTP server is required because links are root-relative (/css/...).
 
 PORT     ?= 8000
 URL      := http://localhost:$(PORT)
@@ -23,7 +23,7 @@ http.server.test(H, port=int(sys.argv[1]), bind="127.0.0.1")
 endef
 export NO_CACHE_SERVER
 
-.PHONY: help serve serve-bg stop restart status open vscode dev dev-vscode clean build-pubs
+.PHONY: help serve serve-bg stop restart status open vscode dev dev-vscode clean build build-pubs
 
 help:
 	@echo "EttoreRocchi.github.io - local dev"
@@ -44,7 +44,8 @@ help:
 	@echo "  make vscode       hint to open in VS Code's Simple Browser"
 	@echo ""
 	@echo "Build:"
-	@echo "  make build-pubs   refresh data/publications.json from Scopus + CrossRef"
+	@echo "  make build        render templates/ + data/ into the HTML pages"
+	@echo "  make build-pubs   refresh data/publications.json from Scopus + CrossRef, then build"
 	@echo ""
 	@echo "  make clean        remove pid/log files and __pycache__"
 	@echo ""
@@ -123,13 +124,13 @@ clean: stop
 	@find . -name "*.pyc" -delete 2>/dev/null || true
 	@echo ">>> Cleaned."
 
+build:
+	@python3 scripts/build_site.py
+
 build-pubs:
-	@if [ ! -f scripts/build_publications.py ]; then \
-		echo "!!! scripts/build_publications.py not found. The scripts/ folder is gitignored - restore it from your backup."; \
-		exit 1; \
-	fi
 	@if [ ! -f scripts/.env ]; then \
 		echo "!!! scripts/.env not found. Copy scripts/.env.example to scripts/.env and add your SCOPUS_API_KEY first."; \
 		exit 1; \
 	fi
 	@python3 scripts/build_publications.py
+	@$(MAKE) --no-print-directory build

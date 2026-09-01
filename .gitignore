@@ -6,10 +6,11 @@ TODO.md
 # remove this entry or un-ignore specific files (e.g. !cv/ettore-rocchi-cv.pdf).
 cv/
 
-# Build tooling. Not part of the published site. The OUTPUT of these scripts
-# (e.g. data/publications.json) IS committed; only the scripts themselves
-# AND their .env / .env.example files are local-only.
-scripts/
+# Build tooling lives in scripts/ and IS tracked (templates/ + data/ -> pages).
+# Only the Scopus API key and Python caches stay local.
+scripts/.env
+__pycache__/
+*.pyc
 
 # Local server housekeeping
 .serve.pid

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Projects - Ettore Rocchi{% endblock %}
+{% block description %}Open-source software by Ettore Rocchi - MaldiSuite for MALDI-TOF antimicrobial resistance pipelines, ResPredAI, phenocluster, combatlearn, nestkit, and bioinformatic tools.{% endblock %}
+{% block og_description %}Open-source tools for biomedical data science: MaldiSuite, ResPredAI, phenocluster, combatlearn, and more.{% endblock %}
+
+{% block content %}
+  {% set eco = projects.ecosystem %}
+  <header class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">Projects</p>
+      <h1>Open-source tools for biomedical data science.</h1>
+      <p class="page-lede">
+        A curated catalog of the software I build and maintain. Most are Python packages,
+        all are open-source, and each was written to solve a problem I actually ran into.
+        Pull requests, issues, and feedback are welcome.
+      </p>
+    </div>
+  </header>
+
+  <section id="{{ eco.id }}" class="project-section">
+    <div class="container">
+      <p class="project-section-label">Flagship ecosystem</p>
+      <div class="project-feature">
+        <div class="project-feature-head">
+          <h2>{{ eco.name }}</h2>
+          <a href="{{ eco.github }}" class="btn btn-outline btn-small" target="_blank" rel="noopener">GitHub &#8599;</a>
+          {% if eco.docs %}<a href="{{ eco.docs }}" class="btn btn-outline btn-small" target="_blank" rel="noopener">Docs &#8599;</a>{% endif %}
+        </div>
+        <p class="project-feature-lede">{{ eco.page.lede }}</p>
+        {{ m.badges(eco) }}
+        <div class="ecosystem-grid">
+          {% for pkg in eco.packages %}
+          <div class="ecosystem-card">
+            <h3>{{ pkg.name }}</h3>
+            <p class="eco-role">{{ pkg.role }}</p>
+            <p>{{ pkg.description }}</p>
+            <a href="{{ pkg.github }}" target="_blank" rel="noopener">{{ pkg.github|replace('https://', '') }} &#8599;</a>
+            {{ m.badges(pkg) }}
+          </div>
+          {% endfor %}
+        </div>
+        {{ m.tags(eco.page.tags) }}
+      </div>
+    </div>
+  </section>
+
+  <section id="frameworks" class="project-section project-section-alt">
+    <div class="container">
+      <p class="project-section-label">Clinical ML frameworks</p>
+      <h2>End-to-end frameworks for clinical questions</h2>
+      <p class="project-section-lede">
+        Self-contained ML frameworks built around a specific clinical question. Each one
+        ships as an installable package with a single configuration file, runs end-to-end
+        from raw inputs to reproducible results and figures, and has been used in peer-reviewed
+        work.
+      </p>
+
+      <div class="frameworks-grid fade-in-stagger">
+        {% for p in projects.frameworks %}
+        <article class="framework-card" id="{{ p.id }}">
+          <div class="framework-card-head">
+            <span class="framework-badge">Framework</span>
+            <h3>{{ p.name }}</h3>
+            <a href="{{ p.github }}" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="framework-oneliner">{{ p.page.oneliner }}</p>
+          <p class="framework-description">{{ p.page.description|safe }}</p>
+          <p class="framework-meta">{{ p.page.meta|safe }}</p>
+          {{ m.badges(p) }}
+          {{ m.tags(p.page.tags) }}
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" class="project-section">
+    <div class="container">
+      <p class="project-section-label">Standalone tools</p>
+      <h2>Single-purpose libraries &amp; bioinformatic tools</h2>
+      <p class="project-section-lede">
+        Focused tools that solve one problem well. Some plug into the frameworks above,
+        others stand on their own and are used by collaborators across labs.
+      </p>
+
+      <div class="projects-grid fade-in-stagger">
+        {% for p in projects.tools %}
+        {{ m.project_card(p, 'page') }}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="back-cta">
+    <div class="container">
+      <a href="/research.html" class="btn btn-outline">Read about the research &#8594;</a>
+      <a href="/publications.html" class="btn btn-outline">See the publications &#8594;</a>
+    </div>
+  </section>
+{% endblock %}

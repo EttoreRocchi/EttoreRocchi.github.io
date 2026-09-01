@@ -7,39 +7,49 @@
   <meta name="description" content="Publication record of Ettore Rocchi - antimicrobial resistance, clinical AI, mass spectrometry, mathematical epidemiology, and computational biology.">
   <meta name="author" content="Ettore Rocchi">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Publications - Ettore Rocchi">
   <meta property="og:description" content="Peer-reviewed publications on AMR, clinical AI, MALDI-TOF, and computational biology.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ettorerocchi.github.io/publications.html">
   <meta property="og:site_name" content="Ettore Rocchi">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:image" content="https://ettorerocchi.github.io/assets/profile_pic.jpeg">
-  <meta property="og:image:alt" content="Ettore Rocchi">
+  <meta property="og:image" content="https://ettorerocchi.github.io/assets/og-card.jpg">
+  <meta property="og:image:alt" content="Ettore Rocchi - Postdoctoral Researcher, University of Bologna">
   <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="852">
-  <meta property="og:image:height" content="852">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Publications - Ettore Rocchi">
   <meta name="twitter:description" content="Peer-reviewed publications on AMR, clinical AI, MALDI-TOF, and computational biology.">
-  <meta name="twitter:image" content="https://ettorerocchi.github.io/assets/profile_pic.jpeg">
-  <meta name="twitter:image:alt" content="Ettore Rocchi">
+  <meta name="twitter:image" content="https://ettorerocchi.github.io/assets/og-card.jpg">
+  <meta name="twitter:image:alt" content="Ettore Rocchi - Postdoctoral Researcher, University of Bologna">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://ettorerocchi.github.io/publications.html">
+<link rel="canonical" href="https://ettorerocchi.github.io/publications.html">
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
 
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+  <noscript><style>.fade-in,.fade-in-stagger>*,.news-item{opacity:1;transform:none}</style></noscript>
 
+  <!-- Prevent flash of wrong theme -->
   <script>
     (function() {
-      const saved = localStorage.getItem('theme');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
       if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -47,33 +57,924 @@
       }
     })();
   </script>
+  <!-- Structured Data: the publication list -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Publications of Ettore Rocchi",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Automated Deauville Score computation from baseline [¹⁸F]FDG PET/CT predicts progression-free survival in multiple myeloma: a radiogenomic framework",
+        "sameAs": "https://doi.org/10.1007/s00259-026-08103-x",
+        "identifier": "10.1007/s00259-026-08103-x",
+        "datePublished": "2026",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "European Journal of Nuclear Medicine and Molecular Imaging"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Polizzi S."
+          },
+          {
+            "@type": "Person",
+            "name": "Pagnini L."
+          },
+          {
+            "@type": "Person",
+            "name": "Tarozzi M."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Dragonetti V."
+          },
+          {
+            "@type": "Person",
+            "name": "Solli V."
+          },
+          {
+            "@type": "Person",
+            "name": "Dall’Olio D."
+          },
+          {
+            "@type": "Person",
+            "name": "Talarico M."
+          },
+          {
+            "@type": "Person",
+            "name": "Terragna C."
+          },
+          {
+            "@type": "Person",
+            "name": "Sala C."
+          },
+          {
+            "@type": "Person",
+            "name": "Zamagni E."
+          },
+          {
+            "@type": "Person",
+            "name": "Fanti S."
+          },
+          {
+            "@type": "Person",
+            "name": "Nanni C."
+          },
+          {
+            "@type": "Person",
+            "name": "Castellani G."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Combining mass spectrometry and machine learning models for predicting Klebsiella pneumoniae antimicrobial resistance: a multicenter experience from clinical isolates in Italy",
+        "sameAs": "https://doi.org/10.1186/s12866-025-04657-2",
+        "identifier": "10.1186/s12866-025-04657-2",
+        "datePublished": "2026",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "BMC Microbiology"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Nicitra E."
+          },
+          {
+            "@type": "Person",
+            "name": "Calvo M."
+          },
+          {
+            "@type": "Person",
+            "name": "Cento V."
+          },
+          {
+            "@type": "Person",
+            "name": "Peiretti L."
+          },
+          {
+            "@type": "Person",
+            "name": "Asif Z."
+          },
+          {
+            "@type": "Person",
+            "name": "Menchinelli G."
+          },
+          {
+            "@type": "Person",
+            "name": "Posteraro B."
+          },
+          {
+            "@type": "Person",
+            "name": "Sala C."
+          },
+          {
+            "@type": "Person",
+            "name": "Colosimo C."
+          },
+          {
+            "@type": "Person",
+            "name": "Cricca M."
+          },
+          {
+            "@type": "Person",
+            "name": "Sambri V."
+          },
+          {
+            "@type": "Person",
+            "name": "Sanguinetti M."
+          },
+          {
+            "@type": "Person",
+            "name": "Castellani G."
+          },
+          {
+            "@type": "Person",
+            "name": "Stefani S."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Impact of whole-brain radiation therapy on neurocognitive functions, alopecia and hearing loss: a systematic review and meta-analysis endorsed by the Palliative Care and Neuro-Oncology Study Groups of the Italian Association of Radiotherapy and Clinical Oncology (AIRO)",
+        "sameAs": "https://doi.org/10.1007/s11547-025-02143-3",
+        "identifier": "10.1007/s11547-025-02143-3",
+        "datePublished": "2025",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Radiologia Medica"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Di Franco R."
+          },
+          {
+            "@type": "Person",
+            "name": "Pezzulla D."
+          },
+          {
+            "@type": "Person",
+            "name": "Chiesa S."
+          },
+          {
+            "@type": "Person",
+            "name": "Cellini F."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Maurizi F."
+          },
+          {
+            "@type": "Person",
+            "name": "Borzillo V."
+          },
+          {
+            "@type": "Person",
+            "name": "Scipilliti E."
+          },
+          {
+            "@type": "Person",
+            "name": "Bonzano E."
+          },
+          {
+            "@type": "Person",
+            "name": "Colombo S."
+          },
+          {
+            "@type": "Person",
+            "name": "Cacciola A."
+          },
+          {
+            "@type": "Person",
+            "name": "Mazzola G.C."
+          },
+          {
+            "@type": "Person",
+            "name": "Bergamaschi L."
+          },
+          {
+            "@type": "Person",
+            "name": "Lillo S."
+          },
+          {
+            "@type": "Person",
+            "name": "De Cicco L."
+          },
+          {
+            "@type": "Person",
+            "name": "Argenone A."
+          },
+          {
+            "@type": "Person",
+            "name": "Arcidiacono F."
+          },
+          {
+            "@type": "Person",
+            "name": "Muto P."
+          },
+          {
+            "@type": "Person",
+            "name": "Deodato F."
+          },
+          {
+            "@type": "Person",
+            "name": "Pinzi V."
+          },
+          {
+            "@type": "Person",
+            "name": "Maranzano E."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Radiomic signatures from postprocedural MRI thalamotomy lesion can predict long-term clinical outcome in patients with tremor after MRgFUS: a pilot study",
+        "sameAs": "https://doi.org/10.3389/fradi.2025.1683274",
+        "identifier": "10.3389/fradi.2025.1683274",
+        "datePublished": "2025",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Frontiers in Radiology"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Innocenzi A."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Bruno F."
+          },
+          {
+            "@type": "Person",
+            "name": "Balducci L."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Bellini M."
+          },
+          {
+            "@type": "Person",
+            "name": "Catalucci A."
+          },
+          {
+            "@type": "Person",
+            "name": "Sucapane P."
+          },
+          {
+            "@type": "Person",
+            "name": "Saporito G."
+          },
+          {
+            "@type": "Person",
+            "name": "Russo T."
+          },
+          {
+            "@type": "Person",
+            "name": "Castellani G."
+          },
+          {
+            "@type": "Person",
+            "name": "Pistoia F."
+          },
+          {
+            "@type": "Person",
+            "name": "Splendiani A."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "CATS: a bioinformatic tool for automated Cas9 nucleases activity comparison in clinically relevant contexts",
+        "sameAs": "https://doi.org/10.3389/fgeed.2025.1571023",
+        "identifier": "10.3389/fgeed.2025.1571023",
+        "datePublished": "2025",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Frontiers in Genome Editing"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Magnani F."
+          },
+          {
+            "@type": "Person",
+            "name": "Castellani G."
+          },
+          {
+            "@type": "Person",
+            "name": "Carusillo A."
+          },
+          {
+            "@type": "Person",
+            "name": "Tarozzi M."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Understanding the evolutionary dynamics of Monkeypox virus through less explored pathways",
+        "sameAs": "https://doi.org/10.1038/s41598-025-11855-5",
+        "identifier": "10.1038/s41598-025-11855-5",
+        "datePublished": "2025",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Scientific Reports"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "De Pascali A.M."
+          },
+          {
+            "@type": "Person",
+            "name": "Ingletto L."
+          },
+          {
+            "@type": "Person",
+            "name": "Brandolini M."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Tarozzi M."
+          },
+          {
+            "@type": "Person",
+            "name": "Turba M.E."
+          },
+          {
+            "@type": "Person",
+            "name": "Casadio R."
+          },
+          {
+            "@type": "Person",
+            "name": "Gentilini F."
+          },
+          {
+            "@type": "Person",
+            "name": "Gatti G."
+          },
+          {
+            "@type": "Person",
+            "name": "Dionisi L."
+          },
+          {
+            "@type": "Person",
+            "name": "Colosimo C."
+          },
+          {
+            "@type": "Person",
+            "name": "Guerra M."
+          },
+          {
+            "@type": "Person",
+            "name": "Zannoli S."
+          },
+          {
+            "@type": "Person",
+            "name": "Dirani G."
+          },
+          {
+            "@type": "Person",
+            "name": "Montanari M.S."
+          },
+          {
+            "@type": "Person",
+            "name": "Marzucco A."
+          },
+          {
+            "@type": "Person",
+            "name": "Grumiro L."
+          },
+          {
+            "@type": "Person",
+            "name": "Rossini G."
+          },
+          {
+            "@type": "Person",
+            "name": "Lazzarotto T."
+          },
+          {
+            "@type": "Person",
+            "name": "Cricca M."
+          },
+          {
+            "@type": "Person",
+            "name": "Castellani G."
+          },
+          {
+            "@type": "Person",
+            "name": "Sambri V."
+          },
+          {
+            "@type": "Person",
+            "name": "Scagliarini A."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data",
+        "sameAs": "https://doi.org/10.3390/e27060602",
+        "identifier": "10.3390/e27060602",
+        "datePublished": "2025",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Entropy"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Giacometti T."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Cojutti P.G."
+          },
+          {
+            "@type": "Person",
+            "name": "Magnani F."
+          },
+          {
+            "@type": "Person",
+            "name": "Remondini D."
+          },
+          {
+            "@type": "Person",
+            "name": "Pea F."
+          },
+          {
+            "@type": "Person",
+            "name": "Castellani G."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections",
+        "sameAs": "https://doi.org/10.1038/s41746-025-01696-x",
+        "identifier": "10.1038/s41746-025-01696-x",
+        "datePublished": "2025",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "npj Digital Medicine"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Bonazzetti C."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Toschi A."
+          },
+          {
+            "@type": "Person",
+            "name": "Derus N.R."
+          },
+          {
+            "@type": "Person",
+            "name": "Sala C."
+          },
+          {
+            "@type": "Person",
+            "name": "Pascale R."
+          },
+          {
+            "@type": "Person",
+            "name": "Rinaldi M."
+          },
+          {
+            "@type": "Person",
+            "name": "Campoli C."
+          },
+          {
+            "@type": "Person",
+            "name": "Pasquini Z.A.I."
+          },
+          {
+            "@type": "Person",
+            "name": "Tazza B."
+          },
+          {
+            "@type": "Person",
+            "name": "Amicucci A."
+          },
+          {
+            "@type": "Person",
+            "name": "Gatti M."
+          },
+          {
+            "@type": "Person",
+            "name": "Ambretti S."
+          },
+          {
+            "@type": "Person",
+            "name": "Viale P."
+          },
+          {
+            "@type": "Person",
+            "name": "Castellani G."
+          },
+          {
+            "@type": "Person",
+            "name": "Giannella M."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Comparing Heterologous and Homologous COVID-19 Vaccination: A Longitudinal Study of Antibody Decay",
+        "sameAs": "https://doi.org/10.3390/v15051162",
+        "identifier": "10.3390/v15051162",
+        "datePublished": "2023",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Viruses"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Orlandi C."
+          },
+          {
+            "@type": "Person",
+            "name": "Stefanetti G."
+          },
+          {
+            "@type": "Person",
+            "name": "Barocci S."
+          },
+          {
+            "@type": "Person",
+            "name": "Buffi G."
+          },
+          {
+            "@type": "Person",
+            "name": "Diotallevi A."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Ceccarelli M."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Vandini D."
+          },
+          {
+            "@type": "Person",
+            "name": "Carlotti E."
+          },
+          {
+            "@type": "Person",
+            "name": "Magnani M."
+          },
+          {
+            "@type": "Person",
+            "name": "Galluzzi L."
+          },
+          {
+            "@type": "Person",
+            "name": "Casabianca A."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Letter to the Editor Regarding “The Effect of Hippocampal Avoidance Whole Brain Radiotherapy on the Preservation of Long-Term Neurocognitive Function in Non-Small Cell Lung Cancer Patients with Brain Metastasis”",
+        "sameAs": "https://doi.org/10.1177/15330338231169599",
+        "identifier": "10.1177/15330338231169599",
+        "datePublished": "2023",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Technology in Cancer Research and Treatment"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Pezzulla D."
+          },
+          {
+            "@type": "Person",
+            "name": "Maurizi F."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "De Cicco L."
+          },
+          {
+            "@type": "Person",
+            "name": "Chiesa S."
+          },
+          {
+            "@type": "Person",
+            "name": "di Franco R."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "New indexes for myofibril linearity in muscle image analysis",
+        "sameAs": "https://doi.org/10.4081/ejtm.2022.10736",
+        "identifier": "10.4081/ejtm.2022.10736",
+        "datePublished": "2022",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "European Journal of Translational Myology"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Amatori S."
+          },
+          {
+            "@type": "Person",
+            "name": "Sisti D."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "A New Epidemic Model for the COVID-19 Pandemic: The θ-SI(R)D Model",
+        "sameAs": "https://doi.org/10.3390/biomedinformatics2030025",
+        "identifier": "10.3390/biomedinformatics2030025",
+        "datePublished": "2022",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "BioMedInformatics"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Sisti D."
+          },
+          {
+            "@type": "Person",
+            "name": "Carletti M."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "A new regression model for the forecasting of COVID-19 outbreak evolution: an application to Italian data",
+        "sameAs": "https://doi.org/10.1080/24709360.2021.1978270",
+        "identifier": "10.1080/24709360.2021.1978270",
+        "datePublished": "2021",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Biostatistics and Epidemiology"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sisti D."
+          },
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Amatori S."
+          },
+          {
+            "@type": "Person",
+            "name": "Carletti M."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "Using Pre-and Posttest Predictive Probabilities to Evaluate Diagnostic Test Is a Confusing Habit",
+        "sameAs": "https://doi.org/10.1097/CCM.0000000000004606",
+        "identifier": "10.1097/CCM.0000000000004606",
+        "datePublished": "2020",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "Critical Care Medicine"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Sisti D."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": "A Possible Scenario for the Covid-19 Epidemic, Based on the SI(R) Model",
+        "sameAs": "https://doi.org/10.1007/s42399-020-00306-z",
+        "identifier": "10.1007/s42399-020-00306-z",
+        "datePublished": "2020",
+        "isPartOf": {
+          "@type": "Periodical",
+          "name": "SN Comprehensive Clinical Medicine"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Rocchi E."
+          },
+          {
+            "@type": "Person",
+            "name": "Peluso S."
+          },
+          {
+            "@type": "Person",
+            "name": "Sisti D."
+          },
+          {
+            "@type": "Person",
+            "name": "Carletti M."
+          }
+        ]
+      }
+    }
+  ]
+}</script>
 </head>
 <body data-page="publications">
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav-logo">ER</a>
-      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <a href="/" class="nav-logo" aria-label="ER - Ettore Rocchi, home">ER</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="nav-menu">
+      <div class="nav-menu" id="nav-menu">
         <ul class="nav-links">
-          <li><a href="index.html" data-nav="about">About</a></li>
-          <li><a href="research.html" data-nav="research">Research</a></li>
-          <li><a href="projects.html" data-nav="projects">Projects</a></li>
-          <li><a href="publications.html" data-nav="publications">Publications</a></li>
-          <li><a href="news.html" data-nav="news">News</a></li>
+          <li><a href="/" data-nav="about">About</a></li>
+          <li><a href="/research.html" data-nav="research">Research</a></li>
+          <li><a href="/projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="/publications.html" data-nav="publications" aria-current="page">Publications</a></li>
+          <li><a href="/education.html" data-nav="education">Education</a></li>
+          <li><a href="/news.html" data-nav="news">News</a></li>
         </ul>
       </div>
-      <button class="theme-toggle" aria-label="Toggle dark mode">
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
         <span class="icon-sun">&#9788;</span>
         <span class="icon-moon">&#9790;</span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
   <header class="page-header">
     <div class="container">
       <p class="page-eyebrow">Publications</p>
@@ -98,25 +999,40 @@
             aria-label="Filter publications"
             autocomplete="off"
           >
-          <button class="pub-search-clear" id="pubSearchClear" aria-label="Clear search" hidden>&times;</button>
+          <button type="button" class="pub-search-clear" id="pubSearchClear" aria-label="Clear search" hidden>&times;</button>
         </div>
-        <button type="button" id="pubBibDownload" class="pub-bib-download" title="Download currently visible publications as a .bib file">
+        <button type="button" id="pubBibDownload" class="pub-bib-download" title="Download all publications as a single .bib file">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
           <span class="pub-bib-label">Download <span class="pub-bib-mode">all</span> .bib</span>
-          <span class="pub-bib-count" id="pubBibCount" aria-hidden="true">&mdash;</span>
+          <span class="pub-bib-count" id="pubBibCount" aria-hidden="true">15</span>
         </button>
       </div>
-      <div class="pub-facet" id="pubTypeFacet" hidden>
+      <div class="pub-facet" id="pubTypeFacet">
         <span class="pub-facet-label">Type</span>
-        <div class="pub-type-filter" id="pubTypeFilter" role="toolbar" aria-label="Filter by document type"></div>
+        <div class="pub-type-filter" id="pubTypeFilter" role="group" aria-label="Filter by document type">
+          <button type="button" class="pub-type-pill active" data-value="all" aria-pressed="true">All <span class="pub-type-pill-count">15</span></button>
+<button type="button" class="pub-type-pill" data-value="Article" aria-pressed="false">Article <span class="pub-type-pill-count">12</span></button>
+<button type="button" class="pub-type-pill" data-value="Letter" aria-pressed="false">Letter <span class="pub-type-pill-count">2</span></button>
+<button type="button" class="pub-type-pill" data-value="Review" aria-pressed="false">Review <span class="pub-type-pill-count">1</span></button>
+
+        </div>
       </div>
-      <div class="pub-facet" id="pubYearFacet" hidden>
+      <div class="pub-facet" id="pubYearFacet">
         <span class="pub-facet-label">Year</span>
-        <div class="pub-type-filter" id="pubYearFilter" role="toolbar" aria-label="Filter by year"></div>
+        <div class="pub-type-filter" id="pubYearFilter" role="group" aria-label="Filter by year">
+          <button type="button" class="pub-type-pill active" data-value="all" aria-pressed="true">All <span class="pub-type-pill-count">15</span></button>
+<button type="button" class="pub-type-pill" data-value="2026" aria-pressed="false">2026 <span class="pub-type-pill-count">2</span></button>
+<button type="button" class="pub-type-pill" data-value="2025" aria-pressed="false">2025 <span class="pub-type-pill-count">6</span></button>
+<button type="button" class="pub-type-pill" data-value="2023" aria-pressed="false">2023 <span class="pub-type-pill-count">2</span></button>
+<button type="button" class="pub-type-pill" data-value="2022" aria-pressed="false">2022 <span class="pub-type-pill-count">2</span></button>
+<button type="button" class="pub-type-pill" data-value="2021" aria-pressed="false">2021 <span class="pub-type-pill-count">1</span></button>
+<button type="button" class="pub-type-pill" data-value="2020" aria-pressed="false">2020 <span class="pub-type-pill-count">2</span></button>
+
+        </div>
       </div>
       <p class="pub-search-meta" id="pubSearchMeta" aria-live="polite"></p>
     </div>
@@ -124,49 +1040,393 @@
 
   <section id="publications-list">
     <div class="container">
-      <ol class="pub-list fade-in" id="pub-list" aria-live="polite">
-        <li class="pub-item-skeleton" aria-hidden="true">
-          <div class="pub-meta-skel"></div>
-          <div class="pub-title-skel"></div>
-          <div class="pub-authors-skel"></div>
-        </li>
-        <li class="pub-item-skeleton" aria-hidden="true">
-          <div class="pub-meta-skel"></div>
-          <div class="pub-title-skel"></div>
-          <div class="pub-authors-skel"></div>
-        </li>
-        <li class="pub-item-skeleton" aria-hidden="true">
-          <div class="pub-meta-skel"></div>
-          <div class="pub-title-skel"></div>
-          <div class="pub-authors-skel"></div>
-        </li>
+      <ol class="pub-list fade-in" id="pub-list">
+        <li class="pub-item" data-year="2026" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2026</span><span class="pub-journal">European Journal of Nuclear Medicine and Molecular Imaging</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Automated Deauville Score computation from baseline [¹⁸F]FDG PET/CT predicts progression-free survival in multiple myeloma: a radiogenomic framework</p>
+  <p class="pub-authors">Peluso S., Polizzi S., Pagnini L., Tarozzi M., <strong>Rocchi E</strong>., Dragonetti V., Solli V., Dall’Olio D., Talarico M., Terragna C., Sala C., Zamagni E., Fanti S., Nanni C., Castellani G.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1007/s00259-026-08103-x" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Peluso_2026,
+  title={Automated Deauville Score computation from baseline [¹⁸F]FDG PET/CT predicts progression-free survival in multiple myeloma: a radiogenomic framework},
+  ISSN={1619-7089},
+  url={http://dx.doi.org/10.1007/s00259-026-08103-x},
+  DOI={10.1007/s00259-026-08103-x},
+  journal={European Journal of Nuclear Medicine and Molecular Imaging},
+  publisher={Springer Science and Business Media LLC},
+  author={Peluso, Sara and Polizzi, Stefano and Pagnini, Lisa and Tarozzi, Martina and Rocchi, Ettore and Dragonetti, Valentino and Solli, Vincenza and Dall’Olio, Daniele and Talarico, Marco and Terragna, Carolina and Sala, Claudia and Zamagni, Elena and Fanti, Stefano and Nanni, Cristina and Castellani, Gastone},
+  year={2026},
+  month=July
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2026" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2026</span><span class="pub-journal">BMC Microbiology</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Combining mass spectrometry and machine learning models for predicting Klebsiella pneumoniae antimicrobial resistance: a multicenter experience from clinical isolates in Italy</p>
+  <p class="pub-authors"><strong>Rocchi E</strong>., Nicitra E., Calvo M., Cento V., Peiretti L., Asif Z., Menchinelli G., Posteraro B., Sala C., Colosimo C., Cricca M., Sambri V., Sanguinetti M., Castellani G., Stefani S.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1186/s12866-025-04657-2" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Rocchi_2026,
+  title={Combining mass spectrometry and machine learning models for predicting Klebsiella pneumoniae antimicrobial resistance: a multicenter experience from clinical isolates in Italy},
+  volume={26},
+  ISSN={1471-2180},
+  url={http://dx.doi.org/10.1186/s12866-025-04657-2},
+  DOI={10.1186/s12866-025-04657-2},
+  number={1},
+  journal={BMC Microbiology},
+  publisher={Springer Science and Business Media LLC},
+  author={Rocchi, Ettore and Nicitra, Emanuele and Calvo, Maddalena and Cento, Valeria and Peiretti, Laura and Asif, Zian and Menchinelli, Giulia and Posteraro, Brunella and Sala, Claudia and Colosimo, Claudia and Cricca, Monica and Sambri, Vittorio and Sanguinetti, Maurizio and Castellani, Gastone and Stefani, Stefania},
+  year={2026},
+  month=Jan
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2025" data-type="Review">
+  <div class="pub-meta">
+<span class="pub-year">2025</span><span class="pub-journal">Radiologia Medica</span>  </div>
+  <p class="pub-title">Impact of whole-brain radiation therapy on neurocognitive functions, alopecia and hearing loss: a systematic review and meta-analysis endorsed by the Palliative Care and Neuro-Oncology Study Groups of the Italian Association of Radiotherapy and Clinical Oncology (AIRO)</p>
+  <p class="pub-authors">Di Franco R., Pezzulla D., Chiesa S., Cellini F., <strong>Rocchi E</strong>., Peluso S., Maurizi F., Borzillo V., Scipilliti E., Bonzano E., Colombo S., Cacciola A., Mazzola G.C., Bergamaschi L., Lillo S., De Cicco L., Argenone A., Arcidiacono F., Muto P., Deodato F., Pinzi V., Maranzano E.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1007/s11547-025-02143-3" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Di_Franco_2025,
+  title={Impact of whole-brain radiation therapy on neurocognitive functions, alopecia and hearing loss: a systematic review and meta-analysis endorsed by the Palliative Care and Neuro-Oncology Study Groups of the Italian Association of Radiotherapy and Clinical Oncology (AIRO)},
+  volume={131},
+  ISSN={1826-6983},
+  url={http://dx.doi.org/10.1007/s11547-025-02143-3},
+  DOI={10.1007/s11547-025-02143-3},
+  number={3},
+  journal={La radiologia medica},
+  publisher={Springer Science and Business Media LLC},
+  author={Di Franco, Rossella and Pezzulla, Donato and Chiesa, Silvia and Cellini, Francesco and Rocchi, Ettore and Peluso, Sara and Maurizi, Francesca and Borzillo, Valentina and Scipilliti, Esmeralda and Bonzano, Elisabetta and Colombo, Sara and Cacciola, Alberto and Mazzola, Giovanni Carlo and Bergamaschi, Luca and Lillo, Sara and De Cicco, Luigi and Argenone, Angela and Arcidiacono, Fabio and Muto, Paolo and Deodato, Francesco and Pinzi, Valentina and Maranzano, Ernesto},
+  year={2025},
+  month=Nov,
+  pages={508–530}
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2025" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2025</span><span class="pub-journal">Frontiers in Radiology</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Radiomic signatures from postprocedural MRI thalamotomy lesion can predict long-term clinical outcome in patients with tremor after MRgFUS: a pilot study</p>
+  <p class="pub-authors">Innocenzi A., Peluso S., Bruno F., Balducci L., <strong>Rocchi E</strong>., Bellini M., Catalucci A., Sucapane P., Saporito G., Russo T., Castellani G., Pistoia F., Splendiani A.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.3389/fradi.2025.1683274" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Innocenzi_2025,
+  title={Radiomic signatures from postprocedural MRI thalamotomy lesion can predict long-term clinical outcome in patients with tremor after MRgFUS: a pilot study},
+  volume={5},
+  ISSN={2673-8740},
+  url={http://dx.doi.org/10.3389/fradi.2025.1683274},
+  DOI={10.3389/fradi.2025.1683274},
+  journal={Frontiers in Radiology},
+  publisher={Frontiers Media SA},
+  author={Innocenzi, Antonio and Peluso, Sara and Bruno, Federico and Balducci, Laura and Rocchi, Ettore and Bellini, Michela and Catalucci, Alessia and Sucapane, Patrizia and Saporito, Gennaro and Russo, Tommasina and Castellani, Gastone and Pistoia, Francesca and Splendiani, Alessandra},
+  year={2025},
+  month=Nov
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2025" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2025</span><span class="pub-journal">Frontiers in Genome Editing</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">CATS: a bioinformatic tool for automated Cas9 nucleases activity comparison in clinically relevant contexts</p>
+  <p class="pub-authors"><strong>Rocchi E</strong>., Magnani F., Castellani G., Carusillo A., Tarozzi M.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.3389/fgeed.2025.1571023" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Rocchi_2025,
+  title={CATS: a bioinformatic tool for automated Cas9 nucleases activity comparison in clinically relevant contexts},
+  volume={7},
+  ISSN={2673-3439},
+  url={http://dx.doi.org/10.3389/fgeed.2025.1571023},
+  DOI={10.3389/fgeed.2025.1571023},
+  journal={Frontiers in Genome Editing},
+  publisher={Frontiers Media SA},
+  author={Rocchi, Ettore and Magnani, Federico and Castellani, Gastone and Carusillo, Antonio and Tarozzi, Martina},
+  year={2025},
+  month=July
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2025" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2025</span><span class="pub-journal">Scientific Reports</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Understanding the evolutionary dynamics of Monkeypox virus through less explored pathways</p>
+  <p class="pub-authors">De Pascali A.M., Ingletto L., Brandolini M., <strong>Rocchi E</strong>., Tarozzi M., Turba M.E., Casadio R., Gentilini F., Gatti G., Dionisi L., Colosimo C., Guerra M., Zannoli S., Dirani G., Montanari M.S., Marzucco A., Grumiro L., Rossini G., Lazzarotto T., Cricca M., Castellani G., Sambri V., Scagliarini A.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1038/s41598-025-11855-5" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{De_Pascali_2025,
+  title={Understanding the evolutionary dynamics of Monkeypox virus through less explored pathways},
+  volume={15},
+  ISSN={2045-2322},
+  url={http://dx.doi.org/10.1038/s41598-025-11855-5},
+  DOI={10.1038/s41598-025-11855-5},
+  number={1},
+  journal={Scientific Reports},
+  publisher={Springer Science and Business Media LLC},
+  author={De Pascali, Alessandra Mistral and Ingletto, Ludovica and Brandolini, Martina and Rocchi, Ettore and Tarozzi, Martina and Turba, Maria Elena and Casadio, Rita and Gentilini, Fabio and Gatti, Giulia and Dionisi, Laura and Colosimo, Claudia and Guerra, Massimiliano and Zannoli, Silvia and Dirani, Giorgio and Montanari, Maria Sofia and Marzucco, Anna and Grumiro, Laura and Rossini, Giada and Lazzarotto, Tiziana and Cricca, Monica and Castellani, Gastone and Sambri, Vittorio and Scagliarini, Alessandra},
+  year={2025},
+  month=July
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2025" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2025</span><span class="pub-journal">Entropy</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data</p>
+  <p class="pub-authors">Giacometti T., <strong>Rocchi E</strong>., Cojutti P.G., Magnani F., Remondini D., Pea F., Castellani G.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.3390/e27060602" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Giacometti_2025,
+  title={Leveraging Neural ODEs for Population Pharmacokinetics of Dalbavancin in Sparse Clinical Data},
+  volume={27},
+  ISSN={1099-4300},
+  url={http://dx.doi.org/10.3390/e27060602},
+  DOI={10.3390/e27060602},
+  number={6},
+  journal={Entropy},
+  publisher={MDPI AG},
+  author={Giacometti, Tommaso and Rocchi, Ettore and Cojutti, Pier Giorgio and Magnani, Federico and Remondini, Daniel and Pea, Federico and Castellani, Gastone},
+  year={2025},
+  month=June,
+  pages={602}
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2025" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2025</span><span class="pub-journal">npj Digital Medicine</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections</p>
+  <p class="pub-authors">Bonazzetti C., <strong>Rocchi E</strong>., Toschi A., Derus N.R., Sala C., Pascale R., Rinaldi M., Campoli C., Pasquini Z.A.I., Tazza B., Amicucci A., Gatti M., Ambretti S., Viale P., Castellani G., Giannella M.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1038/s41746-025-01696-x" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Bonazzetti_2025,
+  title={Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections},
+  volume={8},
+  ISSN={2398-6352},
+  url={http://dx.doi.org/10.1038/s41746-025-01696-x},
+  DOI={10.1038/s41746-025-01696-x},
+  number={1},
+  journal={npj Digital Medicine},
+  publisher={Springer Science and Business Media LLC},
+  author={Bonazzetti, Cecilia and Rocchi, Ettore and Toschi, Alice and Derus, Nicolas Riccardo and Sala, Claudia and Pascale, Renato and Rinaldi, Matteo and Campoli, Caterina and Pasquini, Zeno Adrien Igor and Tazza, Beatrice and Amicucci, Armando and Gatti, Milo and Ambretti, Simone and Viale, Pierluigi and Castellani, Gastone and Giannella, Maddalena},
+  year={2025},
+  month=May
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2023" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2023</span><span class="pub-journal">Viruses</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Comparing Heterologous and Homologous COVID-19 Vaccination: A Longitudinal Study of Antibody Decay</p>
+  <p class="pub-authors">Orlandi C., Stefanetti G., Barocci S., Buffi G., Diotallevi A., <strong>Rocchi E</strong>., Ceccarelli M., Peluso S., Vandini D., Carlotti E., Magnani M., Galluzzi L., Casabianca A.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.3390/v15051162" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Orlandi_2023,
+  title={Comparing Heterologous and Homologous COVID-19 Vaccination: A Longitudinal Study of Antibody Decay},
+  volume={15},
+  ISSN={1999-4915},
+  url={http://dx.doi.org/10.3390/v15051162},
+  DOI={10.3390/v15051162},
+  number={5},
+  journal={Viruses},
+  publisher={MDPI AG},
+  author={Orlandi, Chiara and Stefanetti, Giuseppe and Barocci, Simone and Buffi, Gloria and Diotallevi, Aurora and Rocchi, Ettore and Ceccarelli, Marcello and Peluso, Sara and Vandini, Daniela and Carlotti, Eugenio and Magnani, Mauro and Galluzzi, Luca and Casabianca, Anna},
+  year={2023},
+  month=May,
+  pages={1162}
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2023" data-type="Letter">
+  <div class="pub-meta">
+<span class="pub-year">2023</span><span class="pub-journal">Technology in Cancer Research and Treatment</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">Letter to the Editor Regarding “The Effect of Hippocampal Avoidance Whole Brain Radiotherapy on the Preservation of Long-Term Neurocognitive Function in Non-Small Cell Lung Cancer Patients with Brain Metastasis”</p>
+  <p class="pub-authors">Pezzulla D., Maurizi F., <strong>Rocchi E</strong>., Peluso S., De Cicco L., Chiesa S., di Franco R.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1177/15330338231169599" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Pezzulla_2023,
+  title={Letter to the Editor Regarding “The Effect of Hippocampal Avoidance Whole Brain Radiotherapy on the Preservation of  Long-Term Neurocognitive Function in  Non-Small Cell Lung Cancer Patients with Brain Metastasis”},
+  volume={22},
+  ISSN={1533-0338},
+  url={http://dx.doi.org/10.1177/15330338231169599},
+  DOI={10.1177/15330338231169599},
+  journal={Technology in Cancer Research &amp;amp; Treatment},
+  publisher={SAGE Publications},
+  author={Pezzulla, Donato and Maurizi, Francesca and Rocchi, Ettore and Peluso, Sara and De Cicco, Luigi and Chiesa, Silvia and di Franco, Rossella},
+  year={2023},
+  month=Jan
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2022" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2022</span><span class="pub-journal">European Journal of Translational Myology</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">New indexes for myofibril linearity in muscle image analysis</p>
+  <p class="pub-authors"><strong>Rocchi E</strong>., Peluso S., Amatori S., Sisti D.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.4081/ejtm.2022.10736" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Rocchi_2022,
+  title={New indexes for myofibril linearity in muscle image analysis},
+  ISSN={2037-7452},
+  url={http://dx.doi.org/10.4081/ejtm.2022.10736},
+  DOI={10.4081/ejtm.2022.10736},
+  journal={European Journal of Translational Myology},
+  publisher={PAGEPress Publications},
+  author={Rocchi, Ettore and Peluso, Sara and Amatori, Stefano and Sisti, Davide},
+  year={2022},
+  month=Oct
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2022" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2022</span><span class="pub-journal">BioMedInformatics</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">A New Epidemic Model for the COVID-19 Pandemic: The θ-SI(R)D Model</p>
+  <p class="pub-authors"><strong>Rocchi E</strong>., Peluso S., Sisti D., Carletti M.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.3390/biomedinformatics2030025" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Rocchi_2022,
+  title={A New Epidemic Model for the COVID-19 Pandemic: The θ-SI(R)D Model},
+  volume={2},
+  ISSN={2673-7426},
+  url={http://dx.doi.org/10.3390/biomedinformatics2030025},
+  DOI={10.3390/biomedinformatics2030025},
+  number={3},
+  journal={BioMedInformatics},
+  publisher={MDPI AG},
+  author={Rocchi, Ettore and Peluso, Sara and Sisti, Davide and Carletti, Margherita},
+  year={2022},
+  month=Aug,
+  pages={398–404}
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2021" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2021</span><span class="pub-journal">Biostatistics and Epidemiology</span>  </div>
+  <p class="pub-title">A new regression model for the forecasting of COVID-19 outbreak evolution: an application to Italian data</p>
+  <p class="pub-authors">Sisti D., <strong>Rocchi E</strong>., Peluso S., Amatori S., Carletti M.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1080/24709360.2021.1978270" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Sisti_2021,
+  title={A new regression model for the forecasting of COVID-19 outbreak evolution: an application to Italian data},
+  volume={6},
+  ISSN={2470-9379},
+  url={http://dx.doi.org/10.1080/24709360.2021.1978270},
+  DOI={10.1080/24709360.2021.1978270},
+  number={1},
+  journal={Biostatistics &amp;amp; Epidemiology},
+  publisher={Informa UK Limited},
+  author={Sisti, Davide and Rocchi, Ettore and Peluso, Sara and Amatori, Stefano and Carletti, Margherita},
+  year={2021},
+  month=Oct,
+  pages={48–56}
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2020" data-type="Letter">
+  <div class="pub-meta">
+<span class="pub-year">2020</span><span class="pub-journal">Critical Care Medicine</span>  </div>
+  <p class="pub-title">Using Pre-and Posttest Predictive Probabilities to Evaluate Diagnostic Test Is a Confusing Habit</p>
+  <p class="pub-authors"><strong>Rocchi E</strong>., Peluso S., Sisti D.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1097/CCM.0000000000004606" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Rocchi_2020,
+  title={Using Pre- and Posttest Predictive Probabilities to Evaluate Diagnostic Test Is a Confusing Habit},
+  volume={48},
+  ISSN={0090-3493},
+  url={http://dx.doi.org/10.1097/CCM.0000000000004606},
+  DOI={10.1097/ccm.0000000000004606},
+  number={12},
+  journal={Critical Care Medicine},
+  publisher={Ovid Technologies (Wolters Kluwer Health)},
+  author={Rocchi, Ettore and Peluso, Sara and Sisti, Davide},
+  year={2020},
+  month=Nov,
+  pages={e1374–e1375}
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
+        <li class="pub-item" data-year="2020" data-type="Article">
+  <div class="pub-meta">
+<span class="pub-year">2020</span><span class="pub-journal">SN Comprehensive Clinical Medicine</span><span class="pub-oa">Open Access</span>  </div>
+  <p class="pub-title">A Possible Scenario for the Covid-19 Epidemic, Based on the SI(R) Model</p>
+  <p class="pub-authors"><strong>Rocchi E</strong>., Peluso S., Sisti D., Carletti M.</p>
+  <div class="pub-links">
+<a href="https://doi.org/10.1007/s42399-020-00306-z" target="_blank" rel="noopener">DOI &#8599;</a>    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">@article{Rocchi_2020,
+  title={A Possible Scenario for the Covid-19 Epidemic, Based on the SI(R) Model},
+  volume={2},
+  ISSN={2523-8973},
+  url={http://dx.doi.org/10.1007/s42399-020-00306-z},
+  DOI={10.1007/s42399-020-00306-z},
+  number={5},
+  journal={SN Comprehensive Clinical Medicine},
+  publisher={Springer Science and Business Media LLC},
+  author={Rocchi, Ettore and Peluso, Sara and Sisti, Davide and Carletti, Margherita},
+  year={2020},
+  month=May,
+  pages={501–503}
+}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+  </div>
+</li>
       </ol>
-
-      <p class="pub-error" id="pubError" hidden>Couldn&rsquo;t load publications. <button class="pub-error-retry" id="pubErrorRetry">Try again</button></p>
 
       <div class="pub-empty" id="pubEmpty" hidden>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7"/>
           <line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
-        <p>No publications match &ldquo;<span id="pubEmptyQuery"></span>&rdquo;.</p>
-        <button class="btn btn-outline" id="pubEmptyClear">Clear filter</button>
+        <p>No publications match <span id="pubEmptyQuery"></span>.</p>
+        <button type="button" class="btn btn-outline" id="pubEmptyClear">Clear filters</button>
       </div>
     </div>
   </section>
 
   <section class="back-cta">
     <div class="container">
-      <a href="research.html" class="btn btn-outline">Read about the research &#8594;</a>
-      <a href="projects.html" class="btn btn-outline">Browse the projects &#8594;</a>
+      <a href="/research.html" class="btn btn-outline">Read about the research &#8594;</a>
+      <a href="/projects.html" class="btn btn-outline">Browse the projects &#8594;</a>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-row">
-        <a href="mailto:ettore.rocchi3@unibo.it" class="footer-email" aria-label="Email">ettore.rocchi3@unibo.it</a>
-        <div class="footer-socials" aria-label="Social links">
+        <a href="mailto:ettore.rocchi3@unibo.it" class="footer-email">ettore.rocchi3@unibo.it</a>
+        <nav class="footer-socials" aria-label="Social links">
           <a href="https://github.com/EttoreRocchi" class="footer-social" target="_blank" rel="noopener" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
@@ -185,12 +1445,12 @@
           <a href="https://www.scopus.com/authid/detail.uri?authorId=57220152522" class="footer-social" target="_blank" rel="noopener" aria-label="Scopus">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2a10 10 0 110 20 10 10 0 010-20zm-1.5 5v10h3V7h-3z"/></svg>
           </a>
-        </div>
+        </nav>
       </div>
       <p class="footer-copyright">&copy; 2026 Ettore Rocchi. Built with care, no frameworks were harmed.</p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

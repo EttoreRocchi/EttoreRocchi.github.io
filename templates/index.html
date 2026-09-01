@@ -1,0 +1,414 @@
+{% extends "base.html" %}
+{% block title %}Ettore Rocchi - Biomedical Data Science &amp; Applied Physics{% endblock %}
+{% block description %}Postdoctoral researcher at the University of Bologna building interpretable ML pipelines for omics data and antimicrobial resistance prediction. Physics4MedicineLab.{% endblock %}
+{% block og_description %}Postdoctoral researcher building interpretable ML pipelines for omics data and antimicrobial resistance prediction at the University of Bologna.{% endblock %}
+
+{% block head_extra %}
+  <link rel="preload" as="image" href="/assets/profile_pic-360.webp" imagesrcset="/assets/profile_pic-180.webp 180w, /assets/profile_pic-360.webp 360w, /assets/profile_pic-540.webp 540w" imagesizes="(max-width: 600px) 140px, 180px" fetchpriority="high">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.name }}",
+    "jobTitle": "Postdoctoral Researcher in Biomedical Data Science",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "{{ site.affiliation }}"
+    },
+    "url": "{{ site.base_url }}/",
+    "image": "{{ site.base_url }}/assets/profile_pic.jpeg",
+    "email": "mailto:{{ site.email }}",
+    "sameAs": [
+      "{{ site.links.github }}",
+      "{{ site.links.orcid }}",
+      "{{ site.links.linkedin }}",
+      "{{ site.links.bluesky }}",
+      "{{ site.links.scopus }}",
+      "{{ site.links.scholar }}"
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% block content %}
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-role">{{ site.role }} &middot; {{ site.affiliation }}</p>
+          <h1>{{ site.name }}</h1>
+          <p class="hero-tagline">Physics background, biomedical mission.</p>
+          <p class="hero-subline">Building interpretable machine learning pipelines for clinical microbiology and multi-omics data.</p>
+          <p class="hero-bio">
+            I develop computational methods to predict antimicrobial resistance, discover patient
+            phenotypes, and make sense of high-dimensional omics data. My work spans MALDI-TOF mass
+            spectrometry, multi-omics integration, genomics, and metagenomics, with a focus on interpretability
+            and clinical impact.
+          </p>
+          <div class="hero-buttons">
+            <a href="/research.html" class="btn btn-primary">Research</a>
+            <a href="/projects.html" class="btn btn-outline">Projects</a>
+            <a href="/publications.html" class="btn btn-outline">Publications</a>
+            <a href="#contact" class="btn btn-outline">Contact</a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <picture>
+            <source type="image/webp" srcset="/assets/profile_pic-180.webp 180w, /assets/profile_pic-360.webp 360w, /assets/profile_pic-540.webp 540w" sizes="(max-width: 600px) 140px, 180px">
+            <img src="/assets/profile_pic-360.jpeg" srcset="/assets/profile_pic-360.jpeg 360w, /assets/profile_pic.jpeg 852w" sizes="(max-width: 600px) 140px, 180px" alt="{{ site.name }}" width="360" height="360" decoding="async" fetchpriority="high">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll to About section">
+      <span class="hero-scroll-label">Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </a>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-narrative fade-in">
+          <p>
+            I trained as a physicist and moved into biomedical data science to apply quantitative
+            methods to problems with direct clinical impact. My current work focuses on antimicrobial
+            resistance prediction from MALDI-TOF mass spectrometry, multi-centre data harmonisation,
+            computational patient phenotyping, and computational genomics.
+          </p>
+          <p>
+            I work within the Physics4MedicineLab, part of the Multi-Omics and Health-Care Data Analytics Unit
+            at Sant'Orsola Hospital in Bologna. My research combines machine learning with clinical
+            microbiology, pharmacokinetics, and genomics. I care about making models that are accurate but also
+            interpretable, because a prediction without an explanation is just a well-dressed guess.
+          </p>
+          <p>
+            I write Python, build pipelines, publish open-source tools, and contribute to interdisciplinary
+            projects. The through-line is a commitment to reproducibility and a mild obsession with doing
+            things properly.
+          </p>
+
+          <div class="what-i-do">
+            <h3>What I Actually Do All Day</h3>
+            <p>
+              In practice, my days involve writing Python scripts until something either converges or breaks,
+              reading papers about problems I didn't know existed until last week, preprocessing mass spectra
+              that have strong opinions about baseline correction, and discussing model outputs with
+              clinical collaborators, figuring out together when the data is telling a story we hadn't
+              expected.
+            </p>
+            <p>
+              There's also a fair amount of staring at loss curves, debugging pipelines that worked
+              yesterday, and writing documentation future-me will thank present-me for. The ratio of
+              thinking to typing is higher than most people expect. The ratio of coffee to output is
+              best left unquantified.
+            </p>
+          </div>
+        </div>
+
+        <aside class="about-sidebar fade-in">
+          <h3>Coordinates</h3>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Affiliation</p>
+            <p class="sidebar-value">{{ site.affiliation }}</p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Role</p>
+            <p class="sidebar-value">{{ site.role }}</p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Lab</p>
+            <p class="sidebar-value"><a href="{{ site.links.lab }}" target="_blank" rel="noopener">Physics4MedicineLab</a></p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Discipline</p>
+            <p class="sidebar-value">Applied Physics &amp; Data Science</p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-label">ORCID</p>
+            <p class="sidebar-value"><a href="{{ site.links.orcid }}" target="_blank" rel="noopener">{{ site.orcid }}</a></p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Scopus ID</p>
+            <p class="sidebar-value"><a href="{{ site.links.scopus }}" target="_blank" rel="noopener">{{ site.scopus_id }}</a></p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Location</p>
+            <p class="sidebar-value">Bologna, Italy</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>News</h2>
+        <p class="section-subtitle">
+          Recent updates - papers, releases, conferences, and visits.
+        </p>
+      </div>
+      <div id="news-feed" class="news-feed fade-in">
+        <ol class="news-list">
+          {% for item in news[:site.news_home_limit] %}
+          {{ m.news_item(item, loop.index0) }}
+          {% endfor %}
+        </ol>
+      </div>
+      <div class="section-cta fade-in">
+        <a href="/news.html" class="btn btn-outline">See all news &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="collaborations">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Ongoing Collaborations</h2>
+        <p class="section-subtitle">
+          Institutions and groups I currently work with on research projects.
+        </p>
+      </div>
+      <div class="collab-grid fade-in-stagger">
+
+        <a href="https://www.unibo.it/en" class="collab-card" target="_blank" rel="noopener">
+          <div class="collab-logo">
+            {{ m.icon('unibo') }}
+          </div>
+          <h3 class="collab-name">University of Bologna</h3>
+          <p class="collab-role">Doctoral &amp; postdoctoral home &middot; Health and Technologies</p>
+        </a>
+
+        <a href="https://www.aosp.bo.it/" class="collab-card" target="_blank" rel="noopener">
+          <div class="collab-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="3"/>
+              <line x1="12" y1="8" x2="12" y2="16"/>
+              <line x1="8" y1="12" x2="16" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="collab-name">IRCCS Sant'Orsola</h3>
+          <p class="collab-role">Multi-Omics &amp; Health-Care Data Analytics Unit &middot; Physics4MedicineLab</p>
+        </a>
+
+        <a href="https://www.biochem.mpg.de/en" class="collab-card" target="_blank" rel="noopener">
+          <div class="collab-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <circle cx="12" cy="12" r="1.6" fill="currentColor"/>
+              <ellipse cx="12" cy="12" rx="10" ry="4"/>
+              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>
+            </svg>
+          </div>
+          <h3 class="collab-name">Max Planck Institute of Biochemistry</h3>
+          <p class="collab-role">ML &amp; Systems Biology group &middot; Prof. Karsten Borgwardt</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Research</h2>
+        <p class="section-subtitle">
+          Four threads I am currently pulling, at the intersection of applied physics,
+          machine learning, and clinical data.
+        </p>
+      </div>
+      <div class="research-grid fade-in-stagger">
+
+        <div class="research-card">
+          <div class="research-icon" aria-hidden="true">&#x1F48A;</div>
+          <h3>AMR &amp; clinical machine learning</h3>
+          <p>
+            Machine learning on mass spectra and clinical data to anticipate antimicrobial
+            resistance ahead of culture-based diagnostics, with cross-site harmonisation and
+            generative modelling extending the pipeline beyond single-instrument settings.
+          </p>
+          <p class="research-methods">MALDI-TOF &middot; supervised &amp; generative learning &middot; cross-site harmonisation</p>
+        </div>
+
+        <div class="research-card">
+          <div class="research-icon" aria-hidden="true">&#x1F9A0;</div>
+          <h3>Infectious risk &amp; pathogen surveillance</h3>
+          <p>
+            Stratification of infectious risk in fragile populations such as transplant
+            recipients, and surveillance of circulating pathogens through metagenomic
+            monitoring and computational phenotyping.
+          </p>
+          <p class="research-methods">patient phenotyping &middot; survival &amp; multi-state models &middot; metagenomic surveillance</p>
+        </div>
+
+        <div class="research-card">
+          <div class="research-icon" aria-hidden="true">&#x1F9EC;</div>
+          <h3>Computational genomics</h3>
+          <p>
+            Discovery and interpretation of structural and somatic variants from short- and
+            long-read sequencing, in clinically relevant genomic contexts.
+          </p>
+          <p class="research-methods">structural variants &middot; somatic calling &middot; long-read sequencing</p>
+        </div>
+
+        <div class="research-card">
+          <div class="research-icon" aria-hidden="true">&#x2699;&#xFE0F;</div>
+          <h3>Computational methodologies</h3>
+          <p>
+            Open-source tools and reusable methods built around specific biomedical questions,
+            designed to be reproducible and well-documented.
+          </p>
+          <p class="research-methods">bioinformatic tools &middot; open-source software &middot; reproducible pipelines</p>
+        </div>
+
+      </div>
+      <div class="section-cta fade-in">
+        <a href="/research.html" class="btn btn-outline">Read more about my research &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Projects</h2>
+        <p class="section-subtitle">
+          Open-source tools and research pipelines. A selection below;
+          the full catalog lives on the projects page.
+        </p>
+      </div>
+
+      <div class="projects-grid fade-in-stagger">
+
+        {% set eco = projects.ecosystem %}
+        <div class="project-card project-card-feature">
+          <div class="project-header">
+            <span class="project-name">{{ eco.name }}</span>
+            <a href="{{ eco.github }}" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          </div>
+          <p class="project-oneliner">{{ eco.home.oneliner }}</p>
+          <p class="project-description">{{ eco.home.description }}</p>
+          <div class="ecosystem-pills">
+            {% for pkg in eco.packages %}
+            <a href="{{ pkg.github }}" class="eco-pill" target="_blank" rel="noopener">{{ pkg.name }}</a>
+            {% endfor %}
+          </div>
+          {{ m.badges(eco) }}
+          {{ m.tags(eco.home.tags) }}
+        </div>
+
+        {% for p in projects.frameworks if p.featured_home %}
+        {{ m.project_card(p, 'home') }}
+        {% endfor %}
+
+      </div>
+
+      <div class="section-cta fade-in">
+        <a href="/projects.html" class="btn btn-outline">See all projects &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Recent Publications</h2>
+        <p class="section-subtitle">
+          A few recent highlights. A curated list with BibTeX lives on the publications page; the complete record is on <a href="{{ site.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a> and <a href="{{ site.links.scopus }}" target="_blank" rel="noopener">Scopus</a>.
+        </p>
+      </div>
+      <ol class="pub-list fade-in">
+        {% for pub in featured_pubs %}
+        <li class="pub-item">
+          <div class="pub-meta">
+            <span class="pub-year">{{ pub.year }}</span>
+            <span class="pub-journal">{{ pub.journal }}</span>
+            {% if pub.openaccess %}<span class="pub-oa">Open Access</span>{% endif %}
+          </div>
+          <p class="pub-title">{{ pub.title }}</p>
+          <p class="pub-authors">{{ pub.authors_html|safe }}</p>
+          <div class="pub-links">
+            <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI &#8599;</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+
+      <div class="section-cta fade-in">
+        <a href="/publications.html" class="btn btn-outline">See more publications &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Education</h2>
+        <p class="section-subtitle">
+          A physics training that gradually re-oriented itself toward biomedical questions.
+        </p>
+      </div>
+      {{ m.timeline(education, 'home', 'h3') }}
+      <div class="section-cta fade-in">
+        <a href="/education.html" class="btn btn-outline">Full education page &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Tools I Use</h2>
+        <p class="section-subtitle">
+          The day-to-day toolbox - languages, libraries, and workflow managers I rely on.
+        </p>
+      </div>
+      <div class="stack-grid fade-in-stagger">
+        {% for tool in stack %}
+        <div class="stack-item">
+          <svg class="stack-logo" viewBox="{{ tool.viewbox }}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">{{ tool.svg|safe }}</svg>
+          <span class="stack-name">{{ tool.name }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-content fade-in">
+        <p>
+          I am always happy to talk about research collaborations and open-source development,
+          but also about ideas, methods, and topics I have not explored yet. I am as interested in
+          learning something new from someone as in starting something new together. If you have an
+          idea, a question, or a dataset that misbehaves, I would be glad to hear about it.
+        </p>
+        <p class="contact-email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <div class="contact-links">
+          {% for c in site.contact_links %}
+          {% if c.break %}
+          <span class="contact-links-break" aria-hidden="true"></span>
+          {% else %}
+          <a href="{{ site.links[c.key] }}" class="contact-link" target="_blank" rel="noopener">
+            {{ m.icon(c.key, 18) }}
+            {{ c.label }}
+          </a>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <p class="contact-location">Based in Bologna, Italy</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

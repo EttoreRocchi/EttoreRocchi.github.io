@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Publications - Ettore Rocchi{% endblock %}
+{% block description %}Publication record of Ettore Rocchi - antimicrobial resistance, clinical AI, mass spectrometry, mathematical epidemiology, and computational biology.{% endblock %}
+{% block og_description %}Peer-reviewed publications on AMR, clinical AI, MALDI-TOF, and computational biology.{% endblock %}
+
+{% block head_extra %}
+  <!-- Structured Data: the publication list -->
+  <script type="application/ld+json">{{ pub_jsonld|safe }}</script>
+{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">Publications</p>
+      <h1>Peer-reviewed work.</h1>
+      <p class="page-lede">
+        My full publication record. Most recent first. Each entry links to the DOI and provides
+        a copyable BibTeX citation. Filter by document type or year, or use the search box.
+      </p>
+
+      <!-- Search + bulk bib export -->
+      <div class="pub-toolbar">
+        <div class="pub-search-wrapper" role="search">
+          <svg class="pub-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input
+            type="search"
+            id="pubSearch"
+            class="pub-search-input"
+            placeholder="Filter by title, author, journal, or year..."
+            aria-label="Filter publications"
+            autocomplete="off"
+          >
+          <button type="button" class="pub-search-clear" id="pubSearchClear" aria-label="Clear search" hidden>&times;</button>
+        </div>
+        <button type="button" id="pubBibDownload" class="pub-bib-download" title="Download all publications as a single .bib file">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span class="pub-bib-label">Download <span class="pub-bib-mode">all</span> .bib</span>
+          <span class="pub-bib-count" id="pubBibCount" aria-hidden="true">{{ publications|length }}</span>
+        </button>
+      </div>
+      <div class="pub-facet" id="pubTypeFacet"{% if type_facet|length < 2 %} hidden{% endif %}>
+        <span class="pub-facet-label">Type</span>
+        <div class="pub-type-filter" id="pubTypeFilter" role="group" aria-label="Filter by document type">
+          {{ m.facet_pills(type_facet, publications|length) }}
+        </div>
+      </div>
+      <div class="pub-facet" id="pubYearFacet"{% if year_facet|length < 2 %} hidden{% endif %}>
+        <span class="pub-facet-label">Year</span>
+        <div class="pub-type-filter" id="pubYearFilter" role="group" aria-label="Filter by year">
+          {{ m.facet_pills(year_facet, publications|length) }}
+        </div>
+      </div>
+      <p class="pub-search-meta" id="pubSearchMeta" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <section id="publications-list">
+    <div class="container">
+      <ol class="pub-list fade-in" id="pub-list">
+        {% for pub in publications %}
+        {{ m.pub_item(pub) }}
+        {% endfor %}
+      </ol>
+
+      <div class="pub-empty" id="pubEmpty" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <p>No publications match <span id="pubEmptyQuery"></span>.</p>
+        <button type="button" class="btn btn-outline" id="pubEmptyClear">Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="back-cta">
+    <div class="container">
+      <a href="/research.html" class="btn btn-outline">Read about the research &#8594;</a>
+      <a href="/projects.html" class="btn btn-outline">Browse the projects &#8594;</a>
+    </div>
+  </section>
+{% endblock %}

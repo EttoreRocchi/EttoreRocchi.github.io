@@ -4,11 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page not found - Ettore Rocchi</title>
-  <meta name="robots" content="noindex">
   <meta name="description" content="The page you were looking for does not exist on Ettore Rocchi's website.">
+  <meta name="author" content="Ettore Rocchi">
+<meta name="robots" content="noindex">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Page not found - Ettore Rocchi">
+  <meta property="og:description" content="The page you were looking for does not exist on Ettore Rocchi's website.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ettorerocchi.github.io/404.html">
+  <meta property="og:site_name" content="Ettore Rocchi">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://ettorerocchi.github.io/assets/og-card.jpg">
+  <meta property="og:image:alt" content="Ettore Rocchi - Postdoctoral Researcher, University of Bologna">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-  <!-- Favicon -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Page not found - Ettore Rocchi">
+  <meta name="twitter:description" content="The page you were looking for does not exist on Ettore Rocchi's website.">
+  <meta name="twitter:image" content="https://ettorerocchi.github.io/assets/og-card.jpg">
+  <meta name="twitter:image:alt" content="Ettore Rocchi - Postdoctoral Researcher, University of Bologna">
+
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +43,13 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/style.css">
+  <noscript><style>.fade-in,.fade-in-stagger>*,.news-item{opacity:1;transform:none}</style></noscript>
 
   <!-- Prevent flash of wrong theme -->
   <script>
     (function() {
-      const saved = localStorage.getItem('theme');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
       if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -29,7 +57,6 @@
       }
     })();
   </script>
-
   <style>
     .notfound {
       min-height: calc(100vh - 64px);
@@ -60,30 +87,34 @@
 </head>
 <body data-page="404">
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container">
-      <a href="/index.html" class="nav-logo">ER</a>
-      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <a href="/" class="nav-logo" aria-label="ER - Ettore Rocchi, home">ER</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="nav-menu">
+      <div class="nav-menu" id="nav-menu">
         <ul class="nav-links">
-          <li><a href="/index.html" data-nav="about">About</a></li>
+          <li><a href="/" data-nav="about">About</a></li>
           <li><a href="/research.html" data-nav="research">Research</a></li>
           <li><a href="/projects.html" data-nav="projects">Projects</a></li>
           <li><a href="/publications.html" data-nav="publications">Publications</a></li>
+          <li><a href="/education.html" data-nav="education">Education</a></li>
           <li><a href="/news.html" data-nav="news">News</a></li>
         </ul>
       </div>
-      <button class="theme-toggle" aria-label="Toggle dark mode">
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
         <span class="icon-sun">&#9788;</span>
         <span class="icon-moon">&#9790;</span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
   <section class="notfound">
     <div class="container">
       <p class="notfound-code">404</p>
@@ -94,12 +125,13 @@
         somewhere that exists.
       </p>
       <div class="hero-buttons">
-        <a href="/index.html" class="btn btn-primary">Back home</a>
+        <a href="/" class="btn btn-primary">Back home</a>
         <a href="/publications.html" class="btn btn-outline">Publications</a>
         <a href="/projects.html" class="btn btn-outline">Projects</a>
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="container">

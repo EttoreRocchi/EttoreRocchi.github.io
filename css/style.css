@@ -11,6 +11,8 @@
   --color-text-muted: #5a5a6e;
   --color-accent: #2c3e6b;
   --color-accent-hover: #1e2d50;
+  --color-on-accent: #ffffff;                 /* text on accent-filled surfaces */
+  --color-on-accent-soft: rgba(255, 255, 255, 0.2);
   --color-border: #d8d6d0;
   --color-card-bg: #ffffff;
   --color-card-shadow: rgba(0, 0, 0, 0.06);
@@ -42,8 +44,13 @@
   --color-bg-alt: #22223a;
   --color-text: #e8e6e1;
   --color-text-muted: #a0a0b0;
-  --color-accent: #5b7fc7;
-  --color-accent-hover: #7a9bdf;
+  /* #8eaadc reaches 7.3:1 on --color-bg and 6.6:1 on cards (the previous
+     #5b7fc7 sat at 3.9-4.3:1). Accent-filled controls therefore switch to
+     dark text via --color-on-accent. */
+  --color-accent: #8eaadc;
+  --color-accent-hover: #a3bce8;
+  --color-on-accent: #1a1a2e;
+  --color-on-accent-soft: rgba(26, 26, 46, 0.14);
   --color-border: #3a3a52;
   --color-card-bg: #22223a;
   --color-card-shadow: rgba(0, 0, 0, 0.2);
@@ -62,6 +69,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Respect the `hidden` attribute even on elements with their own display rule
+   (e.g. the search clear button, which is display-ed by its base rule). */
+[hidden] {
+  display: none !important;
 }
 
 html {
@@ -97,7 +110,7 @@ img {
 
 ::selection {
   background-color: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
 }
 
 /* --- Container --- */
@@ -285,6 +298,7 @@ p {
 .hero {
   position: relative;          /* anchor for .hero-scroll */
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   background: var(--color-hero-gradient);
@@ -426,12 +440,12 @@ p {
 
 .btn-primary {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
 }
 
 .btn-primary:hover {
   background: var(--color-accent-hover);
-  color: #fff;
+  color: var(--color-on-accent);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px var(--color-card-shadow);
 }
@@ -444,7 +458,7 @@ p {
 
 .btn-outline:hover {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
   transform: translateY(-1px);
 }
 
@@ -979,6 +993,41 @@ section:nth-child(even) {
   color: var(--color-accent);
 }
 
+/* --- Project badges (shields.io) --- */
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+  margin: 0.9rem 0 1rem;
+}
+
+.project-badges a {
+  display: inline-flex;
+  line-height: 0;
+  border-radius: 3px;
+}
+
+.project-badges img {
+  height: 20px;
+  width: auto;
+}
+
+.pip-line {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  background: var(--color-tag-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.pip-line::before {
+  content: "$ ";
+  opacity: 0.6;
+}
+
 /* --- Contact Section --- */
 .contact-content {
   max-width: 640px;
@@ -1105,6 +1154,32 @@ section:nth-child(even) {
     gap: 1rem;
     text-align: center;
   }
+}
+
+/* --- Keyboard focus --- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2000;
+  padding: 0.6rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 /* --- Animations --- */
@@ -1421,7 +1496,7 @@ section:nth-child(even) {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
 }
@@ -1585,7 +1660,7 @@ section:nth-child(even) {
 
 .eco-pill:hover {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
 }
 
 /* --- Featured Project Card (synthesized version on home) --- */
@@ -1799,7 +1874,7 @@ section:nth-child(even) {
 
 .pub-bib-download:hover:not(:disabled) .pub-bib-count {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
 }
 
 @media (max-width: 560px) {
@@ -1854,6 +1929,11 @@ section:nth-child(even) {
   box-shadow: 0 0 0 4px var(--color-tag-bg), 0 2px 12px var(--color-card-shadow);
 }
 
+.pub-search-input:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 /* Hide native search clear (we use our own) */
 .pub-search-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -1882,7 +1962,7 @@ section:nth-child(even) {
 
 .pub-search-clear:hover {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
 }
 
 .pub-search-meta {
@@ -1977,7 +2057,7 @@ section:nth-child(even) {
 .pub-type-pill.active {
   background: var(--color-accent);
   border-color: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
 }
 
 .pub-type-pill-count {
@@ -1996,42 +2076,10 @@ section:nth-child(even) {
 }
 
 .pub-type-pill.active .pub-type-pill-count {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  background: var(--color-on-accent-soft);
+  color: var(--color-on-accent);
 }
 
-/* --- Skeleton placeholders (shown before publications.json loads) --- */
-.pub-list-placeholder .pub-item-skeleton {
-  list-style: none;
-  padding: 1.8rem 0;
-  border-bottom: 1px solid var(--color-border);
-  animation: pub-skel-pulse 1.4s ease-in-out infinite;
-}
-
-.pub-list-placeholder .pub-item-skeleton:first-child {
-  padding-top: 0;
-}
-
-.pub-list-placeholder .pub-item-skeleton:last-child {
-  border-bottom: none;
-}
-
-.pub-meta-skel,
-.pub-title-skel,
-.pub-authors-skel {
-  background: var(--color-border);
-  border-radius: 4px;
-  opacity: 0.55;
-}
-
-.pub-meta-skel    { height: 0.85rem; width: 30%; margin-bottom: 0.8rem; }
-.pub-title-skel   { height: 1.2rem;  width: 85%; margin-bottom: 0.6rem; }
-.pub-authors-skel { height: 0.9rem;  width: 70%; }
-
-@keyframes pub-skel-pulse {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.55; }
-}
 
 /* --- Error / empty / loading-failed states --- */
 .pub-error {
@@ -2126,19 +2174,12 @@ section:nth-child(even) {
 }
 
 /* --- Active nav link (multi-page) --- */
-body[data-page="home"] .nav-links a[data-nav="about"],
-body[data-page="research"] .nav-links a[data-nav="research"],
-body[data-page="projects"] .nav-links a[data-nav="projects"],
-body[data-page="publications"] .nav-links a[data-nav="publications"],
-body[data-page="news"] .nav-links a[data-nav="news"] {
+/* The build step stamps aria-current="page" on the matching link. */
+.nav-links a[aria-current="page"] {
   color: var(--color-accent);
 }
 
-body[data-page="home"] .nav-links a[data-nav="about"]::after,
-body[data-page="research"] .nav-links a[data-nav="research"]::after,
-body[data-page="projects"] .nav-links a[data-nav="projects"]::after,
-body[data-page="publications"] .nav-links a[data-nav="publications"]::after,
-body[data-page="news"] .nav-links a[data-nav="news"]::after {
+.nav-links a[aria-current="page"]::after {
   width: 100%;
 }
 
@@ -2532,45 +2573,12 @@ body[data-page="news"] .nav-links a[data-nav="news"]::after {
   padding: 2rem 0;
 }
 
-/* Placeholder skeleton (visible before fetch completes) */
-.news-list-placeholder .news-item-placeholder {
-  opacity: 0.35;
-  animation: pulse 1.6s ease-in-out infinite;
-}
-
-.news-item-placeholder .news-marker {
-  border-color: var(--color-border);
-  background: var(--color-bg-alt);
-}
-
-.news-meta-placeholder {
-  width: 140px;
-  height: 14px;
-  background: var(--color-bg-alt);
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-
-.news-text-placeholder {
-  width: 85%;
-  height: 18px;
-  background: var(--color-bg-alt);
-  border-radius: 4px;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.35; }
-  50%      { opacity: 0.55; }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .news-item {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-  .news-list-placeholder .news-item-placeholder {
-    animation: none;
   }
 }
 

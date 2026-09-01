@@ -11,27 +11,30 @@
   <meta property="og:title" content="Ettore Rocchi - Biomedical Data Science &amp; Applied Physics">
   <meta property="og:description" content="Postdoctoral researcher building interpretable ML pipelines for omics data and antimicrobial resistance prediction at the University of Bologna.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ettorerocchi.github.io">
+  <meta property="og:url" content="https://ettorerocchi.github.io/">
   <meta property="og:site_name" content="Ettore Rocchi">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:image" content="https://ettorerocchi.github.io/assets/profile_pic.jpeg">
-  <meta property="og:image:alt" content="Ettore Rocchi">
+  <meta property="og:image" content="https://ettorerocchi.github.io/assets/og-card.jpg">
+  <meta property="og:image:alt" content="Ettore Rocchi - Postdoctoral Researcher, University of Bologna">
   <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="852">
-  <meta property="og:image:height" content="852">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ettore Rocchi - Biomedical Data Science &amp; Applied Physics">
   <meta name="twitter:description" content="Postdoctoral researcher building interpretable ML pipelines for omics data and antimicrobial resistance prediction at the University of Bologna.">
-  <meta name="twitter:image" content="https://ettorerocchi.github.io/assets/profile_pic.jpeg">
-  <meta name="twitter:image:alt" content="Ettore Rocchi">
+  <meta name="twitter:image" content="https://ettorerocchi.github.io/assets/og-card.jpg">
+  <meta name="twitter:image:alt" content="Ettore Rocchi - Postdoctoral Researcher, University of Bologna">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://ettorerocchi.github.io/">
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ettorerocchi.github.io/">
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,12 +42,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <noscript><style>.fade-in,.fade-in-stagger>*,.news-item{opacity:1;transform:none}</style></noscript>
 
   <!-- Prevent flash of wrong theme -->
   <script>
     (function() {
-      const saved = localStorage.getItem('theme');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
       if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -52,6 +57,7 @@
       }
     })();
   </script>
+  <link rel="preload" as="image" href="/assets/profile_pic-360.webp" imagesrcset="/assets/profile_pic-180.webp 180w, /assets/profile_pic-360.webp 360w, /assets/profile_pic-540.webp 540w" imagesizes="(max-width: 600px) 140px, 180px" fetchpriority="high">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -64,7 +70,9 @@
       "@type": "Organization",
       "name": "University of Bologna"
     },
-    "url": "https://ettorerocchi.github.io",
+    "url": "https://ettorerocchi.github.io/",
+    "image": "https://ettorerocchi.github.io/assets/profile_pic.jpeg",
+    "email": "mailto:ettore.rocchi3@unibo.it",
     "sameAs": [
       "https://github.com/EttoreRocchi",
       "https://orcid.org/0000-0002-7612-2819",
@@ -78,30 +86,34 @@
 </head>
 <body data-page="home">
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav-logo">ER</a>
-      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <a href="/" class="nav-logo" aria-label="ER - Ettore Rocchi, home">ER</a>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="nav-menu">
+      <div class="nav-menu" id="nav-menu">
         <ul class="nav-links">
-          <li><a href="index.html" data-nav="about">About</a></li>
-          <li><a href="research.html" data-nav="research">Research</a></li>
-          <li><a href="projects.html" data-nav="projects">Projects</a></li>
-          <li><a href="publications.html" data-nav="publications">Publications</a></li>
-          <li><a href="news.html" data-nav="news">News</a></li>
+          <li><a href="/" data-nav="about" aria-current="page">About</a></li>
+          <li><a href="/research.html" data-nav="research">Research</a></li>
+          <li><a href="/projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="/publications.html" data-nav="publications">Publications</a></li>
+          <li><a href="/education.html" data-nav="education">Education</a></li>
+          <li><a href="/news.html" data-nav="news">News</a></li>
         </ul>
       </div>
-      <button class="theme-toggle" aria-label="Toggle dark mode">
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
         <span class="icon-sun">&#9788;</span>
         <span class="icon-moon">&#9790;</span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
   <section id="hero" class="hero">
     <div class="container">
       <div class="hero-content">
@@ -117,13 +129,18 @@
             and clinical impact.
           </p>
           <div class="hero-buttons">
-            <a href="research.html" class="btn btn-primary">Research</a>
-            <a href="projects.html" class="btn btn-outline">Projects</a>
-            <a href="publications.html" class="btn btn-outline">Publications</a>
+            <a href="/research.html" class="btn btn-primary">Research</a>
+            <a href="/projects.html" class="btn btn-outline">Projects</a>
+            <a href="/publications.html" class="btn btn-outline">Publications</a>
             <a href="#contact" class="btn btn-outline">Contact</a>
           </div>
         </div>
-        <div class="hero-avatar"><img src="assets/profile_pic.jpeg" alt="Ettore Rocchi" width="852" height="852" decoding="async" fetchpriority="high"></div>
+        <div class="hero-avatar">
+          <picture>
+            <source type="image/webp" srcset="/assets/profile_pic-180.webp 180w, /assets/profile_pic-360.webp 360w, /assets/profile_pic-540.webp 540w" sizes="(max-width: 600px) 140px, 180px">
+            <img src="/assets/profile_pic-360.jpeg" srcset="/assets/profile_pic-360.jpeg 360w, /assets/profile_pic.jpeg 852w" sizes="(max-width: 600px) 140px, 180px" alt="Ettore Rocchi" width="360" height="360" decoding="async" fetchpriority="high">
+          </picture>
+        </div>
       </div>
     </div>
     <a href="#about" class="hero-scroll" aria-label="Scroll to About section">
@@ -193,7 +210,7 @@
           </div>
           <div class="sidebar-item">
             <p class="sidebar-label">Discipline</p>
-            <p class="sidebar-value">Applied Physics & Data Science</p>
+            <p class="sidebar-value">Applied Physics &amp; Data Science</p>
           </div>
           <div class="sidebar-item">
             <p class="sidebar-label">ORCID</p>
@@ -220,33 +237,48 @@
           Recent updates - papers, releases, conferences, and visits.
         </p>
       </div>
-      <div id="news-feed" class="news-feed fade-in" data-limit="3">
-        <ol class="news-list news-list-placeholder" aria-hidden="true">
-          <li class="news-item news-item-placeholder">
-            <div class="news-marker"></div>
-            <div class="news-body">
-              <div class="news-meta-placeholder"></div>
-              <div class="news-text-placeholder"></div>
-            </div>
-          </li>
-          <li class="news-item news-item-placeholder">
-            <div class="news-marker"></div>
-            <div class="news-body">
-              <div class="news-meta-placeholder"></div>
-              <div class="news-text-placeholder"></div>
-            </div>
-          </li>
-          <li class="news-item news-item-placeholder">
-            <div class="news-marker"></div>
-            <div class="news-body">
-              <div class="news-meta-placeholder"></div>
-              <div class="news-text-placeholder"></div>
-            </div>
-          </li>
+      <div id="news-feed" class="news-feed fade-in">
+        <ol class="news-list">
+          <li class="news-item" style="--news-delay:0ms">
+  <div class="news-marker" aria-hidden="true">
+    <span class="news-icon">🏆</span>
+  </div>
+  <div class="news-body">
+    <div class="news-meta">
+      <span class="news-date">15 Jul 2026</span>
+      <span class="news-type news-type-award">Award</span>
+    </div>
+    <p class="news-text">PhD defended at the University of Bologna (Health and Technologies), awarded the highest evaluation - Excellent cum laude. Supervisor: Prof. Gastone Castellani.</p>
+  </div>
+</li>
+          <li class="news-item" style="--news-delay:60ms">
+  <div class="news-marker" aria-hidden="true">
+    <span class="news-icon">✨</span>
+  </div>
+  <div class="news-body">
+    <div class="news-meta">
+      <span class="news-date">Jul 2026</span>
+      <span class="news-type news-type-default">Update</span>
+    </div>
+    <p class="news-text">Started as a Postdoctoral Researcher at the University of Bologna, continuing work on machine learning for clinical microbiology and omics data within the Physics4MedicineLab with Prof. Gastone Castellani.</p>
+  </div>
+</li>
+          <li class="news-item" style="--news-delay:120ms">
+  <div class="news-marker" aria-hidden="true">
+    <span class="news-icon">⚙️</span>
+  </div>
+  <div class="news-body">
+    <div class="news-meta">
+      <span class="news-date">28 Apr 2026</span>
+      <span class="news-type news-type-software">Software</span>
+    </div>
+    <p class="news-text"><a href="https://github.com/EttoreRocchi/MaldiSuite" target="_blank" rel="noopener">MaldiSuite ecosystem published on PyPI - MaldiAMRKit, MaldiBatchKit, and MaldiDeepKit for end-to-end clinical AMR pipelines.</a></p>
+  </div>
+</li>
         </ol>
       </div>
       <div class="section-cta fade-in">
-        <a href="news.html" class="btn btn-outline">See all news &#8594;</a>
+        <a href="/news.html" class="btn btn-outline">See all news &#8594;</a>
       </div>
     </div>
   </section>
@@ -261,11 +293,9 @@
       </div>
       <div class="collab-grid fade-in-stagger">
 
-        <a href="https://www.unibo.it/" class="collab-card" target="_blank" rel="noopener">
+        <a href="https://www.unibo.it/en" class="collab-card" target="_blank" rel="noopener">
           <div class="collab-logo">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
           </div>
           <h3 class="collab-name">University of Bologna</h3>
           <p class="collab-role">Doctoral &amp; postdoctoral home &middot; Health and Technologies</p>
@@ -283,7 +313,7 @@
           <p class="collab-role">Multi-Omics &amp; Health-Care Data Analytics Unit &middot; Physics4MedicineLab</p>
         </a>
 
-        <a href="https://www.biochem.mpg.de/" class="collab-card" target="_blank" rel="noopener">
+        <a href="https://www.biochem.mpg.de/en" class="collab-card" target="_blank" rel="noopener">
           <div class="collab-logo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
               <circle cx="12" cy="12" r="1.6" fill="currentColor"/>
@@ -312,7 +342,7 @@
       <div class="research-grid fade-in-stagger">
 
         <div class="research-card">
-          <div class="research-icon">&#x1F48A;</div>
+          <div class="research-icon" aria-hidden="true">&#x1F48A;</div>
           <h3>AMR &amp; clinical machine learning</h3>
           <p>
             Machine learning on mass spectra and clinical data to anticipate antimicrobial
@@ -323,7 +353,7 @@
         </div>
 
         <div class="research-card">
-          <div class="research-icon">&#x1F9A0;</div>
+          <div class="research-icon" aria-hidden="true">&#x1F9A0;</div>
           <h3>Infectious risk &amp; pathogen surveillance</h3>
           <p>
             Stratification of infectious risk in fragile populations such as transplant
@@ -334,7 +364,7 @@
         </div>
 
         <div class="research-card">
-          <div class="research-icon">&#x1F9EC;</div>
+          <div class="research-icon" aria-hidden="true">&#x1F9EC;</div>
           <h3>Computational genomics</h3>
           <p>
             Discovery and interpretation of structural and somatic variants from short- and
@@ -344,7 +374,7 @@
         </div>
 
         <div class="research-card">
-          <div class="research-icon">&#x2699;&#xFE0F;</div>
+          <div class="research-icon" aria-hidden="true">&#x2699;&#xFE0F;</div>
           <h3>Computational methodologies</h3>
           <p>
             Open-source tools and reusable methods built around specific biomedical questions,
@@ -355,7 +385,7 @@
 
       </div>
       <div class="section-cta fade-in">
-        <a href="research.html" class="btn btn-outline">Read more about my research &#8594;</a>
+        <a href="/research.html" class="btn btn-outline">Read more about my research &#8594;</a>
       </div>
     </div>
   </section>
@@ -378,68 +408,59 @@
             <a href="https://github.com/EttoreRocchi/MaldiSuite" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
           </div>
           <p class="project-oneliner">A Python ecosystem for end-to-end clinical AMR pipelines on MALDI-TOF spectra.</p>
-          <p class="project-description">
-            Three sklearn-compatible packages that chain into a single workflow: preprocess with
-            MaldiAMRKit, harmonise across batches and sites with MaldiBatchKit, classify with
-            MaldiDeepKit. Designed to be modular and reproducible.
-          </p>
+          <p class="project-description">Three sklearn-compatible packages that chain into a single workflow: preprocess with MaldiAMRKit, harmonise across batches and sites with MaldiBatchKit, classify with MaldiDeepKit. Designed to be modular and reproducible.</p>
           <div class="ecosystem-pills">
             <a href="https://github.com/EttoreRocchi/MaldiAMRKit" class="eco-pill" target="_blank" rel="noopener">MaldiAMRKit</a>
             <a href="https://github.com/EttoreRocchi/MaldiBatchKit" class="eco-pill" target="_blank" rel="noopener">MaldiBatchKit</a>
             <a href="https://github.com/EttoreRocchi/MaldiDeepKit" class="eco-pill" target="_blank" rel="noopener">MaldiDeepKit</a>
           </div>
+          <div class="project-badges">
+  <a href="https://pypi.org/project/MaldiSuite/" target="_blank" rel="noopener"><img src="https://img.shields.io/pypi/v/MaldiSuite?label=PyPI&amp;color=2c3e6b" alt="MaldiSuite on PyPI (latest version)" height="20" loading="lazy"></a>
+  <a href="https://pypi.org/project/MaldiSuite/" target="_blank" rel="noopener"><img src="https://img.shields.io/pepy/dt/MaldiSuite?label=downloads&amp;color=2c3e6b" alt="MaldiSuite total downloads" height="20" loading="lazy"></a>
+  <a href="https://github.com/EttoreRocchi/MaldiSuite" target="_blank" rel="noopener"><img src="https://img.shields.io/github/last-commit/EttoreRocchi/MaldiSuite?label=last%20commit&amp;color=2c3e6b" alt="MaldiSuite last commit on GitHub" height="20" loading="lazy"></a>
+<code class="pip-line">pip install MaldiSuite</code></div>
+
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">scikit-learn</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">PyPI</span>
-            <span class="tag">MALDI-TOF</span>
-          </div>
+<span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">PyTorch</span><span class="tag">PyPI</span><span class="tag">MALDI-TOF</span></div>
         </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-name">ResPredAI</span>
-            <a href="https://github.com/EttoreRocchi/ResPredAI" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
-          </div>
-          <p class="project-oneliner">AI model to predict resistances in Gram-negative bloodstream infections.</p>
-          <p class="project-description">
-            CLI-based ML framework with nested cross-validation, nine model architectures, probability
-            calibration, and threshold optimization for clinical decision-making. Configured via a
-            single .ini file. Published in npj Digital Medicine.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">XGBoost</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">CLI</span>
-            <span class="tag">PyPI</span>
-          </div>
-        </div>
+        <div class="project-card ">
+  <div class="project-header">
+    <span class="project-name">ResPredAI</span>
+    <a href="https://github.com/EttoreRocchi/ResPredAI" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+  <p class="project-oneliner">AI model to predict resistances in Gram-negative bloodstream infections.</p>
+  <p class="project-description">CLI-based ML framework with nested cross-validation, nine model architectures, probability calibration, and threshold optimization for clinical decision-making. Configured via a single .ini file. Published in npj Digital Medicine.</p>
+  <div class="project-badges">
+  <a href="https://pypi.org/project/ResPredAI/" target="_blank" rel="noopener"><img src="https://img.shields.io/pypi/v/ResPredAI?label=PyPI&amp;color=2c3e6b" alt="ResPredAI on PyPI (latest version)" height="20" loading="lazy"></a>
+  <a href="https://pypi.org/project/ResPredAI/" target="_blank" rel="noopener"><img src="https://img.shields.io/pepy/dt/ResPredAI?label=downloads&amp;color=2c3e6b" alt="ResPredAI total downloads" height="20" loading="lazy"></a>
+  <a href="https://github.com/EttoreRocchi/ResPredAI" target="_blank" rel="noopener"><img src="https://img.shields.io/github/last-commit/EttoreRocchi/ResPredAI?label=last%20commit&amp;color=2c3e6b" alt="ResPredAI last commit on GitHub" height="20" loading="lazy"></a>
+<code class="pip-line">pip install ResPredAI</code></div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-name">phenocluster</span>
-            <a href="https://github.com/EttoreRocchi/phenocluster" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
-          </div>
-          <p class="project-oneliner">Unsupervised clinical phenotype discovery with survival and multi-state modeling.</p>
-          <p class="project-description">
-            Tools for identifying clinically meaningful patient subgroups from heterogeneous cohorts,
-            combining unsupervised clustering with survival analysis and multi-state trajectory
-            modelling for prognostic interpretation.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">clustering</span>
-            <span class="tag">survival</span>
-            <span class="tag">phenotyping</span>
-          </div>
-        </div>
+  <div class="project-tags">
+<span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">PyTorch</span><span class="tag">CLI</span><span class="tag">PyPI</span></div>
+</div>
+        <div class="project-card ">
+  <div class="project-header">
+    <span class="project-name">phenocluster</span>
+    <a href="https://github.com/EttoreRocchi/phenocluster" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+  <p class="project-oneliner">Unsupervised clinical phenotype discovery with survival and multi-state modeling.</p>
+  <p class="project-description">Tools for identifying clinically meaningful patient subgroups from heterogeneous cohorts, combining unsupervised clustering with survival analysis and multi-state trajectory modelling for prognostic interpretation.</p>
+  <div class="project-badges">
+  <a href="https://pypi.org/project/phenocluster/" target="_blank" rel="noopener"><img src="https://img.shields.io/pypi/v/phenocluster?label=PyPI&amp;color=2c3e6b" alt="phenocluster on PyPI (latest version)" height="20" loading="lazy"></a>
+  <a href="https://pypi.org/project/phenocluster/" target="_blank" rel="noopener"><img src="https://img.shields.io/pepy/dt/phenocluster?label=downloads&amp;color=2c3e6b" alt="phenocluster total downloads" height="20" loading="lazy"></a>
+  <a href="https://github.com/EttoreRocchi/phenocluster" target="_blank" rel="noopener"><img src="https://img.shields.io/github/last-commit/EttoreRocchi/phenocluster?label=last%20commit&amp;color=2c3e6b" alt="phenocluster last commit on GitHub" height="20" loading="lazy"></a>
+<code class="pip-line">pip install phenocluster</code></div>
+
+  <div class="project-tags">
+<span class="tag">Python</span><span class="tag">clustering</span><span class="tag">survival</span><span class="tag">phenotyping</span></div>
+</div>
 
       </div>
 
       <div class="section-cta fade-in">
-        <a href="projects.html" class="btn btn-outline">See all projects &#8594;</a>
+        <a href="/projects.html" class="btn btn-outline">See all projects &#8594;</a>
       </div>
     </div>
   </section>
@@ -453,50 +474,43 @@
         </p>
       </div>
       <ol class="pub-list fade-in">
-
         <li class="pub-item">
           <div class="pub-meta">
             <span class="pub-year">2026</span>
             <span class="pub-journal">BMC Microbiology</span>
-            <span class="pub-oa">Open Access</span>
-          </div>
-          <p class="pub-title">Combining mass spectrometry and machine learning models for predicting <em>Klebsiella pneumoniae</em> antimicrobial resistance: a multicenter experience from clinical isolates in Italy</p>
-          <p class="pub-authors"><strong>Rocchi E</strong>, Nicitra E, Calvo M, Cento V, Peiretti L, Asif Z, Menchinelli G, Posteraro B, Sala C, Colosimo C, Cricca M, Sambri V, Sanguinetti M, Castellani G, Stefani S</p>
+<span class="pub-oa">Open Access</span>          </div>
+          <p class="pub-title">Combining mass spectrometry and machine learning models for predicting Klebsiella pneumoniae antimicrobial resistance: a multicenter experience from clinical isolates in Italy</p>
+          <p class="pub-authors"><strong>Rocchi E</strong>., Nicitra E., Calvo M., Cento V., Peiretti L., Asif Z., Menchinelli G., Posteraro B., Sala C., Colosimo C., Cricca M., Sambri V., Sanguinetti M., Castellani G., Stefani S.</p>
           <div class="pub-links">
             <a href="https://doi.org/10.1186/s12866-025-04657-2" target="_blank" rel="noopener">DOI &#8599;</a>
           </div>
         </li>
-
         <li class="pub-item">
           <div class="pub-meta">
             <span class="pub-year">2025</span>
             <span class="pub-journal">npj Digital Medicine</span>
-            <span class="pub-oa">Open Access</span>
-          </div>
+<span class="pub-oa">Open Access</span>          </div>
           <p class="pub-title">Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections</p>
-          <p class="pub-authors">Bonazzetti C, <strong>Rocchi E</strong>, Toschi A, Derus NR, Sala C, Pascale R, Rinaldi M, Campoli C, Pasquini ZAI, Tazza B, Amicucci A, Gatti M, Ambretti S, Viale P, Castellani G, Giannella M</p>
+          <p class="pub-authors">Bonazzetti C., <strong>Rocchi E</strong>., Toschi A., Derus N.R., Sala C., Pascale R., Rinaldi M., Campoli C., Pasquini Z.A.I., Tazza B., Amicucci A., Gatti M., Ambretti S., Viale P., Castellani G., Giannella M.</p>
           <div class="pub-links">
             <a href="https://doi.org/10.1038/s41746-025-01696-x" target="_blank" rel="noopener">DOI &#8599;</a>
           </div>
         </li>
-
         <li class="pub-item">
           <div class="pub-meta">
             <span class="pub-year">2025</span>
             <span class="pub-journal">Frontiers in Genome Editing</span>
-            <span class="pub-oa">Open Access</span>
-          </div>
+<span class="pub-oa">Open Access</span>          </div>
           <p class="pub-title">CATS: a bioinformatic tool for automated Cas9 nucleases activity comparison in clinically relevant contexts</p>
-          <p class="pub-authors"><strong>Rocchi E</strong>, Magnani F, Castellani G, Carusillo A, Tarozzi M</p>
+          <p class="pub-authors"><strong>Rocchi E</strong>., Magnani F., Castellani G., Carusillo A., Tarozzi M.</p>
           <div class="pub-links">
             <a href="https://doi.org/10.3389/fgeed.2025.1571023" target="_blank" rel="noopener">DOI &#8599;</a>
           </div>
         </li>
-
       </ol>
 
       <div class="section-cta fade-in">
-        <a href="publications.html" class="btn btn-outline">See more publications &#8594;</a>
+        <a href="/publications.html" class="btn btn-outline">See more publications &#8594;</a>
       </div>
     </div>
   </section>
@@ -510,43 +524,37 @@
         </p>
       </div>
       <ol class="timeline fade-in-stagger">
-
-        <li class="timeline-item">
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">PhD in Health and Technologies</h3>
-            <p class="timeline-institution">University of Bologna</p>
-            <p class="timeline-detail"><strong>Defended:</strong> 15 July 2026 &middot; Excellent <em>cum laude</em></p>
-            <p class="timeline-detail"><strong>Supervisor:</strong> Prof. Gastone Castellani</p>
-            <div class="timeline-sub">
-              <p class="timeline-sub-badge">Visiting researcher &middot; 6 months</p>
-              <p class="timeline-sub-title">Max Planck Institute of Biochemistry, Munich, Germany</p>
-              <p class="timeline-sub-detail">
-                Machine Learning &amp; Systems Biology group - Prof. Karsten Borgwardt
-              </p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">MSc in Applied Physics</h3>
-            <p class="timeline-institution">University of Bologna</p>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">BSc in Physics</h3>
-            <p class="timeline-institution">University of Bologna</p>
-          </div>
-        </li>
-
-      </ol>
+  <li class="timeline-item">
+    <div class="timeline-marker" aria-hidden="true"></div>
+    <div class="timeline-content">
+      <h3 class="timeline-title">PhD in Health and Technologies</h3>
+      <p class="timeline-institution">University of Bologna</p>
+      <p class="timeline-detail"><strong>Defended:</strong> 15 July 2026 &middot; Excellent <em>cum laude</em></p>
+      <p class="timeline-detail"><strong>Supervisor:</strong> Prof. Gastone Castellani</p>
+      <div class="timeline-sub">
+        <p class="timeline-sub-badge">Visiting researcher &middot; 6 months</p>
+        <p class="timeline-sub-title">Max Planck Institute of Biochemistry, Munich, Germany</p>
+        <p class="timeline-sub-detail">Machine Learning &amp; Systems Biology group - Prof. Karsten Borgwardt</p>
+      </div>
+    </div>
+  </li>
+  <li class="timeline-item">
+    <div class="timeline-marker" aria-hidden="true"></div>
+    <div class="timeline-content">
+      <h3 class="timeline-title">MSc in Applied Physics</h3>
+      <p class="timeline-institution">University of Bologna</p>
+    </div>
+  </li>
+  <li class="timeline-item">
+    <div class="timeline-marker" aria-hidden="true"></div>
+    <div class="timeline-content">
+      <h3 class="timeline-title">BSc in Physics</h3>
+      <p class="timeline-institution">University of Bologna</p>
+    </div>
+  </li>
+</ol>
       <div class="section-cta fade-in">
-        <a href="education.html" class="btn btn-outline">Full education page &#8594;</a>
+        <a href="/education.html" class="btn btn-outline">Full education page &#8594;</a>
       </div>
     </div>
   </section>
@@ -603,32 +611,32 @@
         <p class="contact-email"><a href="mailto:ettore.rocchi3@unibo.it">ettore.rocchi3@unibo.it</a></p>
         <div class="contact-links">
           <a href="https://github.com/EttoreRocchi" class="contact-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
           <a href="https://www.linkedin.com/in/ettore-rocchi/" class="contact-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
           <a href="https://bsky.app/profile/ettorerocchi.bsky.social" class="contact-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364-3.911.58-7.386 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078 2.67.297 5.568-.628 6.383-3.364C23.622 9.418 24 4.458 24 3.768c0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.747 13.087 8.687 12 10.8Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364-3.911.58-7.386 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078 2.67.297 5.568-.628 6.383-3.364C23.622 9.418 24 4.458 24 3.768c0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.747 13.087 8.687 12 10.8Z"/></svg>
             Bluesky
           </a>
           <span class="contact-links-break" aria-hidden="true"></span>
           <a href="https://scholar.google.com/citations?user=MKHoGnQAAAAJ" class="contact-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
             Google Scholar
           </a>
           <a href="https://orcid.org/0000-0002-7612-2819" class="contact-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.238-3.722-3.806-3.722h-2.513z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.238-3.722-3.806-3.722h-2.513z"/></svg>
             ORCID
           </a>
           <a href="https://www.scopus.com/authid/detail.uri?authorId=57220152522" class="contact-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2a10 10 0 110 20 10 10 0 010-20zm-1.5 5v10h3V7h-3z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2a10 10 0 110 20 10 10 0 010-20zm-1.5 5v10h3V7h-3z"/></svg>
             Scopus
           </a>
           <a href="https://www.unibo.it/sitoweb/ettore.rocchi3" class="contact-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
             UniBO
           </a>
         </div>
@@ -636,12 +644,13 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-row">
-        <a href="mailto:ettore.rocchi3@unibo.it" class="footer-email" aria-label="Email">ettore.rocchi3@unibo.it</a>
-        <div class="footer-socials" aria-label="Social links">
+        <a href="mailto:ettore.rocchi3@unibo.it" class="footer-email">ettore.rocchi3@unibo.it</a>
+        <nav class="footer-socials" aria-label="Social links">
           <a href="https://github.com/EttoreRocchi" class="footer-social" target="_blank" rel="noopener" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
@@ -660,12 +669,12 @@
           <a href="https://www.scopus.com/authid/detail.uri?authorId=57220152522" class="footer-social" target="_blank" rel="noopener" aria-label="Scopus">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2a10 10 0 110 20 10 10 0 010-20zm-1.5 5v10h3V7h-3z"/></svg>
           </a>
-        </div>
+        </nav>
       </div>
       <p class="footer-copyright">&copy; 2026 Ettore Rocchi. Built with care, no frameworks were harmed.</p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

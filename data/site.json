@@ -1,0 +1,108 @@
+{
+  "name": "Ettore Rocchi",
+  "base_url": "https://ettorerocchi.github.io",
+  "email": "ettore.rocchi3@unibo.it",
+  "role": "Postdoctoral Researcher",
+  "affiliation": "University of Bologna",
+  "orcid": "0000-0002-7612-2819",
+  "scopus_id": "57220152522",
+  "scholar_id": "MKHoGnQAAAAJ",
+  "links": {
+    "github": "https://github.com/EttoreRocchi",
+    "linkedin": "https://www.linkedin.com/in/ettore-rocchi/",
+    "bluesky": "https://bsky.app/profile/ettorerocchi.bsky.social",
+    "scholar": "https://scholar.google.com/citations?user=MKHoGnQAAAAJ",
+    "orcid": "https://orcid.org/0000-0002-7612-2819",
+    "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57220152522",
+    "unibo": "https://www.unibo.it/sitoweb/ettore.rocchi3",
+    "lab": "https://github.com/Physics4MedicineLab"
+  },
+  "nav": [
+    {
+      "key": "about",
+      "href": "/",
+      "label": "About"
+    },
+    {
+      "key": "research",
+      "href": "/research.html",
+      "label": "Research"
+    },
+    {
+      "key": "projects",
+      "href": "/projects.html",
+      "label": "Projects"
+    },
+    {
+      "key": "publications",
+      "href": "/publications.html",
+      "label": "Publications"
+    },
+    {
+      "key": "education",
+      "href": "/education.html",
+      "label": "Education"
+    },
+    {
+      "key": "news",
+      "href": "/news.html",
+      "label": "News"
+    }
+  ],
+  "footer_socials": [
+    "github",
+    "linkedin",
+    "bluesky",
+    "scholar",
+    "orcid",
+    "scopus"
+  ],
+  "contact_links": [
+    {
+      "key": "github",
+      "label": "GitHub"
+    },
+    {
+      "key": "linkedin",
+      "label": "LinkedIn"
+    },
+    {
+      "key": "bluesky",
+      "label": "Bluesky"
+    },
+    {
+      "break": true
+    },
+    {
+      "key": "scholar",
+      "label": "Google Scholar"
+    },
+    {
+      "key": "orcid",
+      "label": "ORCID"
+    },
+    {
+      "key": "scopus",
+      "label": "Scopus"
+    },
+    {
+      "key": "unibo",
+      "label": "UniBO"
+    }
+  ],
+  "featured_dois": [
+    "10.1186/s12866-025-04657-2",
+    "10.1038/s41746-025-01696-x",
+    "10.3389/fgeed.2025.1571023"
+  ],
+  "news_home_limit": 3,
+  "social_labels": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "bluesky": "Bluesky",
+    "scholar": "Google Scholar",
+    "orcid": "ORCID",
+    "scopus": "Scopus",
+    "unibo": "UniBO"
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "title": "PhD in Health and Technologies",
+    "institution": "University of Bologna",
+    "details_home": [
+      "<strong>Defended:</strong> 15 July 2026 &middot; Excellent <em>cum laude</em>",
+      "<strong>Supervisor:</strong> Prof. Gastone Castellani"
+    ],
+    "details_full": [
+      "<strong>Defended:</strong> 15 July 2026, evaluated Excellent <em>cum laude</em> &middot; 2023 - 2026",
+      "<strong>Supervisor:</strong> Prof. Gastone Castellani &middot; <strong>Co-supervisor:</strong> Prof. Simone Ambretti",
+      "<strong>Cohort:</strong> XXXVIII &middot; <strong>Research focus:</strong> machine learning on omics data",
+      "<strong>Thesis:</strong> <em>Computational algorithms and machine learning frameworks for omics data with focus on antimicrobial resistance</em>"
+    ],
+    "sub": {
+      "badge": "Visiting researcher &middot; 6 months",
+      "title": "Max Planck Institute of Biochemistry, Munich, Germany",
+      "detail_home": "Machine Learning &amp; Systems Biology group - Prof. Karsten Borgwardt",
+      "detail_full": "Machine Learning &amp; Systems Biology group - Prof. Karsten Borgwardt. March - September 2025."
+    }
+  },
+  {
+    "title": "MSc in Applied Physics",
+    "institution": "University of Bologna",
+    "details_home": [],
+    "details_full": [
+      "<strong>Supervisor:</strong> Prof. Claudia Sala &middot; <strong>Co-supervisor:</strong> Prof. Daniel Remondini",
+      "<strong>Thesis:</strong> <em>Characterisation of the sewage microbiome in four European cities throughout the COVID-19 pandemic by means of ecological and network modelling</em>"
+    ]
+  },
+  {
+    "title": "BSc in Physics",
+    "institution": "University of Bologna",
+    "details_home": [],
+    "details_full": [
+      "<strong>Supervisor:</strong> Prof. Alexandr Kamenchtchik",
+      "<strong>Topic:</strong> <em>Physical applications of differential geometry</em>"
+    ]
+  }
+]

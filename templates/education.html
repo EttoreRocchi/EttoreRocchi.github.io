@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Education - Ettore Rocchi{% endblock %}
+{% block description %}Academic background of Ettore Rocchi - PhD in Health and Technologies, MSc in Applied Physics, and BSc in Physics at the University of Bologna, with a visiting period at the Max Planck Institute of Biochemistry.{% endblock %}
+{% block og_description %}PhD in Health and Technologies, MSc in Applied Physics, BSc in Physics - University of Bologna.{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">Education</p>
+      <h1>Where I trained.</h1>
+      <p class="page-lede">
+        A physics training that gradually re-oriented itself toward biomedical questions.
+        The full timeline below, with thesis topics, supervisors, and the visiting period
+        at Max Planck Institute of Biochemistry.
+      </p>
+    </div>
+  </header>
+
+  <section id="education-timeline">
+    <div class="container">
+      {{ m.timeline(education, 'full', 'h2') }}
+    </div>
+  </section>
+
+  <section class="back-cta">
+    <div class="container">
+      <a href="/research.html" class="btn btn-outline">Read about the research &#8594;</a>
+      <a href="/publications.html" class="btn btn-outline">Browse publications &#8594;</a>
+    </div>
+  </section>
+{% endblock %}

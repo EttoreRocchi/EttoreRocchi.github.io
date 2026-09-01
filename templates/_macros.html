@@ -1,0 +1,130 @@
+{#
+  Shared macros: social icons, publication items, news items, project badges,
+  education timeline. Imported by base.html and the page templates.
+#}
+
+{% set ICON_PATHS = {
+  "github":   'M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z',
+  "linkedin": 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
+  "bluesky":  'M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364-3.911.58-7.386 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078 2.67.297 5.568-.628 6.383-3.364C23.622 9.418 24 4.458 24 3.768c0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.747 13.087 8.687 12 10.8Z',
+  "scholar":  'M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z',
+  "orcid":    'M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.238-3.722-3.806-3.722h-2.513z',
+  "scopus":   'M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2a10 10 0 110 20 10 10 0 010-20zm-1.5 5v10h3V7h-3z',
+  "unibo":    'M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z'
+} %}
+
+{% macro icon(name, size=None) -%}
+<svg{% if size %} width="{{ size }}" height="{{ size }}"{% endif %} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="{{ ICON_PATHS[name] }}"/></svg>
+{%- endmacro %}
+
+{# --- Publications ------------------------------------------------------ #}
+
+{% macro pub_item(pub) -%}
+<li class="pub-item" data-year="{{ pub.year or '' }}" data-type="{{ pub.type or '' }}">
+  <div class="pub-meta">
+    {% if pub.year %}<span class="pub-year">{{ pub.year }}</span>{% endif %}
+    {% if pub.journal %}<span class="pub-journal">{{ pub.journal }}</span>{% endif %}
+    {% if pub.openaccess %}<span class="pub-oa">Open Access</span>{% endif %}
+  </div>
+  <p class="pub-title">{{ pub.title }}</p>
+  <p class="pub-authors">{{ pub.authors_html|safe }}</p>
+  {% if pub.doi or pub.bibtex %}
+  <div class="pub-links">
+    {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI &#8599;</a>{% endif %}
+    {% if pub.bibtex %}
+    <details class="bibtex-toggle">
+      <summary>BibTeX</summary>
+      <div class="bibtex-code">{{ pub.bibtex }}<button type="button" class="bibtex-copy" aria-label="Copy BibTeX">copy</button></div>
+    </details>
+    {% endif %}
+  </div>
+  {% endif %}
+</li>
+{%- endmacro %}
+
+{% macro facet_pills(facet, total) -%}
+<button type="button" class="pub-type-pill active" data-value="all" aria-pressed="true">All <span class="pub-type-pill-count">{{ total }}</span></button>
+{% for key, count in facet %}
+<button type="button" class="pub-type-pill" data-value="{{ key }}" aria-pressed="false">{{ key }} <span class="pub-type-pill-count">{{ count }}</span></button>
+{% endfor %}
+{%- endmacro %}
+
+{# --- News -------------------------------------------------------------- #}
+
+{% macro news_item(item, index) -%}
+<li class="news-item" style="--news-delay:{{ index * 60 }}ms">
+  <div class="news-marker" aria-hidden="true">
+    <span class="news-icon">{{ item.icon }}</span>
+  </div>
+  <div class="news-body">
+    <div class="news-meta">
+      <span class="news-date">{{ item.date_text }}</span>
+      <span class="news-type news-type-{{ item.type }}">{{ item.label }}</span>
+    </div>
+    <p class="news-text">{% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}</p>
+  </div>
+</li>
+{%- endmacro %}
+
+{# --- Projects ---------------------------------------------------------- #}
+
+{% macro badges(p) -%}
+{% if p.pypi or p.github %}
+<div class="project-badges">
+  {% if p.pypi %}
+  <a href="https://pypi.org/project/{{ p.pypi }}/" target="_blank" rel="noopener"><img src="https://img.shields.io/pypi/v/{{ p.pypi }}?label=PyPI&amp;color=2c3e6b" alt="{{ p.name }} on PyPI (latest version)" height="20" loading="lazy"></a>
+  <a href="https://pypi.org/project/{{ p.pypi }}/" target="_blank" rel="noopener"><img src="https://img.shields.io/pepy/dt/{{ p.pypi }}?label=downloads&amp;color=2c3e6b" alt="{{ p.name }} total downloads" height="20" loading="lazy"></a>
+  {% endif %}
+  {% if p.github %}
+  <a href="{{ p.github }}" target="_blank" rel="noopener"><img src="https://img.shields.io/github/last-commit/{{ p.github|replace('https://github.com/', '') }}?label=last%20commit&amp;color=2c3e6b" alt="{{ p.name }} last commit on GitHub" height="20" loading="lazy"></a>
+  {% endif %}
+  {% if p.pypi %}<code class="pip-line">pip install {{ p.pypi }}</code>{% endif %}
+</div>
+{% endif %}
+{%- endmacro %}
+
+{% macro tags(list) -%}
+<div class="project-tags">
+  {% for t in list %}<span class="tag">{{ t }}</span>{% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro project_card(p, variant, extra_class='') -%}
+<div class="project-card {{ extra_class }}"{% if variant == 'page' %} id="{{ p.id }}"{% endif %}>
+  <div class="project-header">
+    <span class="project-name">{{ p.name }}</span>
+    <a href="{{ p.github }}" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+  {% set v = p[variant] if variant in p else p %}
+  <p class="project-oneliner">{{ v.oneliner }}</p>
+  <p class="project-description">{{ v.description|safe }}</p>
+  {{ badges(p) }}
+  {{ tags(v.tags) }}
+</div>
+{%- endmacro %}
+
+{# --- Education --------------------------------------------------------- #}
+
+{% macro timeline(entries, variant, heading='h3') -%}
+<ol class="timeline fade-in-stagger">
+  {% for e in entries %}
+  <li class="timeline-item">
+    <div class="timeline-marker" aria-hidden="true"></div>
+    <div class="timeline-content">
+      <{{ heading }} class="timeline-title">{{ e.title }}</{{ heading }}>
+      <p class="timeline-institution">{{ e.institution }}</p>
+      {% for d in e['details_' ~ variant] %}
+      <p class="timeline-detail">{{ d|safe }}</p>
+      {% endfor %}
+      {% if e.sub %}
+      <div class="timeline-sub">
+        <p class="timeline-sub-badge">{{ e.sub.badge|safe }}</p>
+        <p class="timeline-sub-title">{{ e.sub.title }}</p>
+        <p class="timeline-sub-detail">{{ e.sub['detail_' ~ variant]|safe }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{%- endmacro %}
