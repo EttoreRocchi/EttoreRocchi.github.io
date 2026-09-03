@@ -90,11 +90,16 @@
       "label": "UniBO"
     }
   ],
-  "featured_dois": [
-    "10.1186/s12866-025-04657-2",
-    "10.1038/s41746-025-01696-x",
-    "10.3389/fgeed.2025.1571023"
-  ],
+  "highlights": {
+    "paper_doi": "10.1186/s12866-025-04657-2",
+    "paper_blurb": "Multicentre antimicrobial resistance prediction in Klebsiella pneumoniae from routine MALDI-TOF spectra of clinical isolates, with cross-site validation.",
+    "project_id": "maldisuite",
+    "research": {
+      "title": "AMR & clinical machine learning",
+      "text": "Predicting antimicrobial resistance from MALDI-TOF spectra and clinical data ahead of culture-based diagnostics, with cross-site harmonisation so that models learn the biology rather than the instrument.",
+      "href": "/research.html#amr"
+    }
+  },
   "news_home_limit": 3,
   "social_labels": {
     "github": "GitHub",

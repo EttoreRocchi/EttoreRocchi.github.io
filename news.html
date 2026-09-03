@@ -33,13 +33,13 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="alternate" type="application/atom+xml" title="Ettore Rocchi - News" href="/feed.xml">
   <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <!-- Fonts are self-hosted (assets/fonts, declared in style.css); preload the two on the critical path -->
+  <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/style.css">
@@ -103,7 +103,7 @@
     <div class="container">
       <div id="news-feed" class="news-feed fade-in">
         <ol class="news-list">
-          <li class="news-item" style="--news-delay:0ms">
+          <li class="news-item" id="2026-07-15-phd-defended-at-the" style="--news-delay:0ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">🏆</span>
   </div>
@@ -112,10 +112,10 @@
       <span class="news-date">15 Jul 2026</span>
       <span class="news-type news-type-award">Award</span>
     </div>
-    <p class="news-text">PhD defended at the University of Bologna (Health and Technologies), awarded the highest evaluation - Excellent cum laude. Supervisor: Prof. Gastone Castellani.</p>
+    <p class="news-text">PhD defended at the University of Bologna (Health and Technologies), evaluated Excellent cum laude. Supervisor: Prof. Gastone Castellani.</p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:60ms">
+          <li class="news-item" id="2026-07-started-as-a-postdoctoral" style="--news-delay:60ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">✨</span>
   </div>
@@ -127,7 +127,7 @@
     <p class="news-text">Started as a Postdoctoral Researcher at the University of Bologna, continuing work on machine learning for clinical microbiology and omics data within the Physics4MedicineLab with Prof. Gastone Castellani.</p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:120ms">
+          <li class="news-item" id="2026-04-28-maldisuite-ecosystem-published-on" style="--news-delay:120ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">⚙️</span>
   </div>
@@ -139,7 +139,7 @@
     <p class="news-text"><a href="https://github.com/EttoreRocchi/MaldiSuite" target="_blank" rel="noopener">MaldiSuite ecosystem published on PyPI - MaldiAMRKit, MaldiBatchKit, and MaldiDeepKit for end-to-end clinical AMR pipelines.</a></p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:180ms">
+          <li class="news-item" id="2026-04-17-poster-at-escmid-global" style="--news-delay:180ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">🎓</span>
   </div>
@@ -151,7 +151,7 @@
     <p class="news-text">Poster at ESCMID Global 2026, Munich (17-21 April): &#39;AMRchitecture - a standardised benchmark framework for MALDI-TOF-based antimicrobial resistance detection&#39;.</p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:240ms">
+          <li class="news-item" id="2026-03-started-as-an-associate" style="--news-delay:240ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">✨</span>
   </div>
@@ -163,7 +163,7 @@
     <p class="news-text">Started as an Associate Researcher at IRCCS Policlinico di Sant&#39;Orsola (Azienda Ospedaliero-Universitaria di Bologna) with Dr. Magda Ialonardi.</p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:300ms">
+          <li class="news-item" id="2026-01-19-paper-published-in-bmc" style="--news-delay:300ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">📄</span>
   </div>
@@ -175,7 +175,7 @@
     <p class="news-text"><a href="https://doi.org/10.1186/s12866-025-04657-2" target="_blank" rel="noopener">Paper published in BMC Microbiology - multicentre AMR prediction in Klebsiella pneumoniae from MALDI-TOF spectra.</a></p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:360ms">
+          <li class="news-item" id="2026-01-08-respredai-released-on-pypi" style="--news-delay:360ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">⚙️</span>
   </div>
@@ -187,7 +187,7 @@
     <p class="news-text"><a href="https://github.com/EttoreRocchi/ResPredAI" target="_blank" rel="noopener">ResPredAI released on PyPI - CLI-based ML framework for predicting resistances in Gram-negative bloodstream infections.</a></p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:420ms">
+          <li class="news-item" id="2025-09-24-completed-6-month-research" style="--news-delay:420ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">🏛️</span>
   </div>
@@ -199,7 +199,7 @@
     <p class="news-text"><a href="https://www.biochem.mpg.de/borgwardt" target="_blank" rel="noopener">Completed 6-month research visit at the Max Planck Institute of Biochemistry, Munich (March-September 2025) - Machine Learning &amp; Systems Biology group (Prof. Karsten Borgwardt).</a></p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:480ms">
+          <li class="news-item" id="2025-07-16-paper-published-in-scientific" style="--news-delay:480ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">📄</span>
   </div>
@@ -211,7 +211,7 @@
     <p class="news-text"><a href="https://doi.org/10.1038/s41598-025-11855-5" target="_blank" rel="noopener">Paper published in Scientific Reports - evolutionary dynamics of Monkeypox virus through less explored pathways.</a></p>
   </div>
 </li>
-          <li class="news-item" style="--news-delay:540ms">
+          <li class="news-item" id="2025-05-29-paper-published-in-npj" style="--news-delay:540ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">📄</span>
   </div>

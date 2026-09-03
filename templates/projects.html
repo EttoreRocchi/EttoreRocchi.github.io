@@ -34,7 +34,7 @@
             <h3>{{ pkg.name }}</h3>
             <p class="eco-role">{{ pkg.role }}</p>
             <p>{{ pkg.description }}</p>
-            <a href="{{ pkg.github }}" target="_blank" rel="noopener">{{ pkg.github|replace('https://', '') }} &#8599;</a>
+            <a href="{{ pkg.github }}" target="_blank" rel="noopener">GitHub &#8599;</a>
             {{ m.badges(pkg) }}
           </div>
           {% endfor %}

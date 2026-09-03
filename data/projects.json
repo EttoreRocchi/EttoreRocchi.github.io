@@ -52,7 +52,7 @@
       },
       "page": {
         "oneliner": "A reproducible ML framework for predicting antimicrobial resistance from clinical and microbiology data.",
-        "description": "Built around nested cross-validation with proper hyperparameter selection, nine model architectures (linear, tree-based, kernel methods, neural networks), probability calibration, and decision-threshold optimization. The whole pipeline is configured via a single <code>.ini</code> file and produces reproducible results, including calibration plots, performance tables, and SHAP-based interpretability reports.",
+        "description": "Built around nested cross-validation with hyperparameter selection, nine model architectures (linear, tree-based, kernel methods, neural networks), probability calibration, and decision-threshold optimization. The whole pipeline is configured via a single <code>.ini</code> file and produces reproducible results, including calibration plots, performance tables, and SHAP-based interpretability reports.",
         "meta": "<strong>Used in:</strong> Bonazzetti C, <strong>Rocchi E</strong>, <em>et al.</em> <em>npj Digital Medicine</em>, 2025",
         "tags": ["Python", "XGBoost", "PyTorch", "CLI", "PyPI", "AMR"]
       }
@@ -92,7 +92,7 @@
       "github": "https://github.com/EttoreRocchi/nestkit",
       "pypi": "nestkit",
       "oneliner": "Nested cross-validation with calibration, threshold optimization, and statistical tests.",
-      "description": "A toolkit for the kind of model evaluation that survives peer review: nested CV with proper hyperparameter selection, probability calibration, decision-threshold tuning, and built-in statistical comparisons between models.",
+      "description": "A toolkit for rigorous model evaluation: nested CV with hyperparameter selection kept inside the inner loop, probability calibration, decision-threshold tuning, and built-in statistical comparisons between models.",
       "tags": ["Python", "scikit-learn", "nested CV", "calibration"]
     },
     {

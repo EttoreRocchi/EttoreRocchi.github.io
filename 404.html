@@ -33,13 +33,13 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="alternate" type="application/atom+xml" title="Ettore Rocchi - News" href="/feed.xml">
   <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <!-- Fonts are self-hosted (assets/fonts, declared in style.css); preload the two on the critical path -->
+  <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/style.css">
@@ -65,11 +65,11 @@
       text-align: center;
     }
     .notfound-code {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-heading);
       font-size: clamp(4rem, 18vw, 9rem);
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.02em;
       margin: 0;
       color: var(--color-accent, #2c3e6b);
     }

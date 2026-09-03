@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ettore Rocchi - News</title>
+  <subtitle>Papers, software releases, conferences, and research visits.</subtitle>
+  <link href="https://ettorerocchi.github.io/news.html"/>
+  <link rel="self" href="https://ettorerocchi.github.io/feed.xml"/>
+  <id>https://ettorerocchi.github.io/</id>
+  <updated>2026-07-15T00:00:00Z</updated>
+  <author><name>Ettore Rocchi</name></author>
+  <entry>
+    <title>PhD defended at the University of Bologna (Health and Technologies), evaluated Excellent cum laude</title>
+    <link href="https://ettorerocchi.github.io/news.html#2026-07-15-phd-defended-at-the"/>
+    <id>https://ettorerocchi.github.io/news.html#2026-07-15-phd-defended-at-the</id>
+    <updated>2026-07-15T00:00:00Z</updated>
+    <category term="Award"/>
+    <summary>PhD defended at the University of Bologna (Health and Technologies), evaluated Excellent cum laude. Supervisor: Prof. Gastone Castellani.</summary>
+  </entry>
+  <entry>
+    <title>Started as a Postdoctoral Researcher at the University of Bologna, continuing work on machine learning for clinical…</title>
+    <link href="https://ettorerocchi.github.io/news.html#2026-07-started-as-a-postdoctoral"/>
+    <id>https://ettorerocchi.github.io/news.html#2026-07-started-as-a-postdoctoral</id>
+    <updated>2026-07-01T00:00:00Z</updated>
+    <category term="Update"/>
+    <summary>Started as a Postdoctoral Researcher at the University of Bologna, continuing work on machine learning for clinical microbiology and omics data within the Physics4MedicineLab with Prof. Gastone Castellani.</summary>
+  </entry>
+  <entry>
+    <title>MaldiSuite ecosystem published on PyPI - MaldiAMRKit, MaldiBatchKit, and MaldiDeepKit for end-to-end clinical AMR…</title>
+    <link href="https://github.com/EttoreRocchi/MaldiSuite"/>
+    <id>https://ettorerocchi.github.io/news.html#2026-04-28-maldisuite-ecosystem-published-on</id>
+    <updated>2026-04-28T00:00:00Z</updated>
+    <category term="Software"/>
+    <summary>MaldiSuite ecosystem published on PyPI - MaldiAMRKit, MaldiBatchKit, and MaldiDeepKit for end-to-end clinical AMR pipelines.</summary>
+  </entry>
+  <entry>
+    <title>Poster at ESCMID Global 2026, Munich (17-21 April): 'AMRchitecture - a standardised benchmark framework for…</title>
+    <link href="https://ettorerocchi.github.io/news.html#2026-04-17-poster-at-escmid-global"/>
+    <id>https://ettorerocchi.github.io/news.html#2026-04-17-poster-at-escmid-global</id>
+    <updated>2026-04-17T00:00:00Z</updated>
+    <category term="Conference"/>
+    <summary>Poster at ESCMID Global 2026, Munich (17-21 April): 'AMRchitecture - a standardised benchmark framework for MALDI-TOF-based antimicrobial resistance detection'.</summary>
+  </entry>
+  <entry>
+    <title>Started as an Associate Researcher at IRCCS Policlinico di Sant'Orsola (Azienda Ospedaliero-Universitaria di Bologna)…</title>
+    <link href="https://ettorerocchi.github.io/news.html#2026-03-started-as-an-associate"/>
+    <id>https://ettorerocchi.github.io/news.html#2026-03-started-as-an-associate</id>
+    <updated>2026-03-01T00:00:00Z</updated>
+    <category term="Update"/>
+    <summary>Started as an Associate Researcher at IRCCS Policlinico di Sant'Orsola (Azienda Ospedaliero-Universitaria di Bologna) with Dr. Magda Ialonardi.</summary>
+  </entry>
+  <entry>
+    <title>Paper published in BMC Microbiology - multicentre AMR prediction in Klebsiella pneumoniae from MALDI-TOF spectra</title>
+    <link href="https://doi.org/10.1186/s12866-025-04657-2"/>
+    <id>https://ettorerocchi.github.io/news.html#2026-01-19-paper-published-in-bmc</id>
+    <updated>2026-01-19T00:00:00Z</updated>
+    <category term="Paper"/>
+    <summary>Paper published in BMC Microbiology - multicentre AMR prediction in Klebsiella pneumoniae from MALDI-TOF spectra.</summary>
+  </entry>
+  <entry>
+    <title>ResPredAI released on PyPI - CLI-based ML framework for predicting resistances in Gram-negative bloodstream infections</title>
+    <link href="https://github.com/EttoreRocchi/ResPredAI"/>
+    <id>https://ettorerocchi.github.io/news.html#2026-01-08-respredai-released-on-pypi</id>
+    <updated>2026-01-08T00:00:00Z</updated>
+    <category term="Software"/>
+    <summary>ResPredAI released on PyPI - CLI-based ML framework for predicting resistances in Gram-negative bloodstream infections.</summary>
+  </entry>
+  <entry>
+    <title>Completed 6-month research visit at the Max Planck Institute of Biochemistry, Munich (March-September 2025) - Machine…</title>
+    <link href="https://www.biochem.mpg.de/borgwardt"/>
+    <id>https://ettorerocchi.github.io/news.html#2025-09-24-completed-6-month-research</id>
+    <updated>2025-09-24T00:00:00Z</updated>
+    <category term="Visit"/>
+    <summary>Completed 6-month research visit at the Max Planck Institute of Biochemistry, Munich (March-September 2025) - Machine Learning &amp; Systems Biology group (Prof. Karsten Borgwardt).</summary>
+  </entry>
+  <entry>
+    <title>Paper published in Scientific Reports - evolutionary dynamics of Monkeypox virus through less explored pathways</title>
+    <link href="https://doi.org/10.1038/s41598-025-11855-5"/>
+    <id>https://ettorerocchi.github.io/news.html#2025-07-16-paper-published-in-scientific</id>
+    <updated>2025-07-16T00:00:00Z</updated>
+    <category term="Paper"/>
+    <summary>Paper published in Scientific Reports - evolutionary dynamics of Monkeypox virus through less explored pathways.</summary>
+  </entry>
+  <entry>
+    <title>Paper published in npj Digital Medicine - AI model to predict resistances in Gram-negative bloodstream infections</title>
+    <link href="https://doi.org/10.1038/s41746-025-01696-x"/>
+    <id>https://ettorerocchi.github.io/news.html#2025-05-29-paper-published-in-npj</id>
+    <updated>2025-05-29T00:00:00Z</updated>
+    <category term="Paper"/>
+    <summary>Paper published in npj Digital Medicine - AI model to predict resistances in Gram-negative bloodstream infections.</summary>
+  </entry>
+</feed>

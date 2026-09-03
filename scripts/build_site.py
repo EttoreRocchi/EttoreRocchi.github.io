@@ -8,7 +8,8 @@ Run via:
 The site stays plain HTML/CSS/JS at runtime; this script only removes the
 copy-paste between pages (header, footer, head metadata) and pre-renders the
 data-driven parts (publications, news, projects, education) so that they are
-crawlable and readable without JavaScript. Requires `jinja2`.
+crawlable and readable without JavaScript. It also writes sitemap.xml (lastmod
+taken from git) and an Atom feed.xml built from data/news.json. Requires `jinja2`.
 """
 
 from __future__ import annotations
@@ -16,9 +17,11 @@ from __future__ import annotations
 import datetime as dt
 import json
 import re
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -69,14 +72,26 @@ def format_news_date(raw: str) -> str:
     return raw
 
 
+def slugify(text: str, words: int = 4) -> str:
+    tokens = re.findall(r"[a-z0-9]+", text.lower())
+    return "-".join(tokens[:words])
+
+
 def prepare_news(items: list[dict]) -> list[dict]:
     out = []
+    seen: set[str] = set()
     for item in items:
         kind = item.get("type") or "default"
         if kind not in NEWS_TYPES:
             kind = "default"
         icon, label = NEWS_TYPES[kind]
+        base = f"{item.get('date', '')}-{slugify(item.get('text', ''))}".strip("-")
+        uid, n = base, 2
+        while uid in seen:
+            uid, n = f"{base}-{n}", n + 1
+        seen.add(uid)
         out.append({
+            "id": uid,
             "date": item.get("date", ""),
             "date_text": format_news_date(item.get("date", "")),
             "type": kind,
@@ -127,6 +142,122 @@ def publications_jsonld(pubs: list[dict], site: dict) -> str:
     return json.dumps(data, ensure_ascii=False, indent=2)
 
 
+# --- Sitemap ------------------------------------------------------------
+
+SITEMAP_META: dict[str, tuple[str, str]] = {
+    # page key -> (changefreq, priority)
+    "home":         ("monthly", "1.0"),
+    "research":     ("monthly", "0.8"),
+    "projects":     ("monthly", "0.8"),
+    "publications": ("monthly", "0.8"),
+    "news":         ("weekly",  "0.7"),
+    "education":    ("yearly",  "0.6"),
+}
+
+
+def git(*args: str) -> str | None:
+    try:
+        return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return None
+
+
+def page_lastmod(out_name: str, rendered: str, today: dt.date) -> str:
+    """Date of the last commit that changed the page, or today if the fresh render differs from HEAD."""
+    committed = git("show", f"HEAD:{out_name}")
+    if committed is None or committed.rstrip("\n") != rendered.rstrip("\n"):
+        return today.isoformat()
+    stamp = git("log", "-1", "--format=%cs", "--", out_name)
+    return (stamp or "").strip() or today.isoformat()
+
+
+def write_sitemap(site: dict, entries: list[tuple[str, str, str]]) -> None:
+    """entries: (url path, lastmod, page key)."""
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for url, lastmod, key in entries:
+        changefreq, priority = SITEMAP_META.get(key, ("monthly", "0.5"))
+        lines += ["  <url>",
+                  f"    <loc>{escape(site['base_url'] + url)}</loc>",
+                  f"    <lastmod>{lastmod}</lastmod>",
+                  f"    <changefreq>{changefreq}</changefreq>",
+                  f"    <priority>{priority}</priority>",
+                  "  </url>"]
+    lines.append("</urlset>")
+    (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f">>> Wrote sitemap.xml ({len(entries)} URLs)")
+
+
+# --- Atom feed ----------------------------------------------------------
+
+def news_timestamp(raw: str) -> str:
+    """RFC 3339 timestamp for a news date; month-only dates map to the 1st."""
+    if re.fullmatch(r"\d{4}-\d{2}", raw):
+        raw += "-01"
+    elif re.fullmatch(r"\d{4}", raw):
+        raw += "-01-01"
+    try:
+        dt.date.fromisoformat(raw)
+    except ValueError:
+        raw = dt.date.today().isoformat()
+    return raw + "T00:00:00Z"
+
+
+def news_title(text: str, limit: int = 120) -> str:
+    first = re.split(r"(?<=[.!?])\s", text.strip(), maxsplit=1)[0].rstrip(".")
+    if len(first) <= limit:
+        return first
+    cut = first[:limit].rsplit(" ", 1)[0]
+    return cut + "\u2026"
+
+
+def write_feed(site: dict, news: list[dict], today: dt.date) -> None:
+    base = site["base_url"]
+    updated = news_timestamp(news[0]["date"]) if news else today.isoformat() + "T00:00:00Z"
+    lines = ['<?xml version="1.0" encoding="utf-8"?>',
+             '<feed xmlns="http://www.w3.org/2005/Atom">',
+             f"  <title>{escape(site['name'])} - News</title>",
+             f"  <subtitle>Papers, software releases, conferences, and research visits.</subtitle>",
+             f'  <link href="{base}/news.html"/>',
+             f'  <link rel="self" href="{base}/feed.xml"/>',
+             f"  <id>{base}/</id>",
+             f"  <updated>{updated}</updated>",
+             f"  <author><name>{escape(site['name'])}</name></author>"]
+    for item in news:
+        permalink = f"{base}/news.html#{item['id']}"
+        lines += ["  <entry>",
+                  f"    <title>{escape(news_title(item['text']))}</title>",
+                  f'    <link href="{escape(item["link"] or permalink)}"/>',
+                  f"    <id>{permalink}</id>",
+                  f"    <updated>{news_timestamp(item['date'])}</updated>",
+                  f'    <category term="{escape(item["label"])}"/>',
+                  f"    <summary>{escape(item['text'])}</summary>",
+                  "  </entry>"]
+    lines.append("</feed>")
+    (ROOT / "feed.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f">>> Wrote feed.xml ({len(news)} entries)")
+
+
+# --- Highlights (home) ---------------------------------------------------
+
+def resolve_highlights(site: dict, publications: list[dict], projects: dict) -> dict:
+    cfg = site.get("highlights", {})
+    by_doi = {(p.get("doi") or "").lower(): p for p in publications}
+    paper = by_doi.get((cfg.get("paper_doi") or "").lower())
+    if paper is None:
+        print(f"!!! highlights.paper_doi not found in publications.json: {cfg.get('paper_doi')}", file=sys.stderr)
+    candidates = [projects.get("ecosystem", {})] + projects.get("frameworks", []) + projects.get("tools", [])
+    project = next((p for p in candidates if p.get("id") == cfg.get("project_id")), None)
+    if project is None:
+        print(f"!!! highlights.project_id not found in projects.json: {cfg.get('project_id')}", file=sys.stderr)
+    return {
+        "paper": paper,
+        "paper_blurb": cfg.get("paper_blurb", ""),
+        "project": project,
+        "research": cfg.get("research", {}),
+    }
+
+
 # --- Main ----------------------------------------------------------------
 
 def main() -> int:
@@ -135,16 +266,7 @@ def main() -> int:
     news = prepare_news(load_json("news.json"))
     projects = load_json("projects.json")
     education = load_json("education.json")
-    stack = load_json("stack.json")
-
-    by_doi = {(p.get("doi") or "").lower(): p for p in publications}
-    featured_pubs = []
-    for doi in site.get("featured_dois", []):
-        pub = by_doi.get(doi.lower())
-        if pub is None:
-            print(f"!!! featured DOI not found in publications.json: {doi}", file=sys.stderr)
-            continue
-        featured_pubs.append(pub)
+    highlights = resolve_highlights(site, publications, projects)
 
     today = dt.date.today()
     env = Environment(
@@ -159,23 +281,27 @@ def main() -> int:
         "site": site,
         "build": {"year": today.year, "date": today.isoformat()},
         "publications": publications,
-        "featured_pubs": featured_pubs,
+        "highlights": highlights,
         "type_facet": facet(publications, "type"),
         "year_facet": facet(publications, "year", sort_key=lambda kv: int(kv[0]), reverse=True),
         "pub_jsonld": publications_jsonld(publications, site),
         "news": news,
         "projects": projects,
         "education": education,
-        "stack": stack,
     }
 
+    sitemap_entries: list[tuple[str, str, str]] = []
     for page in PAGES:
         template = env.get_template(page["template"])
-        html = template.render(page=page, **context)
+        html = template.render(page=page, **context).rstrip("\n") + "\n"
         out = ROOT / page["out"]
-        out.write_text(html.rstrip("\n") + "\n", encoding="utf-8")
+        if not page.get("noindex"):
+            sitemap_entries.append((page["url"], page_lastmod(page["out"], html, today), page["key"]))
+        out.write_text(html, encoding="utf-8")
         print(f">>> Wrote {page['out']} ({len(html.encode('utf-8')) // 1024} KB)")
 
+    write_sitemap(site, sitemap_entries)
+    write_feed(site, news, today)
     return 0
 
 

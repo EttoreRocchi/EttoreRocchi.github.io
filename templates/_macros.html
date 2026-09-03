@@ -52,7 +52,7 @@
 {# --- News -------------------------------------------------------------- #}
 
 {% macro news_item(item, index) -%}
-<li class="news-item" style="--news-delay:{{ index * 60 }}ms">
+<li class="news-item" id="{{ item.id }}" style="--news-delay:{{ index * 60 }}ms">
   <div class="news-marker" aria-hidden="true">
     <span class="news-icon">{{ item.icon }}</span>
   </div>
@@ -73,7 +73,6 @@
 <div class="project-badges">
   {% if p.pypi %}
   <a href="https://pypi.org/project/{{ p.pypi }}/" target="_blank" rel="noopener"><img src="https://img.shields.io/pypi/v/{{ p.pypi }}?label=PyPI&amp;color=2c3e6b" alt="{{ p.name }} on PyPI (latest version)" height="20" loading="lazy"></a>
-  <a href="https://pypi.org/project/{{ p.pypi }}/" target="_blank" rel="noopener"><img src="https://img.shields.io/pepy/dt/{{ p.pypi }}?label=downloads&amp;color=2c3e6b" alt="{{ p.name }} total downloads" height="20" loading="lazy"></a>
   {% endif %}
   {% if p.github %}
   <a href="{{ p.github }}" target="_blank" rel="noopener"><img src="https://img.shields.io/github/last-commit/{{ p.github|replace('https://github.com/', '') }}?label=last%20commit&amp;color=2c3e6b" alt="{{ p.name }} last commit on GitHub" height="20" loading="lazy"></a>

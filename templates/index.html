@@ -62,12 +62,6 @@
         </div>
       </div>
     </div>
-    <a href="#about" class="hero-scroll" aria-label="Scroll to About section">
-      <span class="hero-scroll-label">Scroll</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <polyline points="6 9 12 15 18 9"/>
-      </svg>
-    </a>
   </section>
 
   <section id="about">
@@ -91,8 +85,8 @@
           </p>
           <p>
             I write Python, build pipelines, publish open-source tools, and contribute to interdisciplinary
-            projects. The through-line is a commitment to reproducibility and a mild obsession with doing
-            things properly.
+            projects. The through-line is reproducibility, and a mild obsession with the details that
+            make a result hold up the second time around.
           </p>
 
           <div class="what-i-do">
@@ -106,30 +100,41 @@
             </p>
             <p>
               There's also a fair amount of staring at loss curves, debugging pipelines that worked
-              yesterday, and writing documentation future-me will thank present-me for. The ratio of
-              thinking to typing is higher than most people expect. The ratio of coffee to output is
-              best left unquantified.
+              yesterday, and writing documentation future-me will thank present-me for. There is more
+              thinking than typing involved. The ratio of coffee to output is best left unquantified.
             </p>
+          </div>
+
+          <div class="about-collabs">
+            <h3>Ongoing collaborations</h3>
+            <ul class="collab-list">
+              <li>
+                <a href="https://www.unibo.it/en" target="_blank" rel="noopener">
+                  <span class="collab-name">University of Bologna</span>
+                  <span class="collab-role">Doctoral &amp; postdoctoral home &middot; Health and Technologies</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.aosp.bo.it/" target="_blank" rel="noopener">
+                  <span class="collab-name">IRCCS Sant'Orsola</span>
+                  <span class="collab-role">Multi-Omics &amp; Health-Care Data Analytics Unit &middot; Physics4MedicineLab</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.biochem.mpg.de/en" target="_blank" rel="noopener">
+                  <span class="collab-name">Max Planck Institute of Biochemistry</span>
+                  <span class="collab-role">ML &amp; Systems Biology group &middot; Prof. Karsten Borgwardt</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
         <aside class="about-sidebar fade-in">
           <h3>Coordinates</h3>
           <div class="sidebar-item">
-            <p class="sidebar-label">Affiliation</p>
-            <p class="sidebar-value">{{ site.affiliation }}</p>
-          </div>
-          <div class="sidebar-item">
-            <p class="sidebar-label">Role</p>
-            <p class="sidebar-value">{{ site.role }}</p>
-          </div>
-          <div class="sidebar-item">
             <p class="sidebar-label">Lab</p>
             <p class="sidebar-value"><a href="{{ site.links.lab }}" target="_blank" rel="noopener">Physics4MedicineLab</a></p>
-          </div>
-          <div class="sidebar-item">
-            <p class="sidebar-label">Discipline</p>
-            <p class="sidebar-value">Applied Physics &amp; Data Science</p>
           </div>
           <div class="sidebar-item">
             <p class="sidebar-label">ORCID</p>
@@ -140,8 +145,12 @@
             <p class="sidebar-value"><a href="{{ site.links.scopus }}" target="_blank" rel="noopener">{{ site.scopus_id }}</a></p>
           </div>
           <div class="sidebar-item">
-            <p class="sidebar-label">Location</p>
-            <p class="sidebar-value">Bologna, Italy</p>
+            <p class="sidebar-label">Google Scholar</p>
+            <p class="sidebar-value"><a href="{{ site.links.scholar }}" target="_blank" rel="noopener">{{ site.scholar_id }}</a></p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Email</p>
+            <p class="sidebar-value"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
           </div>
         </aside>
       </div>
@@ -169,215 +178,66 @@
     </div>
   </section>
 
-  <section id="collaborations">
+  <section id="highlights">
     <div class="container">
       <div class="section-header fade-in">
-        <h2>Ongoing Collaborations</h2>
+        <h2>Highlights</h2>
         <p class="section-subtitle">
-          Institutions and groups I currently work with on research projects.
+          One paper, one tool, one research thread. The full lists live on their own pages.
         </p>
       </div>
-      <div class="collab-grid fade-in-stagger">
+      <div class="highlights-grid fade-in-stagger">
 
-        <a href="https://www.unibo.it/en" class="collab-card" target="_blank" rel="noopener">
-          <div class="collab-logo">
-            {{ m.icon('unibo') }}
-          </div>
-          <h3 class="collab-name">University of Bologna</h3>
-          <p class="collab-role">Doctoral &amp; postdoctoral home &middot; Health and Technologies</p>
-        </a>
-
-        <a href="https://www.aosp.bo.it/" class="collab-card" target="_blank" rel="noopener">
-          <div class="collab-logo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="3"/>
-              <line x1="12" y1="8" x2="12" y2="16"/>
-              <line x1="8" y1="12" x2="16" y2="12"/>
-            </svg>
-          </div>
-          <h3 class="collab-name">IRCCS Sant'Orsola</h3>
-          <p class="collab-role">Multi-Omics &amp; Health-Care Data Analytics Unit &middot; Physics4MedicineLab</p>
-        </a>
-
-        <a href="https://www.biochem.mpg.de/en" class="collab-card" target="_blank" rel="noopener">
-          <div class="collab-logo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-              <circle cx="12" cy="12" r="1.6" fill="currentColor"/>
-              <ellipse cx="12" cy="12" rx="10" ry="4"/>
-              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
-              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>
-            </svg>
-          </div>
-          <h3 class="collab-name">Max Planck Institute of Biochemistry</h3>
-          <p class="collab-role">ML &amp; Systems Biology group &middot; Prof. Karsten Borgwardt</p>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="research">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Research</h2>
-        <p class="section-subtitle">
-          Four threads I am currently pulling, at the intersection of applied physics,
-          machine learning, and clinical data.
-        </p>
-      </div>
-      <div class="research-grid fade-in-stagger">
-
-        <div class="research-card">
-          <div class="research-icon" aria-hidden="true">&#x1F48A;</div>
-          <h3>AMR &amp; clinical machine learning</h3>
-          <p>
-            Machine learning on mass spectra and clinical data to anticipate antimicrobial
-            resistance ahead of culture-based diagnostics, with cross-site harmonisation and
-            generative modelling extending the pipeline beyond single-instrument settings.
+        {% set pub = highlights.paper %}
+        <article class="highlight-card">
+          <p class="highlight-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+            Selected paper
           </p>
-          <p class="research-methods">MALDI-TOF &middot; supervised &amp; generative learning &middot; cross-site harmonisation</p>
-        </div>
-
-        <div class="research-card">
-          <div class="research-icon" aria-hidden="true">&#x1F9A0;</div>
-          <h3>Infectious risk &amp; pathogen surveillance</h3>
-          <p>
-            Stratification of infectious risk in fragile populations such as transplant
-            recipients, and surveillance of circulating pathogens through metagenomic
-            monitoring and computational phenotyping.
-          </p>
-          <p class="research-methods">patient phenotyping &middot; survival &amp; multi-state models &middot; metagenomic surveillance</p>
-        </div>
-
-        <div class="research-card">
-          <div class="research-icon" aria-hidden="true">&#x1F9EC;</div>
-          <h3>Computational genomics</h3>
-          <p>
-            Discovery and interpretation of structural and somatic variants from short- and
-            long-read sequencing, in clinically relevant genomic contexts.
-          </p>
-          <p class="research-methods">structural variants &middot; somatic calling &middot; long-read sequencing</p>
-        </div>
-
-        <div class="research-card">
-          <div class="research-icon" aria-hidden="true">&#x2699;&#xFE0F;</div>
-          <h3>Computational methodologies</h3>
-          <p>
-            Open-source tools and reusable methods built around specific biomedical questions,
-            designed to be reproducible and well-documented.
-          </p>
-          <p class="research-methods">bioinformatic tools &middot; open-source software &middot; reproducible pipelines</p>
-        </div>
-
-      </div>
-      <div class="section-cta fade-in">
-        <a href="/research.html" class="btn btn-outline">Read more about my research &#8594;</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Projects</h2>
-        <p class="section-subtitle">
-          Open-source tools and research pipelines. A selection below;
-          the full catalog lives on the projects page.
-        </p>
-      </div>
-
-      <div class="projects-grid fade-in-stagger">
-
-        {% set eco = projects.ecosystem %}
-        <div class="project-card project-card-feature">
-          <div class="project-header">
-            <span class="project-name">{{ eco.name }}</span>
-            <a href="{{ eco.github }}" class="project-link" target="_blank" rel="noopener">GitHub &#8599;</a>
+          <p class="highlight-meta">{{ pub.journal }} &middot; {{ pub.year }}{% if pub.openaccess %} &middot; Open Access{% endif %}</p>
+          <h3 class="highlight-title">{{ pub.title }}</h3>
+          <p class="highlight-text">{{ highlights.paper_blurb }}</p>
+          <div class="highlight-links">
+            <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI &#8599;</a>
+            <a href="/publications.html">All publications &#8594;</a>
           </div>
-          <p class="project-oneliner">{{ eco.home.oneliner }}</p>
-          <p class="project-description">{{ eco.home.description }}</p>
+        </article>
+
+        {% set proj = highlights.project %}
+        <article class="highlight-card">
+          <p class="highlight-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+            Flagship software
+          </p>
+          <h3 class="highlight-title is-package">{{ proj.name }}</h3>
+          <p class="highlight-text">{{ proj.home.oneliner }} {{ proj.home.description }}</p>
+          {% if proj.packages %}
           <div class="ecosystem-pills">
-            {% for pkg in eco.packages %}
+            {% for pkg in proj.packages %}
             <a href="{{ pkg.github }}" class="eco-pill" target="_blank" rel="noopener">{{ pkg.name }}</a>
             {% endfor %}
           </div>
-          {{ m.badges(eco) }}
-          {{ m.tags(eco.home.tags) }}
-        </div>
-
-        {% for p in projects.frameworks if p.featured_home %}
-        {{ m.project_card(p, 'home') }}
-        {% endfor %}
-
-      </div>
-
-      <div class="section-cta fade-in">
-        <a href="/projects.html" class="btn btn-outline">See all projects &#8594;</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Recent Publications</h2>
-        <p class="section-subtitle">
-          A few recent highlights. A curated list with BibTeX lives on the publications page; the complete record is on <a href="{{ site.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a> and <a href="{{ site.links.scopus }}" target="_blank" rel="noopener">Scopus</a>.
-        </p>
-      </div>
-      <ol class="pub-list fade-in">
-        {% for pub in featured_pubs %}
-        <li class="pub-item">
-          <div class="pub-meta">
-            <span class="pub-year">{{ pub.year }}</span>
-            <span class="pub-journal">{{ pub.journal }}</span>
-            {% if pub.openaccess %}<span class="pub-oa">Open Access</span>{% endif %}
+          {% endif %}
+          <div class="highlight-links">
+            <a href="{{ proj.github }}" target="_blank" rel="noopener">GitHub &#8599;</a>
+            <a href="/projects.html">All projects &#8594;</a>
           </div>
-          <p class="pub-title">{{ pub.title }}</p>
-          <p class="pub-authors">{{ pub.authors_html|safe }}</p>
-          <div class="pub-links">
-            <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI &#8599;</a>
+        </article>
+
+        {% set thread = highlights.research %}
+        <article class="highlight-card">
+          <p class="highlight-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L4.5 19a1.5 1.5 0 0 0 1.3 2.2h12.4a1.5 1.5 0 0 0 1.3-2.2L14 9.5V3"/><line x1="7" y1="16" x2="17" y2="16"/></svg>
+            Research thread
+          </p>
+          <h3 class="highlight-title">{{ thread.title }}</h3>
+          <p class="highlight-text">{{ thread.text }}</p>
+          <div class="highlight-links">
+            <a href="{{ thread.href }}">Read more &#8594;</a>
+            <a href="/research.html">All research &#8594;</a>
           </div>
-        </li>
-        {% endfor %}
-      </ol>
+        </article>
 
-      <div class="section-cta fade-in">
-        <a href="/publications.html" class="btn btn-outline">See more publications &#8594;</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Education</h2>
-        <p class="section-subtitle">
-          A physics training that gradually re-oriented itself toward biomedical questions.
-        </p>
-      </div>
-      {{ m.timeline(education, 'home', 'h3') }}
-      <div class="section-cta fade-in">
-        <a href="/education.html" class="btn btn-outline">Full education page &#8594;</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="stack">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Tools I Use</h2>
-        <p class="section-subtitle">
-          The day-to-day toolbox - languages, libraries, and workflow managers I rely on.
-        </p>
-      </div>
-      <div class="stack-grid fade-in-stagger">
-        {% for tool in stack %}
-        <div class="stack-item">
-          <svg class="stack-logo" viewBox="{{ tool.viewbox }}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">{{ tool.svg|safe }}</svg>
-          <span class="stack-name">{{ tool.name }}</span>
-        </div>
-        {% endfor %}
       </div>
     </div>
   </section>

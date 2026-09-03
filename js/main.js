@@ -132,7 +132,7 @@
   var page = document.body.getAttribute('data-page');
   if (page === 'home') {
     var sections = document.querySelectorAll('section[id]');
-    var sectionIds = ['about', 'education', 'news', 'collaborations', 'research', 'projects', 'publications', 'contact'];
+    var sectionIds = ['about', 'news', 'highlights', 'contact'];
 
     if ('IntersectionObserver' in window && sections.length) {
       var navObserver = new IntersectionObserver(function (entries) {
