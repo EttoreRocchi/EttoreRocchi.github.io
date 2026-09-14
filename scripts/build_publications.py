@@ -40,6 +40,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
 ENV_FILE = SCRIPT_DIR / ".env"   # lives next to this script (gitignored)
 OUTPUT_JSON = ROOT / "data" / "publications.json"
+SITE_JSON = ROOT / "data" / "site.json"   # contact email for the CrossRef User-Agent
 
 # DOIs listed here are dropped from the output (errata, withdrawn, etc.).
 EXCLUDE_DOIS: set[str] = set()
@@ -324,7 +325,8 @@ def main() -> int:
 
     print(f">>> Fetching BibTeX from CrossRef for {sum(1 for p in pubs if p['doi'])} entries...")
     with requests.Session() as session:
-        session.headers["User-Agent"] = "ettorerocchi.github.io build-pubs (mailto:ettore.rocchi3@unibo.it)"
+        email = json.loads(SITE_JSON.read_text(encoding="utf-8"))["email"]
+        session.headers["User-Agent"] = f"ettorerocchi.github.io build-pubs (mailto:{email})"
         for i, pub in enumerate(pubs, 1):
             if not pub["doi"]:
                 print(f"  [{i}/{len(pubs)}] (no DOI) {pub['title'][:60]}")

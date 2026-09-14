@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Ettore Rocchi - Biomedical Data Science &amp; Applied Physics{% endblock %}
-{% block description %}Postdoctoral researcher at the University of Bologna building interpretable ML pipelines for omics data and antimicrobial resistance prediction. Physics4MedicineLab.{% endblock %}
-{% block og_description %}Postdoctoral researcher building interpretable ML pipelines for omics data and antimicrobial resistance prediction at the University of Bologna.{% endblock %}
+{% block description %}Health researcher at IRCCS Sant'Orsola in Bologna building interpretable ML pipelines for omics data and antimicrobial resistance prediction. Computational Genomics Unit.{% endblock %}
+{% block og_description %}Health researcher building interpretable ML pipelines for omics data and antimicrobial resistance prediction at IRCCS Sant'Orsola in Bologna.{% endblock %}
 
 {% block head_extra %}
   <link rel="preload" as="image" href="/assets/profile_pic-360.webp" imagesrcset="/assets/profile_pic-180.webp 180w, /assets/profile_pic-360.webp 360w, /assets/profile_pic-540.webp 540w" imagesizes="(max-width: 600px) 140px, 180px" fetchpriority="high">
@@ -12,10 +12,10 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "{{ site.name }}",
-    "jobTitle": "Postdoctoral Researcher in Biomedical Data Science",
+    "jobTitle": "Health Researcher in Computational Genomics",
     "affiliation": {
       "@type": "Organization",
-      "name": "{{ site.affiliation }}"
+      "name": "{{ site.affiliation_full }}"
     },
     "url": "{{ site.base_url }}/",
     "image": "{{ site.base_url }}/assets/profile_pic.jpeg",
@@ -78,8 +78,9 @@
             computational patient phenotyping, and computational genomics.
           </p>
           <p>
-            I work within the Physics4MedicineLab, part of the Multi-Omics and Health-Care Data Analytics Unit
-            at Sant'Orsola Hospital in Bologna. My research combines machine learning with clinical
+            I work in the Computational Genomics Unit, part of the Multi-Omics and Health-Care Data Analytics Unit
+            at Sant'Orsola Hospital in Bologna, and collaborate closely with Prof. Gastone Castellani's
+            Physics4MedicineLab. My research combines machine learning with clinical
             microbiology, pharmacokinetics, and genomics. I care about making models that are accurate but also
             interpretable, because a prediction without an explanation is just a well-dressed guess.
           </p>
@@ -106,18 +107,18 @@
           </div>
 
           <div class="about-collabs">
-            <h3>Ongoing collaborations</h3>
+            <h3>Affiliations &amp; collaborations</h3>
             <ul class="collab-list">
               <li>
                 <a href="https://www.unibo.it/en" target="_blank" rel="noopener">
                   <span class="collab-name">University of Bologna</span>
-                  <span class="collab-role">Doctoral &amp; postdoctoral home &middot; Health and Technologies</span>
+                  <span class="collab-role">Doctoral home &middot; Physics4MedicineLab, Prof. Gastone Castellani</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.aosp.bo.it/" target="_blank" rel="noopener">
                   <span class="collab-name">IRCCS Sant'Orsola</span>
-                  <span class="collab-role">Multi-Omics &amp; Health-Care Data Analytics Unit &middot; Physics4MedicineLab</span>
+                  <span class="collab-role">Computational Genomics Unit &middot; Multi-Omics &amp; Health-Care Data Analytics Unit</span>
                 </a>
               </li>
               <li>
@@ -132,6 +133,10 @@
 
         <aside class="about-sidebar fade-in">
           <h3>Coordinates</h3>
+          <div class="sidebar-item">
+            <p class="sidebar-label">Unit</p>
+            <p class="sidebar-value"><a href="{{ site.links.unit }}" target="_blank" rel="noopener">Computational Genomics</a></p>
+          </div>
           <div class="sidebar-item">
             <p class="sidebar-label">Lab</p>
             <p class="sidebar-value"><a href="{{ site.links.lab }}" target="_blank" rel="noopener">Physics4MedicineLab</a></p>

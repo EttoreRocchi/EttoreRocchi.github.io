@@ -1,7 +1,7 @@
 # [Ettore Rocchi](https://ettorerocchi.github.io)
 ## Personal academic website
 
-Postdoctoral researcher in Biomedical Data Science at the University of Bologna.
+Health Researcher in the Computational Genomics Unit at IRCCS Sant'Orsola, Bologna.
 
 The published site is plain HTML/CSS/JS (no runtime framework). Pages are rendered from `templates/` + `data/` by a small Python build step and the output is committed, so GitHub Pages serves static files.
 

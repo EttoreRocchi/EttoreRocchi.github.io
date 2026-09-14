@@ -1,9 +1,10 @@
 {
   "name": "Ettore Rocchi",
   "base_url": "https://ettorerocchi.github.io",
-  "email": "ettore.rocchi3@unibo.it",
-  "role": "Postdoctoral Researcher",
-  "affiliation": "University of Bologna",
+  "email": "ettore.rocchi@aosp.bo.it",
+  "role": "Health Researcher",
+  "affiliation": "IRCCS Sant'Orsola",
+  "affiliation_full": "IRCCS Azienda Ospedaliero-Universitaria di Bologna",
   "orcid": "0000-0002-7612-2819",
   "scopus_id": "57220152522",
   "scholar_id": "MKHoGnQAAAAJ",
@@ -14,7 +15,7 @@
     "scholar": "https://scholar.google.com/citations?user=MKHoGnQAAAAJ",
     "orcid": "https://orcid.org/0000-0002-7612-2819",
     "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57220152522",
-    "unibo": "https://www.unibo.it/sitoweb/ettore.rocchi3",
+    "unit": "https://www.aosp.bo.it/il-policlinico/amministrazione-trasparente/organizzazione/articolazione-degli-uffici/direzione-scientifica/ssd-genomica-computazionale",
     "lab": "https://github.com/Physics4MedicineLab"
   },
   "nav": [
@@ -84,10 +85,6 @@
     {
       "key": "scopus",
       "label": "Scopus"
-    },
-    {
-      "key": "unibo",
-      "label": "UniBO"
     }
   ],
   "highlights": {
@@ -107,7 +104,6 @@
     "bluesky": "Bluesky",
     "scholar": "Google Scholar",
     "orcid": "ORCID",
-    "scopus": "Scopus",
-    "unibo": "UniBO"
+    "scopus": "Scopus"
   }
 }
