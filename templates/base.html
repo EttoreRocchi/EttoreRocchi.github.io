@@ -110,5 +110,10 @@
   </footer>
 
   <script src="/js/main.js"></script>
+{% if site.goatcounter %}
+  <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count"
+          async src="https://gc.zgo.at/count.js"></script>
+  <noscript><img src="https://{{ site.goatcounter }}.goatcounter.com/count?p={{ page.url }}" alt="" width="1" height="1"></noscript>
+{% endif %}
 </body>
 </html>

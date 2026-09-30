@@ -4,6 +4,9 @@
 {% block robots %}<meta name="robots" content="noindex">{% endblock %}
 
 {% block head_extra %}
+  {% if site.goatcounter %}
+  <script>window.goatcounter = { path: function(p) { return '/404' + p; } };</script>
+  {% endif %}
   <style>
     .notfound {
       min-height: calc(100vh - 64px);
